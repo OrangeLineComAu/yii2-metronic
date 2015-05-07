@@ -5,13 +5,13 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use Yii;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\View;
-use dlds\metronic\bundles\IonRangeSliderAsset;
+use hustshenl\metronic\bundles\IonRangeSliderAsset;
 
 /**
  *  IonRangeSlider renders ionRangeSlider widget.

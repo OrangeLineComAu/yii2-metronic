@@ -4,14 +4,14 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use dlds\metronic\Metronic;
+use hustshenl\metronic\Metronic;
 
 /**
  * Nav renders a nav HTML component.

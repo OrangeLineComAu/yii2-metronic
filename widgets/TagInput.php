@@ -4,14 +4,14 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use Yii;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
-use dlds\metronic\widgets\TextInputWidget;
-use dlds\metronic\bundles\TagInputAsset;
+use hustshenl\metronic\widgets\TextInputWidget;
+use hustshenl\metronic\bundles\TagInputAsset;
 
 /**
  * TextInputWidget renders text input widget.

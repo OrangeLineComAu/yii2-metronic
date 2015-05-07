@@ -1,18 +1,18 @@
 {
-    "name": "dlds/yii2-metronic",
+    "name": "hustshenl/yii2-metronic",
     "description": "Yii2 Metronic theme integration",
     "keywords": ["yii2", "theme", "metronic"],
     "type": "yii2-extension",
     "license": "BSD",
     "support": {
-        "issues": "https://github.com/dlds/yii2-metronic/issues",
-        "wiki": "https://github.com/dlds/yii2-metronic/wiki",
-        "source": "https://github.com/dlds/yii2-metronic"
+        "issues": "https://github.com/hustshenl/yii2-metronic/issues",
+        "wiki": "https://github.com/hustshenl/yii2-metronic/wiki",
+        "source": "https://github.com/hustshenl/yii2-metronic"
     },
     "authors": [
         {
             "name": "Jiri Svoboda",
-            "email": "jiri.svoboda@dlds.cz"
+            "email": "jiri.svoboda@hustshenl.cz"
         }
     ],
     "require": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dlds\\metronic\\": ""
+            "hustshenl\\metronic\\": ""
         }
     }
 }

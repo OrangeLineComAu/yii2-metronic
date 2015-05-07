@@ -4,7 +4,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
  */
 class TagInputAsset extends AssetBundle {
 
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
     public $js = [
         'global/plugins/jquery-tags-input/jquery.tagsinput.min.js',
     ];
@@ -21,7 +21,7 @@ class TagInputAsset extends AssetBundle {
         'global/plugins/jquery-tags-input/jquery.tagsinput.css',
     ];
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'hustshenl\metronic\bundles\CoreAsset',
     ];
 
 }

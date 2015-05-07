@@ -4,7 +4,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace  dlds\metronic\bundles;
+namespace  hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
  */
 class NotificationAsset extends AssetBundle
 {
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
     public $js = [
         'plugins/bootstrap-toastr/toastr.min.js',
     ];
@@ -23,6 +23,6 @@ class NotificationAsset extends AssetBundle
     ];
 
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'hustshenl\metronic\bundles\CoreAsset',
     ];
 }

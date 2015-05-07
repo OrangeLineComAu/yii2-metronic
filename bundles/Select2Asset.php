@@ -4,7 +4,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace  dlds\metronic\bundles;
+namespace  hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
  */
 class Select2Asset extends AssetBundle
 {
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
     public $js = [
         'global/plugins/select2/select2.min.js',
     ];
@@ -25,6 +25,6 @@ class Select2Asset extends AssetBundle
 
 
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'hustshenl\metronic\bundles\CoreAsset',
     ];
 }

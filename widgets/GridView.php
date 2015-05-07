@@ -4,12 +4,12 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\GridViewSortableAsset;
+use hustshenl\metronic\bundles\GridViewSortableAsset;
 
 class GridView extends \kartik\grid\GridView {
 

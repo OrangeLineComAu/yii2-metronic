@@ -4,12 +4,12 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 
-use dlds\metronic\bundles\Select2Asset;
+use hustshenl\metronic\bundles\Select2Asset;
 
 /**
  * Select2 renders Select2 component.

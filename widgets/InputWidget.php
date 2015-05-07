@@ -5,7 +5,7 @@
  */
 
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use Yii;
 use yii\base\Model;

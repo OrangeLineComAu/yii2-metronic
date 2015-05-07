@@ -6,12 +6,12 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic;
+namespace hustshenl\metronic;
 
 use Yii;
 use yii\web\AssetBundle;
 use yii\base\InvalidConfigException;
-use dlds\metronic\bundles\ThemeAsset;
+use hustshenl\metronic\bundles\ThemeAsset;
 
 /**
  * This is the class of Metronic Component
@@ -155,7 +155,7 @@ class Metronic extends \yii\base\Component {
     /**
      * Classes paths
      */
-    const CLASS_HTML = '@vendor/dlds/yii2-metronic/helpers/Html.php';
+    const CLASS_HTML = '@vendor/hustshenl/yii2-metronic/helpers/Html.php';
 
     /**
      * @var string version

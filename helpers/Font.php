@@ -5,9 +5,9 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\helpers;
+namespace hustshenl\metronic\helpers;
 
-use dlds\metronic\Metronic;
+use hustshenl\metronic\Metronic;
 use yii\helpers\Html;
 
 /**

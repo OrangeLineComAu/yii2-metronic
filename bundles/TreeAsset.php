@@ -5,7 +5,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
@@ -14,7 +14,7 @@ class TreeAsset extends AssetBundle {
     /**
      * @var string source path
      */
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
 
     /**
      * @var array CSS
@@ -30,7 +30,7 @@ class TreeAsset extends AssetBundle {
      * @var array depends on
      */
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'hustshenl\metronic\bundles\CoreAsset',
     ];
 
 }

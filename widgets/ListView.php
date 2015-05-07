@@ -5,12 +5,12 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use yii\helpers\Url;
 use \yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\ListViewAsset;
-use dlds\metronic\bundles\ListViewSortableAsset;
+use hustshenl\metronic\bundles\ListViewAsset;
+use hustshenl\metronic\bundles\ListViewSortableAsset;
 
 class ListView extends \yii\widgets\ListView {
 

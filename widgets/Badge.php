@@ -4,7 +4,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use yii\helpers\Html;
 
@@ -19,7 +19,7 @@ use yii\helpers\Html;
  *     'round'
  * ]);
  *
- * @package dlds\metronic\widgets
+ * @package hustshenl\metronic\widgets
  */
 class Badge extends  \yii\base\Widget
 {

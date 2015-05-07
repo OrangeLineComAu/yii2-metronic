@@ -16,9 +16,9 @@ Basic configuration:
 ```
     'components' => [ 
         'metronic' => [
-            'class' => 'dlds\metronic\Metronic',
+            'class' => 'hustshenl\metronic\Metronic',
             'color' => 'default',
-            'layoutOption' => \dlds\metronic\Metronic::LAYOUT_FLUID,
+            'layoutOption' => \hustshenl\metronic\Metronic::LAYOUT_FLUID,
             'headerOption' => 'fixed',
         ],
     ],

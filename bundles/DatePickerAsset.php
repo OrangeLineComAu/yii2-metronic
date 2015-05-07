@@ -5,13 +5,13 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
 class DatePickerAsset extends AssetBundle {
 
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
     public static $extraJs = [];
     public $js = [
         'plugins/bootstrap-daterangepicker/moment.min.js',
@@ -22,7 +22,7 @@ class DatePickerAsset extends AssetBundle {
         'plugins/bootstrap-datepicker-extended/css/datepicker3.css',
     ];
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'hustshenl\metronic\bundles\CoreAsset',
     ];
 
     public function init()

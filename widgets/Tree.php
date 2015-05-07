@@ -4,11 +4,11 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use yii\helpers\Html;
 use \yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\TreeAsset;
+use hustshenl\metronic\bundles\TreeAsset;
 
 class Tree extends InputWidget {
 
@@ -105,7 +105,7 @@ class Tree extends InputWidget {
      */
     public function run()
     {
-        $builder = \dlds\metronic\builders\TreeBuilder::instance($this->items, array(
+        $builder = \hustshenl\metronic\builders\TreeBuilder::instance($this->items, array(
                 'treeTag' => $this->listTag,
                 'itemTag' => $this->itemTag,
                 'levelAttr' => $this->levelAttr,

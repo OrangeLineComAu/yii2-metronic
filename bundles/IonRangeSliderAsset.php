@@ -5,7 +5,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
@@ -14,7 +14,7 @@ use yii\web\AssetBundle;
  */
 class IonRangeSliderAsset extends AssetBundle {
 
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
     public $js = [
         'global/plugins/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js',
     ];
@@ -23,7 +23,7 @@ class IonRangeSliderAsset extends AssetBundle {
         'global/plugins/ion.rangeslider/css/ion.rangeSlider.Metronic.css',
     ];
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'hustshenl\metronic\bundles\CoreAsset',
     ];
 
 }

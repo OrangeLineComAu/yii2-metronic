@@ -4,7 +4,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\StringHelper;

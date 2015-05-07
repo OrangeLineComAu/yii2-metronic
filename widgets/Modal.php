@@ -5,12 +5,12 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\widgets;
+namespace hustshenl\metronic\widgets;
 
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-use dlds\metronic\bundles\ModalAsset;
+use hustshenl\metronic\bundles\ModalAsset;
 
 /**
  * Modal renders a modal window that can be toggled by clicking on a button.

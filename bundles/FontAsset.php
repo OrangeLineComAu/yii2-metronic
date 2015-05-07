@@ -4,13 +4,13 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
 class FontAsset extends AssetBundle
 {
-    public $sourcePath = '@dlds/metronic/assets';
+    public $sourcePath = '@hustshenl/metronic/assets';
 
     public $css = [
         'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all',
