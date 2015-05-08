@@ -863,7 +863,7 @@ Page sidebar
   -o-border-radius: 4px;
   border-radius: 4px;
   list-style: none;
-  margin: 10px 0 0 0;
+  margin: 0;
   padding: 0;
   /* 1st level links */
   /* all links */
@@ -892,7 +892,7 @@ Page sidebar
 .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li > a {
   display: block;
   position: relative;
-  margin: 1px 0 0 0;
+  margin: 0;
   border: 0px;
   padding: 12px 15px;
   text-decoration: none;
@@ -1033,7 +1033,6 @@ Page sidebar
     float: left;
     position: relative;
     margin-right: -100%;
-    margin-bottom: 10px;
   }
   .page-full-width .page-sidebar {
     display: none !important;
@@ -1065,9 +1064,6 @@ Page sidebar
   }
   .page-sidebar-fixed .page-sidebar-menu > li.last {
     margin-bottom: 15px !important;
-  }
-  .page-sidebar-fixed .page-sidebar-menu .sub-menu {
-    height: auto !important;
   }
 
   /* Sidebar Closed */
@@ -1579,13 +1575,12 @@ Page footer
   }
   .page-sidebar-fixed.page-footer-fixed .page-footer {
     margin-left: 0 !important;
-    padding: 8px 20px 5px 20px;
   }
 
   /* Fixed Sidebar */
   .page-sidebar-fixed .page-footer {
     margin-left: 235px;
-    padding: 8px 20px 5px 40px;
+    padding: 8px 20px 5px 20px;
   }
 
   /* Boxed page */
@@ -1780,7 +1775,7 @@ Theme Panel
     width: 105px !important;
   }
 }
-/***          
+/***     
 Page Loading         
 ***/
 .page-on-load {

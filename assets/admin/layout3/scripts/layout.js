@@ -39,11 +39,6 @@ var Layout = function () {
             e.stopPropagation();
             $(this).closest('.search-form').submit();
         });
-
-        // handle scrolling to top on responsive menu toggler click when header is fixed for mobile view
-        $('body').on('click', '.page-header-top-fixed .page-header-top .menu-toggler', function(){
-            Metronic.scrollTop();
-        });     
     };
 
     // Handles main menu
@@ -53,10 +48,12 @@ var Layout = function () {
         $(".page-header .menu-toggler").on("click", function(event) {
             if (Metronic.getViewPort().width < resBreakpointMd) {
                 var menu = $(".page-header .page-header-menu");
-                if (menu.is(":visible")) {
+                if (menu.hasClass("page-header-menu-opened")) {
                     menu.slideUp(300);
-                } else {  
+                    menu.removeClass("page-header-menu-opened");
+                } else {
                     menu.slideDown(300);
+                    menu.addClass("page-header-menu-opened");
                 }
 
                 if ($('body').hasClass('page-header-top-fixed')) {
@@ -66,10 +63,11 @@ var Layout = function () {
         });
 
         // handle sub dropdown menu click for mobile devices only
-        $(".hor-menu .dropdown-submenu > a").on("click", function(e) {
+        $(".dropdown-submenu > a").on("click", function(e) {
             if (Metronic.getViewPort().width < resBreakpointMd) {
                 if ($(this).next().hasClass('dropdown-menu')) {
                     e.stopPropagation();
+
                     if ($(this).parent().hasClass("open")) {
                         $(this).parent().removeClass("open");
                         $(this).next().hide();
@@ -83,21 +81,13 @@ var Layout = function () {
 
         // handle hover dropdown menu for desktop devices only
         if (Metronic.getViewPort().width >= resBreakpointMd) {
-            $('.hor-menu [data-hover="megamenu-dropdown"]').not('.hover-initialized').each(function() {   
+            $('[data-hover="megamenu-dropdown"]').not('.hover-initialized').each(function() {   
                 $(this).dropdownHover(); 
                 $(this).addClass('hover-initialized'); 
             });
-        } 
-
-        // handle auto scroll to selected sub menu node on mobile devices
-        $(document).on('click', '.hor-menu .menu-dropdown > a[data-hover="megamenu-dropdown"]', function() {
-            if (Metronic.getViewPort().width < resBreakpointMd) {
-                Metronic.scrollTo($(this));
-            }
-        });
-
-        // hold mega menu content open on click/tap. 
-        $(document).on('click', '.mega-menu-dropdown .dropdown-menu, .classic-menu-dropdown .dropdown-menu', function (e) {
+        }
+        
+        $(document).on('click', '.mega-menu-dropdown .dropdown-menu', function (e) {
             e.stopPropagation();
         });
 
@@ -170,20 +160,14 @@ var Layout = function () {
         var menu = $(".page-header-menu");
             
         if (width >= resBreakpointMd && menu.data('breakpoint') !== 'desktop') { 
-            // reset active states
-            $('.hor-menu [data-toggle="dropdown"].active').removeClass('open');
-
             menu.data('breakpoint', 'desktop');
             $('.hor-menu [data-hover="megamenu-dropdown"]').not('.hover-initialized').each(function() {   
                 $(this).dropdownHover(); 
                 $(this).addClass('hover-initialized'); 
             });
             $('.hor-menu .navbar-nav li.open').removeClass('open');
-            $(".page-header-menu").css("display", "block");
+            $(".page-header-menu").css("display", "block").removeClass('page-header-menu-opened');
         } else if (width < resBreakpointMd && menu.data('breakpoint') !== 'mobile') {
-            // set active states as open
-            $('.hor-menu [data-toggle="dropdown"].active').addClass('open');
-            
             menu.data('breakpoint', 'mobile');
             // disable hover bootstrap dropdowns plugin
             $('.hor-menu [data-hover="megamenu-dropdown"].hover-initialized').each(function() {   
@@ -193,8 +177,6 @@ var Layout = function () {
                 });
                 $(this).removeClass('hover-initialized');    
             });
-        } else if (width < resBreakpointMd) {
-            //$(".page-header-menu").css("display", "none");  
         }
     };
 

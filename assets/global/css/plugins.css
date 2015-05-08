@@ -511,18 +511,12 @@ Toastr Notifications
   left: 50%;
   margin-left: -150px;
 }
-.toast-top-center .toast {
-  margin: 0 !important;
-}
 
 .toast-bottom-center {
   bottom: 12px;
   margin: 0 auto;
   left: 50%;
   margin-left: -150px;
-}
-.toast-bottom-center .toast {
-  margin: 0 !important;
 }
 
 /***

@@ -1124,9 +1124,6 @@ Page sidebar
   .page-sidebar-fixed .page-sidebar-menu > li.last {
     margin-bottom: 15px !important;
   }
-  .page-sidebar-fixed .page-sidebar-menu .sub-menu {
-    height: auto !important;
-  }
 
   /* Sidebar Closed */
   .page-sidebar-closed .page-sidebar {

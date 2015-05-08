@@ -229,16 +229,11 @@ var Layout = function() {
                 }
             });
         });
-
-        // handle scrolling to top on responsive menu toggler click when header is fixed for mobile view
-        $(document).on('click', '.page-header-fixed-mobile .responsive-toggler', function(){
-            Metronic.scrollTop();
-        });      
     };
 
     // Helper function to calculate sidebar height for fixed sidebar layout.
     var _calculateFixedSidebarViewportHeight = function() {
-        var sidebarHeight = Metronic.getViewPort().height - $('.page-header').outerHeight() - 30;
+        var sidebarHeight = Metronic.getViewPort().height - $('.page-header').outerHeight();
         if ($('body').hasClass("page-footer-fixed")) {
             sidebarHeight = sidebarHeight - $('.page-footer').outerHeight();
         }

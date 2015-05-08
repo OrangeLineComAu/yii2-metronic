@@ -541,7 +541,6 @@ Page Footer
   .page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-menu li.current > a:hover > i {
     color: #fff !important;
   }
-  .page-header .page-header-menu .hor-menu .navbar-nav > li.classic-menu-dropdown .dropdown-menu > li.dropdown-submenu.active > a:after,
   .page-header .page-header-menu .hor-menu .navbar-nav > li.classic-menu-dropdown .dropdown-menu > li.dropdown-submenu.open > a:after {
     color: #fff !important;
   }

@@ -9,7 +9,7 @@ Theme Colors
 Body bg color
 ***********/
 body {
-  background: #e9ecf3;
+  background: #e6e9f2;
 }
 
 /*********** 
@@ -18,7 +18,7 @@ Page Header
 /* Header search bar, toggler button & top menu */
 .page-header.navbar {
   background: #3B3F51;
-  border-bottom: 1px solid #e9ecf3;
+  border-bottom: 1px solid #e6e9f2;
   /* Top notification menu/bar */
   /* Header seaech box */
   /* Menu Toggler */
@@ -46,22 +46,22 @@ Page Header
   background-color: #3f4457;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu:before {
-  border-bottom-color: #dce1ec;
+  border-bottom-color: #d9deeb;
 }
 .page-header.navbar .top-menu .navbar-nav > li.separator {
   background: darker(#f8f9fa, 5%);
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu {
-  border: 1px solid #dce1ec;
+  border: 1px solid #d9deeb;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu:before {
-  border-bottom-color: #cbd2e3;
+  border-bottom-color: #c8cfe2;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu:after {
-  border-bottom-color: #e3e6f0;
+  border-bottom-color: #dfe4ee;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu > li.external {
-  background: #e3e6f0;
+  background: #dfe4ee;
 }
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu > li.external > h3 {
   color: #62878f;
@@ -353,7 +353,7 @@ Page Footer
   color: #69789E;
 }
 .page-footer-fixed .page-footer {
-  background-color: #e9ecf3;
+  background-color: #e6e9f2;
 }
 .page-footer-fixed .page-footer .page-footer-inner {
   color: #69789E;
@@ -363,7 +363,7 @@ Page Footer
   color: #69789E;
 }
 .page-footer-fixed .page-boxed .page-footer {
-  background-color: #e9ecf3;
+  background-color: #e6e9f2;
 }
 
 @media (min-width: 992px) {
@@ -393,7 +393,7 @@ Page Footer
     /* Page container */
   }
   .page-boxed .page-container {
-    background-color: #e9ecf3;
+    background-color: #e6e9f2;
   }
   .page-boxed.page-sidebar-reversed .page-container {
     border-left: 0;

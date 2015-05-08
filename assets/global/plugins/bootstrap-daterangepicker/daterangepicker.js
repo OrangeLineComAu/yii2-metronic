@@ -153,12 +153,12 @@
             this.separator = ' - ';
 
             this.locale = {
-                applyLabel: 'Apply',
-                cancelLabel: 'Cancel',
-                fromLabel: 'From',
-                toLabel: 'To',
-                weekLabel: 'W',
-                customRangeLabel: 'Custom Range',
+                applyLabel: '确定',
+                cancelLabel: '取消',
+                fromLabel: '起始时间',
+                toLabel: '截至时间',
+                weekLabel: '星期',
+                customRangeLabel: '自定义范围',
                 daysOfWeek: moment.weekdaysMin(),
                 monthNames: moment.monthsShort(),
                 firstDay: moment.localeData()._week.dow
@@ -599,7 +599,7 @@
             this.element.removeClass('active');
             this.container.hide();
 
-            if (!this.startDate.isSame(this.oldStartDate) || !this.endDate.isSame(this.oldEndDate))
+            //if (!this.startDate.isSame(this.oldStartDate) || !this.endDate.isSame(this.oldEndDate))
                 this.notify();
 
             this.oldStartDate = this.startDate.clone();
@@ -683,11 +683,10 @@
                 this.leftCalendar.month.month(this.startDate.month()).year(this.startDate.year()).hour(this.startDate.hour()).minute(this.startDate.minute());
                 this.rightCalendar.month.month(this.endDate.month()).year(this.endDate.year()).hour(this.endDate.hour()).minute(this.endDate.minute());
                 this.updateCalendars();
-
                 this.updateInputText();
-
                 this.hideCalendars();
                 this.hide();
+
                 this.element.trigger('apply.daterangepicker', this);
             }
         },
@@ -1080,9 +1079,9 @@
                 if (this.timePicker12Hour) {
                     html += '<select class="ampmselect">';
                     if (selected.hour() >= 12) {
-                        html += '<option value="AM">AM</option><option value="PM" selected="selected">PM</option>';
+                        html += '<option value="AM">上午</option><option value="PM" selected="selected">下午</option>';
                     } else {
-                        html += '<option value="AM" selected="selected">AM</option><option value="PM">PM</option>';
+                        html += '<option value="AM" selected="selected">上午</option><option value="PM">下午</option>';
                     }
                     html += '</select>';
                 }

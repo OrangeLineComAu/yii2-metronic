@@ -129,11 +129,9 @@ var Index = function () {
                 }
             }
 
-           
-
             $('#calendar').fullCalendar('destroy'); // destroy the calendar
             $('#calendar').fullCalendar({ //re-initialize the calendar
-                disableDragging : false,
+                disableDragging: false,
                 header: h,
                 editable: true,
                 events: [{

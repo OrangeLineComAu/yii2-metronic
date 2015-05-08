@@ -266,11 +266,6 @@ var Layout = function() {
                 }
             });
         });
-
-        // handle scrolling to top on responsive menu toggler click when header is fixed for mobile view
-        $(document).on('click', '.page-header-fixed-mobile .page-header .responsive-toggler', function(){
-            Metronic.scrollTop();
-        });      
     };
 
     // Helper function to calculate sidebar height for fixed sidebar layout.
