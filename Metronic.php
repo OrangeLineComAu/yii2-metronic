@@ -160,7 +160,7 @@ class Metronic extends \yii\base\Component {
     /**
      * @var string version
      */
-    public $version = self::VERSION_4;
+    public $version = self::VERSION_1;
 
     /**
      * @var string Theme
