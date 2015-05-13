@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @copyright Copyright (c) 2014 Digital Deals s.r.o.
- * @license http://www.digitaldeals.cz/license/
+ * @copyright Copyright (c) 2012 - 2015 SHENL.COM
+ * @license http://www.shenl.com/license/
  */
 
 namespace hustshenl\metronic\widgets;
@@ -95,6 +95,7 @@ use yii\widgets\ActiveForm as CoreActiveForm;
 class HorizontalMenu extends Menu {
 
     const ITEM_TYPE_CLASSIC = 'classic-menu-dropdown';
+    const ITEM_TYPE_NORMAL = 'normal-menu';
     const ITEM_TYPE_MEGA = 'mega-menu-dropdown';
     const ITEM_TYPE_FULL_MEGA = 'mega-menu-dropdown mega-menu-full';
 
@@ -177,7 +178,7 @@ class HorizontalMenu extends Menu {
         {
             throw new InvalidConfigException("The 'visible' option of search is required.");
         }
-        $data[] = Html::tag('li', $this->renderSearch());
+        if($this->search['visible']) $data[] = Html::tag('li', $this->renderSearch());
         echo Html::tag($tag, implode("\n", $data), $options);
         echo Html::endTag('div');
     }

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @link http://www.digitaldeals.cz/
- * @copyright Copyright (c) 2014 Digital Deals s.r.o. 
- * @license http://www.digitaldeals.cz/license/
+ * @link http://www.shenl.com/
+ * @copyright Copyright (c) 2012 - 2015 SHENL.COM
+ * @license http://www.shenl.com/license/
  */
 
 namespace hustshenl\metronic;
@@ -24,7 +24,7 @@ class Metronic extends \yii\base\Component {
     public static $assetsBundle;
 
     /**
-     * Theme
+     * Version
      */
     const VERSION_1 = 'layout';
     const VERSION_2 = 'layout2';
@@ -32,10 +32,13 @@ class Metronic extends \yii\base\Component {
     const VERSION_4 = 'layout4';
 
     /**
-     * Theme
+     * Theme color
      */
     const THEME_DARK = 'default';
+    const THEME_DARK_BLUE = 'darkblue';
+    const THEME_GRAY = 'grey';
     const THEME_LIGHT = 'light';
+    const THEME_LIGHT2 = 'light2';
 
     /**
      * Style

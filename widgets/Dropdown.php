@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @copyright Copyright (c) 2014 Digital Deals s.r.o.
- * @license http://www.digitaldeals.cz/license/
+ * @copyright Copyright (c) 2012 - 2015 SHENL.COM
+ * @license http://www.shenl.com/license/
  */
 
 namespace hustshenl\metronic\widgets;
