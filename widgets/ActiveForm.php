@@ -13,7 +13,8 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\ActiveFormAsset;
 
-class ActiveForm extends \yii\widgets\ActiveForm {
+class ActiveForm extends \yii\widgets\ActiveForm
+{
 
     // Buttons align
     const BUTTONS_ALIGN_LEFT = 'left';
@@ -68,12 +69,12 @@ class ActiveForm extends \yii\widgets\ActiveForm {
      * ```
      */
     public $buttons = [];
-
+    public $tagOptions = ['class' => 'col-md-9'];
     /**
      * @var array the default configuration used by [[field()]] when creating a new field object.
      */
     public $fieldConfig = [];
-
+    public $fieldClass = 'metronic\widgets\ActiveField';
     /**
      * @var bool indicates whether the tag 'form' is rendered.
      * In case 'true' widget renders 'div' instead 'form'.
@@ -109,13 +110,13 @@ class ActiveForm extends \yii\widgets\ActiveForm {
                 Html::addCssClass($this->options, 'form-horizontal');
                 $this->fieldConfig = ArrayHelper::merge([
                             'labelOptions' => ['class' => 'col-md-3 control-label'],
-                            'template' => "{label}\n" . Html::tag('div', "{input}\n{error}\n{hint}", ['class' => 'col-md-9']),
+                    'template' => "{label}\n" . Html::tag('div', "{input}\n{error}\n{hint}", $this->tagOptions),
                                 ], $this->fieldConfig);
                 break;
             case self::TYPE_INLINE:
                 Html::addCssClass($this->options, 'form-inline');
                 $this->fieldConfig = ArrayHelper::merge([
-                            'labelOptions' => ['class' => 'sr-only'],
+                            //'labelOptions' => ['class' => 'sr-only'],
                                 ], $this->fieldConfig);
                 break;
         }

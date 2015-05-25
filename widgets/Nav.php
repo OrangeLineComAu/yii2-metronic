@@ -205,7 +205,14 @@ class Nav extends \yii\bootstrap\Nav {
 
         if ($icon)
         {
-            $label = Html::tag('i', '', ['alt' => $label, 'class' => $icon]);
+            if ($dropdownType === self::TYPE_USER)
+            {
+                $label .= Html::tag('i', '', ['class' => $icon]);
+            }
+            else
+            {
+                $label = Html::tag('i', '', ['alt' =>$label, 'class' => $icon]);
+            }
         }
 
         $label .= ArrayHelper::getValue($item, 'badge', '');

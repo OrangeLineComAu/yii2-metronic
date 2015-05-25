@@ -16,7 +16,7 @@ class ActiveField extends \yii\widgets\ActiveField {
      * @var ActiveForm the form that this field is associated with.
      */
     public $form;
-
+    public $tagOptions = ['class' => 'col-md-9'];
     // icon position
     const ICON_POSITION_LEFT = 'left';
     const ICON_POSITION_RIGHT = 'right';
