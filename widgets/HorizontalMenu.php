@@ -161,7 +161,7 @@ class HorizontalMenu extends Menu {
     public function run()
     {
         Html::addCssClass($this->options, 'nav navbar-nav');
-        echo Html::beginTag('div', ['class' => 'page-actions']);
+        echo Html::beginTag('div', ['class' => 'hor-menu hor-menu-light hidden-sm hidden-xs']);
         if ($this->route === null && Yii::$app->controller !== null)
         {
             $this->route = Yii::$app->controller->getRoute();
