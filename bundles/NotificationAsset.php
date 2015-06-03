@@ -15,11 +15,11 @@ class NotificationAsset extends AssetBundle
 {
     public $sourcePath = '@hustshenl/metronic/assets';
     public $js = [
-        'plugins/bootstrap-toastr/toastr.min.js',
+        'global/plugins/bootstrap-toastr/toastr.min.js',
     ];
 
     public $css = [
-        'plugins/bootstrap-toastr/toastr.min.css',
+        'global/plugins/bootstrap-toastr/toastr.min.css',
     ];
 
     public $depends = [
