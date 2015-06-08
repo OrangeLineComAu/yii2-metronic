@@ -29,7 +29,7 @@ class ActionColumn extends \yii\grid\ActionColumn {
     /**
      * @var string the icon for the view button.
      */
-    public $viewButtonIcon = 'icon-search';
+    public $viewButtonIcon = 'icon-magnifier';
 
     /**
      * @var string the icon for the update button.
@@ -41,10 +41,9 @@ class ActionColumn extends \yii\grid\ActionColumn {
      */
     public $deleteButtonIcon = 'icon-trash';
 
-    /**
-     * @var string the icon for the delete button.
-     */
     public $resetButtonIcon = 'icon-close';
+
+    public $refreshButtonIcon = 'icon-refresh';
 
     /**
      * @var mixed array pager settings or false to disable pager
@@ -65,6 +64,8 @@ class ActionColumn extends \yii\grid\ActionColumn {
      * @var string btn delete class
      */
     public $btnDeleteClass = 'action-delete';
+
+    public $btnRefreshClass = 'action-refresh';
 
     /**
      * @var mixed filter reset route
@@ -107,13 +108,24 @@ class ActionColumn extends \yii\grid\ActionColumn {
                         'class' => $this->btnDeleteClass,
                 ]);
             };
+            if (!isset($this->buttons['refresh'])) {
+                $this->buttons['refresh'] = function ($url, $model, $key) {
+                    return Html::a('<span class="' . $this->refreshButtonIcon . '"></span>', $url, [
+                        'title' => \Yii::t('yii', 'Refresh'),
+                        'data-confirm' => \Yii::t('yii', 'Are you sure you want to refresh this item?'),
+                        'data-method' => 'post',
+                        'data-pjax' => '0',
+                        'class' => $this->btnRefreshClass,
+                    ]);
+                };
+            }
         }
     }
 
     /**
      * @inheritdoc
      */
-    protected function renderHeaderCellContent()
+    /*protected function renderHeaderCellContent()
     {
         if (!$this->routeFilterReset)
         {
@@ -131,7 +143,7 @@ class ActionColumn extends \yii\grid\ActionColumn {
                 'title' => \Yii::t('yii', 'Reset filter'),
                 'data-pjax' => '0',
         ]);
-    }
+    }*/
 
     /**
      * Renders the filter cell content.
@@ -147,5 +159,32 @@ class ActionColumn extends \yii\grid\ActionColumn {
         }
 
         return Html::dropDownList($this->grid->dataProvider->pagination->pageSizeParam, $this->grid->dataProvider->pagination->pageSize, $this->pageSizeOptions);
+    }
+
+    /**
+     * 重写了标签渲染方法。
+     * @param mixed $model
+     * @param mixed $key
+     * @param int $index
+     * @return mixed
+     */
+    protected function renderDataCellContent($model, $key, $index)
+    {
+        return preg_replace_callback('/\\{([^}]+)\\}/', function ($matches) use ($model, $key, $index) {
+            list($name, $type) = explode(':', $matches[1].':'); // 得到按钮名和类型
+
+            if (!isset($this->buttons[$type])) { // 如果类型不存在 默认为view
+                $type = 'view';
+            }
+
+            if ('' == $name) { // 名称为空，就用类型为名称
+                $name = $type;
+            }
+
+            $url = $this->createUrl($name, $model, $key, $index);
+
+            return call_user_func($this->buttons[$type], $url, $model, $key);
+        }, $this->template);
+
     }
 }

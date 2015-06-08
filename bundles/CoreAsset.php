@@ -21,6 +21,7 @@ class CoreAsset extends AssetBundle {
      * @var array depended packages
      */
     public $depends = [
+        'yii\web\YiiAsset',
         'hustshenl\metronic\bundles\FontAsset',
         'yii\bootstrap\BootstrapPluginAsset',
     ];
