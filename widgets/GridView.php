@@ -6,6 +6,7 @@
 
 namespace hustshenl\metronic\widgets;
 
+use hustshenl\metronic\bundles\GridViewAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
@@ -17,7 +18,7 @@ class GridView extends \kartik\grid\GridView {
      * @var string grid view layout
      */
     //public $layout = "{items}\n{summary}\n{pager}";
-    public $layout = "{items}\n<div class=\"row\"><div class=\"col-md-5 col-sm-12\">{summary}</div>\n<div class=\"col-md-7 col-sm-12 text-right\">{pager}</div></div>";
+    public $layout = '<div class="row"><div class="col-xs-5">{summary}</div><div class="col-xs-7"><div class="dataTables_paginate paging_simple_numbers" id="sample_6_paginate">{pager}</div></div></div>{items}<div class="row"><div class="col-xs-5">{summary}</div><div class="col-xs-7"><div class="dataTables_paginate paging_simple_numbers" id="sample_6_paginate">{pager}</div></div></div>';
 
     /**
      * @var boolean indicates if grid is sortable
@@ -37,7 +38,7 @@ class GridView extends \kartik\grid\GridView {
 
         $this->initSortable();
 
-        //GridViewAsset::register($this->view);
+        GridViewAsset::register($this->view);
     }
 
     /**

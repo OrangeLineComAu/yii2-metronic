@@ -6,6 +6,7 @@
 
 namespace hustshenl\metronic\widgets;
 
+use hustshenl\metronic\bundles\ActionColumnAsset;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
@@ -73,6 +74,16 @@ class ActionColumn extends \yii\grid\ActionColumn {
     public $routeFilterReset = null;
 
     /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+        $view = $this->grid->getView();
+        ActionColumnAsset::register($view);
+    }
+
+    /**
      * Initializes the default button rendering callbacks.
      */
     protected function initDefaultButtons()
@@ -105,20 +116,22 @@ class ActionColumn extends \yii\grid\ActionColumn {
                         'data-confirm' => \Yii::t('yii', 'Are you sure you want to delete this item?'),
                         'data-method' => 'post',
                         'data-pjax' => '0',
+                        'data-action' => 'delete',
                         'class' => $this->btnDeleteClass,
                 ]);
             };
-            if (!isset($this->buttons['refresh'])) {
-                $this->buttons['refresh'] = function ($url, $model, $key) {
-                    return Html::a('<span class="' . $this->refreshButtonIcon . '"></span>', $url, [
-                        'title' => \Yii::t('yii', 'Refresh'),
-                        'data-confirm' => \Yii::t('yii', 'Are you sure you want to refresh this item?'),
-                        'data-method' => 'post',
-                        'data-pjax' => '0',
-                        'class' => $this->btnRefreshClass,
-                    ]);
-                };
-            }
+        }
+        if (!isset($this->buttons['refresh'])) {
+            $this->buttons['refresh'] = function ($url, $model, $key) {
+                return Html::a('<span class="' . $this->refreshButtonIcon . '"></span>', $url, [
+                    'title' => \Yii::t('yii', 'Refresh'),
+                    'data-confirm' => \Yii::t('yii', 'Are you sure you want to refresh this item?'),
+                    'data-method' => 'post',
+                    'data-pjax' => '0',
+                    'data-action' => 'refresh',
+                    'class' => $this->btnRefreshClass,
+                ]);
+            };
         }
     }
 
