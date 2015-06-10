@@ -47,7 +47,7 @@ yii.actionColumn = (function ($) {
                 url,
                 pub.params,
                 function(res){
-                    if(action == 'delete') $e.parents('tr').hide();
+                    if(action == 'delete'&&res.status == 1) $e.parents('tr').hide();
                     if(typeof (res.data) == 'string') {
                         pub.notify({type:res.status == 1?'success':'error',title:res.data});
                     } else {
