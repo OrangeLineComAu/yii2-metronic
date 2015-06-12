@@ -13,7 +13,7 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\ActiveFormAsset;
 
-class ActiveForm extends \yii\widgets\ActiveForm
+class ActiveForm extends \kartik\widgets\ActiveForm
 {
 
     // Buttons align

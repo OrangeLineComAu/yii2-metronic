@@ -10,7 +10,7 @@ namespace hustshenl\metronic\widgets;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
-class ActiveField extends \yii\widgets\ActiveField {
+class ActiveField extends \kartik\form\ActiveField {
 
     /**
      * @var ActiveForm the form that this field is associated with.
