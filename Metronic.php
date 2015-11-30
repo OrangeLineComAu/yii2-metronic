@@ -222,10 +222,10 @@ class Metronic extends \yii\base\Component {
     {
         $htmlClass = \yii\helpers\ArrayHelper::getValue(Yii::$classMap, 'yii\helpers\Html', null);
 
-        if ($htmlClass != self::CLASS_HTML)
+       /* if ($htmlClass != self::CLASS_HTML)
         {
             throw new InvalidConfigException('Default Yii2 Html helper class is not allowed. For using Metronic theme put Yii::$classMap[\'yii\\helpers\\Html\'] = \'' . self::CLASS_HTML . '\'; into your bootstrap.php');
-        }
+        }*/
 
         if (self::SIDEBAR_FIXED === $this->sidebarOption && self::SIDEBAR_MENU_HOVER === $this->sidebarMenu)
         {
