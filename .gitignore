@@ -2,4 +2,4 @@
 /nbproject/private/
 /nbproject/
 /vendor/
-/node_modules/
+**/node_modules/
