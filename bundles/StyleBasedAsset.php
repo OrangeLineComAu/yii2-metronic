@@ -12,6 +12,12 @@ use yii\web\AssetBundle;
 use yii\helpers\ArrayHelper;
 use hustshenl\metronic\Metronic;
 
+/**
+ * Theme global styles and scripts
+ *
+ * Class StyleBasedAsset
+ * @package hustshenl\metronic\bundles
+ */
 class StyleBasedAsset extends AssetBundle {
 
     /**
@@ -37,9 +43,11 @@ class StyleBasedAsset extends AssetBundle {
      * @var array js assets
      */
     public $js = [
-            //'scripts/layout.js',
-            //'scripts/app.js',
-            //'scripts/init.js',
+        'global/scripts/app.js',
+
+        # as-per the blank page reference for admin_4
+        'layouts/global/scripts/quick-sidebar.min.js',
+        'layouts/global/scripts/quick-nav.min.js'
     ];
 
     /**

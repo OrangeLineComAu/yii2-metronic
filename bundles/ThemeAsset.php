@@ -16,7 +16,7 @@ class ThemeAsset extends AssetBundle {
     /**
      * @var string source assets path
      */
-    public $sourcePath = '@hustshenl/metronic/assets/admin/{version}';
+    public $sourcePath = '@hustshenl/metronic/assets/layouts/{version}';
 
     /**
      * @var array depended bundles
@@ -41,7 +41,8 @@ class ThemeAsset extends AssetBundle {
     public $js = [
         'scripts/layout.js',
         'scripts/demo.js',
-        'scripts/quick-sidebar.js',
+
+
     ];
 
     /**
