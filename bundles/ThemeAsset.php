@@ -19,6 +19,11 @@ class ThemeAsset extends AssetBundle {
     public $sourcePath = '@hustshenl/metronic/assets/layouts/{version}';
 
     /**
+     * @var array make this dependent only on dev
+     */
+    public $publishOptions = ['forceCopy' => true];
+
+    /**
      * @var array depended bundles
      */
     public $depends = [
