@@ -13,7 +13,7 @@ class FontAsset extends AssetBundle
     public $sourcePath = '@hustshenl/metronic/assets';
 
     public $css = [
-        'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all',
+    	  'http://fonts.googleapis.com/css?family=Raleway:400,700',
         'global/plugins/font-awesome/css/font-awesome.min.css',
     ];
 }

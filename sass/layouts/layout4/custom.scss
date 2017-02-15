@@ -1,1 +1,71 @@
 /* here you can put your own css to customize and override the theme */
+
+@import 'themes/_custom-variables'; // industry monitor theme level variables
+
+/* =Layout
+---------------------------------------------------- */
+body { 
+color:$grey; 
+background-color:$lightbluegrey; 
+font-family:'Raleway', sans-serif; 
+font-feature-settings:'lnum';
+-moz-font-feature-settings:'lnum=1';
+-ms-font-feature-settings:'lnum';
+-webkit-font-feature-settings:'lnum';
+-o-font-feature-settings:'lnum'; 
+}
+.page-header.navbar .page-logo .logo-default { margin-top:10px; }
+
+/* Typography
+---------------------------------------------------- */
+h1 { font-size:40px; color:$navy; font-weight:normal; text-transform:uppercase; }
+h2 { font-size:35px; color:$navy; font-weight:normal; }
+h3 { font-size:30px; color:$blue; font-weight:bold; }
+h4 { font-size:25px; color:$blue; font-weight:normal; } 
+//small { font-size:85%; }
+
+.dashboard-stat2 {
+	.node-value { color:$bluedarkest; }
+	/* small, 
+	.icon > i, 
+	.status { color:darken($lightbluegrey, 15%); } */
+}
+
+.font-status-positive { color:$green !important; }
+.font-status-static { color:gold !important; }
+.font-status-negative { color:$red !important; }
+
+
+/* =Buttons
+---------------------------------------------------- */
+.btn { 
+	border-radius:1em; transition:all 0.25s ease-in-out;
+}
+.btn-default,
+.btn-info { 
+	color:$red; background-color:transparent; border:2px solid $red;
+	&:hover, &:focus, &:active { color:#fff; background-color:$red; border:2px solid $red; }
+}
+.btn-primary { 
+	color:#fff; background-color:$red; border:2px solid $red;
+	&:hover, &:focus, &:active { color:#fff; background-color:darken($red, 10%); border:2px solid darken($red, 10%); }
+}
+.btn.blue { color:#fff; background-color:$blue; }
+
+/* =Portlet
+---------------------------------------------------- */
+.portlet.light > .portlet-title > .caption { color:$grey !important; font-weight:normal; }
+
+/* =Table
+---------------------------------------------------- */
+table {}
+thead { color:$grey; }
+table thead tr th { color:$grey; }
+
+.table-striped {
+	> tbody > tr > td { border:none; }
+	> tbody > tr:nth-of-type(odd) {
+		background-color:lighten($lightbluegrey, 2%);
+	}
+}
+

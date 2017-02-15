@@ -121,7 +121,7 @@ Page Header
               .page-header .page-header-top .top-menu .navbar-nav > li.dropdown > .dropdown-toggle > i.glyphicon {
                 font-size: 18px; }
             .page-header .page-header-top .top-menu .navbar-nav > li.dropdown > .dropdown-toggle > .badge {
-              font-family: "Open Sans", sans-serif;
+              font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
               position: absolute;
               top: 9px;
               right: 24px;
@@ -133,7 +133,7 @@ Page Header
             z-index: 9996;
             margin-top: 5px;
             margin-right: 7px;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             -ms-border-radius: 4px;
@@ -256,7 +256,7 @@ Page Header
             -ms-border-radius: 50% !important;
             -o-border-radius: 50% !important;
             border-radius: 50% !important;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-weight: 300; }
           .page-header .page-header-top .top-menu .navbar-nav > li.dropdown-inbox > .dropdown-toggle > .corner {
             float: left;
@@ -416,7 +416,7 @@ Page Header
             left: auto;
             width: auto; }
             .page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content {
-              font-family: "Open Sans", sans-serif;
+              font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
               padding: 15px;
               margin: 0; }
               .page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content.mega-menu-responsive-content {
@@ -438,7 +438,7 @@ Page Header
                   .page-header .page-header-menu .hor-menu .navbar-nav > li.mega-menu-dropdown > .dropdown-menu .mega-menu-content .mega-menu-submenu li > a {
                     display: block;
                     white-space: normal;
-                    font-family: "Open Sans", sans-serif;
+                    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
                     padding: 7px;
                     margin: 0;
                     font-size: 14px;
@@ -484,7 +484,7 @@ Page Header
           margin-top: 0;
           border: none; }
           .page-header .page-header-menu .hor-menu .navbar-nav > li .dropdown-menu li > a {
-            font-family: "Open Sans", sans-serif;
+            font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 14px;
             font-weight: 300;
             padding: 10px 12px;
@@ -1005,7 +1005,7 @@ Theme Panel
   z-index: 1000;
   min-width: 675px;
   padding: 20px 10px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .theme-panel h3 {
     margin: 8px 0 8px 0;
     font-size: 15px;
