@@ -10,6 +10,7 @@ namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 use hustshenl\metronic\Metronic;
+use Yii;
 
 class ThemeAsset extends AssetBundle {
 
@@ -21,7 +22,7 @@ class ThemeAsset extends AssetBundle {
     /**
      * @var array make this dependent only on dev
      */
-    public $publishOptions = ['forceCopy' => true];
+//    public $publishOptions = ['forceCopy' => true];
 
     /**
      * @var array depended bundles
@@ -58,6 +59,11 @@ class ThemeAsset extends AssetBundle {
         $this->_handleSourcePath();
 
         $this->_handleDynamicCss();
+
+        if (YII_ENV_DEV) {
+            Yii::info("Setting force copy for Metronic theme assets");
+            $this->publishOptions = ['forceCopy' => true];
+        }
 
         return parent::init();
     }
