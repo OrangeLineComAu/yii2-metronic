@@ -28,21 +28,14 @@ h2 {
   font-weight: normal; }
 
 h3 {
-  font-size: 30px;
+  font-size: 25px;
   color: #1655d6;
   font-weight: bold; }
 
 h4 {
-  font-size: 25px;
+  font-size: 20px;
   color: #1655d6;
   font-weight: normal; }
-
-.dashboard-stat2 {
-  /* small, 
-	.icon > i, 
-	.status { color:darken($lightbluegrey, 15%); } */ }
-  .dashboard-stat2 .node-value {
-    color: #092c7b; }
 
 .font-status-positive {
   color: #01bc7d !important; }
@@ -56,8 +49,14 @@ h4 {
 /* =Buttons
 ---------------------------------------------------- */
 .btn {
-  border-radius: 1em;
+  display: inline-block !important;
+  border-radius: 5px;
   transition: all 0.25s ease-in-out; }
+
+.btn-rounded {
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 1em; }
 
 .btn-default,
 .btn-info {
@@ -83,7 +82,16 @@ h4 {
 
 .btn.blue {
   color: #fff;
-  background-color: #1655d6; }
+  background-color: #1655d6 !important;
+  border: none; }
+
+.btn.blue:hover {
+  background-color: #0f3991 !important; }
+
+/* Molecules
+---------------------------------------------------- */
+.module {
+  border-radius: 5px; }
 
 /* =Portlet
 ---------------------------------------------------- */
@@ -97,10 +105,40 @@ thead {
   color: #333333; }
 
 table thead tr th {
-  color: #333333; }
+  color: #333333;
+  border: none !important; }
 
 .table-striped > tbody > tr > td {
   border: none; }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f0f2f7; }
+
+/* =Dashboard
+---------------------------------------------------- */
+.dashboard-hero {
+  padding: 20px;
+  background: #fff url(/images/bg-hills.jpg) center no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom;
+  margin-bottom: 20px; }
+  .dashboard-hero h2 {
+    font-weight: bold;
+    margin-top: 0; }
+  .dashboard-hero h3 {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .dashboard-hero p, .dashboard-hero .btn {
+    font-size: 100%; }
+
+.dashboard-hero-logo {
+  display: block;
+  float: right;
+  max-height: 80px; }
+
+.dashboard-stat2 {
+  /* small, 
+	.icon > i, 
+	.status { color:darken($lightbluegrey, 15%); } */ }
+  .dashboard-stat2 .node-value {
+    color: #092c7b; }

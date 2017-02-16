@@ -10,12 +10,12 @@
 
 // Main settings   
 $theme-name:																			"default";  
-$brand-main-color:																	$navy; //#5b9bd1 !default;
+$brand-main-color:																	$navy !default;
 $brand-main-font-color:																#ffffff !default;   
 
 // Body and header    
-$bg-color:																				$lightbluegrey !default; //darken(#F0F2F7, 2%) !default;          
-$header-bg-color:																		$navy !default; //#3B3F51 !default;
+$bg-color:																				$lightbluegrey !default;
+$header-bg-color:																		$navy !default;
 $header-top-shadow:																	0px 1px 10px 0px rgba(50, 50, 50, 0.2);
 $header-mobile-menu-border:														lighten($header-bg-color, 3%);  
 
@@ -75,20 +75,20 @@ $header-top-menu-dropdown-head-font-color:									lighten(#3D4A53, 95%);
 $header-top-menu-dropdown-border-color:										lighten(#3D4A53, 60%);
 
 // Sidebar menu
-$sidebar-bg-color:																	$blue; //!default;
+$sidebar-bg-color:																	$blue !default;
 
-$sidebar-menu-heading-font-color:												#fff; //!default;
+$sidebar-menu-heading-font-color:												#fff !default;
 
-$sidebar-menu-link-font-color:													#fff; //darken($blue, 5%) !default;
-$sidebar-menu-link-font-color-on-hover:										#fff; //$brand-main-color !default;
-$sidebar-menu-link-font-color-on-active:										#fff; //$brand-main-color !default;
+$sidebar-menu-link-font-color:													#fff !default;
+$sidebar-menu-link-font-color-on-hover:										#fff !default;
+$sidebar-menu-link-font-color-on-active:										#fff !default;
 
-$sidebar-menu-link-icon-font-color:												$bluedarkest; //darken(#b7c9d6, 5%) !default;
-$sidebar-menu-link-icon-font-color-on-active:								$bluedarkest; //$brand-main-color !default;
-$sidebar-menu-link-icon-font-color-on-hover:									$bluedarkest; //$brand-main-color !default;
+$sidebar-menu-link-icon-font-color:												$bluedarkest !default;
+$sidebar-menu-link-icon-font-color-on-active:								$bluedarkest !default;
+$sidebar-menu-link-icon-font-color-on-hover:									$bluedarkest !default;
 
-$sidebar-menu-link-bg-color-on-hover:											darken($blue, 10%); //darken(#f9fbfc, 2%) !default;
-$sidebar-menu-link-bg-color-on-active:											darken($blue, 10%); //darken(#f9fbfc, 2%) !default;
+$sidebar-menu-link-bg-color-on-hover:											darken($blue, 10%) !default;
+$sidebar-menu-link-bg-color-on-active:											darken($blue, 10%) !default;
 
 $sidebar-menu-arrow-color:															lighten($sidebar-menu-link-icon-font-color, 3%) !default;
 $sidebar-menu-arrow-color-on-active:											lighten($sidebar-menu-link-icon-font-color-on-active, 3%) !default;
