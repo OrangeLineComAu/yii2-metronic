@@ -14,6 +14,6 @@ class FontAsset extends AssetBundle
 
     public $css = [
     	  'http://fonts.googleapis.com/css?family=Raleway:400,700',
-        'global/plugins/font-awesome/css/font-awesome.min.css',
+          'global/plugins/font-awesome/css/font-awesome.min.css',
     ];
 }
