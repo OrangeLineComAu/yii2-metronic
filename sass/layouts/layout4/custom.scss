@@ -4,6 +4,11 @@
 
 /* =Layout
 ---------------------------------------------------- */
+//.page-footer { background-color:$navy; }
+.footer-copyright { color:$grey; margin-right:1em; }
+
+/* Typography
+---------------------------------------------------- */
 body { 
 	color:$grey; 
 	background-color:$lightbluegrey; 
@@ -15,8 +20,6 @@ body {
 	-o-font-feature-settings:'lnum'; 
 }
 
-/* Typography
----------------------------------------------------- */
 h1 { font-size:40px; color:$navy; font-weight:normal; text-transform:uppercase; }
 h2 { font-size:35px; color:$navy; font-weight:normal; }
 h3 { font-size:25px; color:$blue; font-weight:bold; }
@@ -35,11 +38,16 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 	border-radius:$br-sml; 
 	transition:all 0.25s ease-in-out; 
 }
-.btn-rounded { padding-left:2em; 
-	padding-right:2em; 
-	border-radius:$br-lg; 
+.btn-default { 
+	color:$blue; 
+	background-color:transparent; 
+	border:2px solid $blue;
+	&:hover, &:focus, &:active { 
+		color:#fff; 
+		background-color:$blue; 
+		border:2px solid $blue; 
+	}
 }
-.btn-default,
 .btn-info { 
 	color:$red; 
 	background-color:transparent; 
@@ -52,15 +60,16 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 }
 .btn-primary { 
 	color:#fff; 
-	background-color:$red; 
-	border:2px solid $red;
+	background-color:$blue; 
+	border:2px solid $blue;
 	&:hover, &:focus, &:active { 
 		color:#fff; 
-		background-color:darken($red, 10%); 
-		border:2px solid darken($red, 10%); 
+		background-color:darken($blue, 10%); 
+		border:2px solid darken($blue, 10%); 
 	}
 }
-.btn.blue { color:#fff; 
+.btn.blue { 
+	color:#fff; 
 	background-color:$blue !important; 
 	border:none; 
 }
@@ -70,6 +79,11 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 .navbar .btn-logout {
 	color:$lightbluegrey;
 	margin-top:20px;
+}
+
+.btn-rounded { padding-left:2em; 
+	padding-right:2em; 
+	border-radius:$br-lg; 
 }
 
 //.dropdown-menu-offset { left:; }
@@ -103,7 +117,7 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 
 	h2 { font-weight:bold; margin-top:0; }	
 	h3 { text-transform:uppercase; margin-top:0; }
-	//p, .btn { font-size:100%; }	
+	p { font-size:120%; }
 }
 .dashboard-hero-logo { display:block; float:right; max-height:80px; }
 

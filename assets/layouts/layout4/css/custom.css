@@ -1,6 +1,12 @@
 /* here you can put your own css to customize and override the theme */
 /* =Layout
 ---------------------------------------------------- */
+.footer-copyright {
+  color: #333333;
+  margin-right: 1em; }
+
+/* Typography
+---------------------------------------------------- */
 body {
   color: #333333;
   background-color: #e9ecf3;
@@ -11,8 +17,6 @@ body {
   -webkit-font-feature-settings: 'lnum';
   -o-font-feature-settings: 'lnum'; }
 
-/* Typography
----------------------------------------------------- */
 h1 {
   font-size: 40px;
   color: #00103e;
@@ -50,32 +54,32 @@ h4 {
   border-radius: 5px;
   transition: all 0.25s ease-in-out; }
 
-.btn-rounded {
-  padding-left: 2em;
-  padding-right: 2em;
-  border-radius: 1em; }
+.btn-default {
+  color: #1655d6;
+  background-color: transparent;
+  border: 2px solid #1655d6; }
+  .btn-default:hover, .btn-default:focus, .btn-default:active {
+    color: #fff;
+    background-color: #1655d6;
+    border: 2px solid #1655d6; }
 
-.btn-default,
 .btn-info {
   color: #e03412;
   background-color: transparent;
   border: 2px solid #e03412; }
-  .btn-default:hover, .btn-default:focus, .btn-default:active,
-  .btn-info:hover,
-  .btn-info:focus,
-  .btn-info:active {
+  .btn-info:hover, .btn-info:focus, .btn-info:active {
     color: #fff;
     background-color: #e03412;
     border: 2px solid #e03412; }
 
 .btn-primary {
   color: #fff;
-  background-color: #e03412;
-  border: 2px solid #e03412; }
+  background-color: #1655d6;
+  border: 2px solid #1655d6; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #fff;
-    background-color: #b1290e;
-    border: 2px solid #b1290e; }
+    background-color: #1143a8;
+    border: 2px solid #1143a8; }
 
 .btn.blue {
   color: #fff;
@@ -88,6 +92,11 @@ h4 {
 .navbar .btn-logout {
   color: #e9ecf3;
   margin-top: 20px; }
+
+.btn-rounded {
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 1em; }
 
 /* Molecules
 ---------------------------------------------------- */
@@ -126,6 +135,8 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
   .dashboard-hero h3 {
     text-transform: uppercase;
     margin-top: 0; }
+  .dashboard-hero p {
+    font-size: 120%; }
 
 .dashboard-hero-logo {
   display: block;
