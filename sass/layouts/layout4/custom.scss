@@ -14,7 +14,6 @@ body {
 	-webkit-font-feature-settings:'lnum';
 	-o-font-feature-settings:'lnum'; 
 }
-.page-header.navbar .page-logo .logo-default { margin-top:10px; }
 
 /* Typography
 ---------------------------------------------------- */
@@ -40,7 +39,6 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 	padding-right:2em; 
 	border-radius:$br-lg; 
 }
-
 .btn-default,
 .btn-info { 
 	color:$red; 
@@ -56,16 +54,22 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 	color:#fff; 
 	background-color:$red; 
 	border:2px solid $red;
-	&:hover, &:focus, &:active { color:#fff; 
+	&:hover, &:focus, &:active { 
+		color:#fff; 
 		background-color:darken($red, 10%); 
-	border:2px solid darken($red, 10%); 
-}
+		border:2px solid darken($red, 10%); 
+	}
 }
 .btn.blue { color:#fff; 
 	background-color:$blue !important; 
-border:none; 
+	border:none; 
 }
-.btn.blue:hover { background-color:darken($blue, 15%) !important; 
+.btn.blue:hover { 
+	background-color:darken($blue, 15%) !important; 
+}
+.navbar .btn-logout {
+	color:$lightbluegrey;
+	margin-top:20px;
 }
 
 //.dropdown-menu-offset { left:; }
@@ -81,15 +85,11 @@ border:none;
 
 /* =Table
 ---------------------------------------------------- */
-table {}
-thead { color:$grey; }
+table thead { color:$grey; }
 table thead tr th { color:$grey; border:none !important; }
 
-.table-striped {
-	> tbody > tr > td { border:none; }
-	> tbody > tr:nth-of-type(odd) {
-		background-color:lighten($lightbluegrey, 2%);
-	}
+table.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color:lighten($lightbluegrey, 2%);
 }
 
 /* =Dashboard
@@ -103,14 +103,11 @@ table thead tr th { color:$grey; border:none !important; }
 
 	h2 { font-weight:bold; margin-top:0; }	
 	h3 { text-transform:uppercase; margin-top:0; }
-	p, .btn { font-size:100%; }	
+	//p, .btn { font-size:100%; }	
 }
 .dashboard-hero-logo { display:block; float:right; max-height:80px; }
 
 .dashboard-stat2 {
 	.node-value { color:$bluedarkest; }
-	/* small, 
-	.icon > i, 
-	.status { color:darken($lightbluegrey, 15%); } */
 }
 

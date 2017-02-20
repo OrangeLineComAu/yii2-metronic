@@ -64,9 +64,10 @@ Page Header
     .page-header.navbar .page-logo > .logo-image,
     .page-header.navbar .page-logo > a {
       display: block;
-      float: left; }
+      float: right; }
     .page-header.navbar .page-logo .logo-default {
-      margin: 29px 10px 0 10px; }
+      margin: 10px 0;
+      max-width: 170px; }
     .page-header.navbar .page-logo .logo-mini {
       display: none;
       margin-left: 5px; }
@@ -121,8 +122,8 @@ Page Header
       filter: alpha(opacity=100);
       opacity: 1; }
     .page-header.navbar .menu-toggler.sidebar-toggler {
-      float: right;
-      margin: 30px 0 0 0; }
+      float: left;
+      margin: 30px 0 0 5px; }
       .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .menu-toggler.sidebar-toggler {
         margin-right: 17px; }
     .page-header.navbar .menu-toggler.responsive-toggler {

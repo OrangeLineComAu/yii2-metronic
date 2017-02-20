@@ -11,9 +11,6 @@ body {
   -webkit-font-feature-settings: 'lnum';
   -o-font-feature-settings: 'lnum'; }
 
-.page-header.navbar .page-logo .logo-default {
-  margin-top: 10px; }
-
 /* Typography
 ---------------------------------------------------- */
 h1 {
@@ -88,6 +85,10 @@ h4 {
 .btn.blue:hover {
   background-color: #0f3991 !important; }
 
+.navbar .btn-logout {
+  color: #e9ecf3;
+  margin-top: 20px; }
+
 /* Molecules
 ---------------------------------------------------- */
 .module {
@@ -101,17 +102,14 @@ h4 {
 
 /* =Table
 ---------------------------------------------------- */
-thead {
+table thead {
   color: #333333; }
 
 table thead tr th {
   color: #333333;
   border: none !important; }
 
-.table-striped > tbody > tr > td {
-  border: none; }
-
-.table-striped > tbody > tr:nth-of-type(odd) {
+table.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f0f2f7; }
 
 /* =Dashboard
@@ -128,17 +126,11 @@ table thead tr th {
   .dashboard-hero h3 {
     text-transform: uppercase;
     margin-top: 0; }
-  .dashboard-hero p, .dashboard-hero .btn {
-    font-size: 100%; }
 
 .dashboard-hero-logo {
   display: block;
   float: right;
   max-height: 80px; }
 
-.dashboard-stat2 {
-  /* small, 
-	.icon > i, 
-	.status { color:darken($lightbluegrey, 15%); } */ }
-  .dashboard-stat2 .node-value {
-    color: #092c7b; }
+.dashboard-stat2 .node-value {
+  color: #092c7b; }

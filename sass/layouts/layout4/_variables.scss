@@ -7,12 +7,13 @@ $header-height:															75px !default; // header height on table and deskt
 $header-height-xs:														($header-height * 2) !default; // header height on mobile view
 $header-height-mobile:													46px !default; 
 
-$header-logo-height:														17px;
+$header-logo-height:														48px;
 $header-menu-toggler-width:											20px; 
 $header-menu-toggler-height:											14px;  
-$header-sidebar-toggler-margin:										($header-height - $header-menu-toggler-height - 1px) / 2 0 0 0 !default;
+$header-sidebar-toggler-margin:										($header-height - $header-menu-toggler-height - 1px) / 2 0 0 5px !default;
 $header-responsive-toggler-margin:									($header-height - $header-menu-toggler-height) / 2 14px 0 6px !default; 
-$header-logo-margin:														($header-height - $header-logo-height) / 2 10px 0 10px !default;  // adjsut logo's margin top. default: -1px
+//$header-logo-margin:													($header-height - $header-logo-height) / 3 10px 0 10px !default;  // adjsut logo's margin top. default: -1px
+$header-logo-margin:														10px 0 !default;
 
 $header-page-actions-margin:											17px 0 15px 10px;
 

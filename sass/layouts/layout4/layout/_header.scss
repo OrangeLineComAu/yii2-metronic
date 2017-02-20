@@ -35,11 +35,12 @@ Page Header
 		> .logo-image,
 		> a {
 			display: block;
-			float: left;
+			float: right;
 		}
 
 		.logo-default {
 			margin: $header-logo-margin;
+			max-width: 170px;
 		}
 
 		.logo-mini {
@@ -132,7 +133,7 @@ Page Header
 		}
 
 		&.sidebar-toggler {
-			float: right;
+			float: left;
 			margin: $header-sidebar-toggler-margin;
 
 			.page-sidebar-closed.page-sidebar-closed-hide-logo & {
