@@ -9,6 +9,7 @@ namespace hustshenl\metronic\widgets;
 
 use hustshenl\metronic\Metronic;
 use yii\helpers\Html;
+use hustshenl\metronic\helpers\Layout;
 use Yii;
 
 /**
@@ -60,7 +61,7 @@ class NavBar extends \yii\bootstrap\NavBar {
         }
 
         echo Html::beginTag('div', $this->options);
-        echo Html::beginTag('div', ['class' => 'page-header-inner']);
+        echo Html::beginTag('div', Layout::getHtmlOptions('inner_header', [], false));
 
         Html::addCssClass($this->brandWrapperOptions, 'page-logo');
         echo Html::beginTag('div', $this->brandWrapperOptions);

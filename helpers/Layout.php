@@ -87,6 +87,22 @@ class Layout {
     }
 
     /**
+     * Adds inner header options
+     * @param $options array options given options
+     */
+    private static function _inner_headerOptions($options) {
+
+        Html::addCssClass($options, 'page-header-inner');
+
+        if (Metronic::LAYOUT_BOXED === Metronic::getComponent()->layoutOption)
+        {
+            Html::addCssClass($options, 'container');
+        }
+
+        return $options;
+    }
+
+    /**
      * Adds actions tag options
      * @param array $options given options
      */
