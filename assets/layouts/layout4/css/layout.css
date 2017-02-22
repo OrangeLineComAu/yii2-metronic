@@ -114,8 +114,8 @@ Page Header
     cursor: pointer;
     opacity: 0.6;
     filter: alpha(opacity=60);
-    width: 20px;
-    height: 14px;
+    width: 30px;
+    height: 30px;
     background-repeat: no-repeat;
     background-position: center center; }
     .page-header.navbar .menu-toggler:hover {
@@ -123,13 +123,13 @@ Page Header
       opacity: 1; }
     .page-header.navbar .menu-toggler.sidebar-toggler {
       float: left;
-      margin: 30px 0 0 5px; }
+      margin: 22px 0 0 5px; }
       .page-sidebar-closed.page-sidebar-closed-hide-logo .page-header.navbar .menu-toggler.sidebar-toggler {
-        margin-right: 17px; }
+        margin-right: 12px; }
     .page-header.navbar .menu-toggler.responsive-toggler {
       display: none;
       float: right;
-      margin: 30.5px 14px 0 6px; }
+      margin: 20px 14px 0 6px; }
   .page-header.navbar .page-actions {
     margin: 17px 0 15px 10px;
     padding: 0;
@@ -337,7 +337,7 @@ Page Header
           .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > .username {
             display: inline-block;
             font-size: 14px;
-            font-weight: 600; }
+            font-weight: normal; }
           .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle > img {
             margin-top: 4px;
             margin-left: 5px;
@@ -349,7 +349,7 @@ Page Header
             margin-top: 5px;
             margin: 0;
             font-size: 14px;
-            font-weight: 600; }
+            font-weight: normal; }
         .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-menu {
           width: 175px; }
           .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-menu > li > a {
@@ -534,9 +534,7 @@ Page Header
         margin: -52px 0 0 0; }
     .page-header.navbar .page-top {
       padding: 0;
-      display: block;
-      clear: both;
-      width: 100%; }
+      display: block; }
     .page-header.navbar .top-menu {
       margin: 1px 0 0 0;
       padding: 0;
@@ -729,7 +727,7 @@ Page sidebar
         .page-sidebar .page-sidebar-menu > li > a > .title,
         .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li > a > .title {
           font-size: 14px;
-          font-weight: 400; }
+          font-weight: normal; }
         .page-sidebar .page-sidebar-menu > li > a > i,
         .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li > a > i {
           font-size: 18px;
@@ -801,7 +799,7 @@ Page sidebar
           padding: 9px 14px 9px 30px;
           text-decoration: none;
           font-size: 14px;
-          font-weight: 400;
+          font-weight: normal;
           background: none; }
           .page-sidebar .page-sidebar-menu .sub-menu li > a > i,
           .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu .sub-menu li > a > i {
@@ -1036,7 +1034,7 @@ Page sidebar
   /* 991px */
   .page-sidebar {
     border-top: 0 !important;
-    margin: 20px; }
+    margin: 10px; }
     .page-sidebar .selected {
       display: none !important; }
     .page-sidebar.navbar-collapse {
@@ -1046,7 +1044,7 @@ Page sidebar
         display: none !important; }
       .page-sidebar.navbar-collapse.in {
         border-top: 0 !important;
-        margin: 20px;
+        margin: 10px;
         position: relative;
         overflow: hidden !important;
         overflow-y: auto !important;
@@ -1075,6 +1073,9 @@ Page sidebar
 @media (max-width: 767px) {
   /* 767px */
   /* Page sidebar */
+  /* =HACK: Make sidebar show on 768px and smaller with an invisible border */
+  .page-sidebar {
+    border: 1px solid rgba(255, 255, 255, 0); }
   .page-sidebar,
   .page-sidebar.in {
     margin: 10px 10px 10px 10px !important; }

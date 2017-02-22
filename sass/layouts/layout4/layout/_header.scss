@@ -456,7 +456,7 @@ Page Header
 						> .username {
 							display: inline-block;
 							font-size: $header-top-menu-user-font-size;
-	                        font-weight: $header-top-menu-user-font-weight;
+	                  font-weight: $header-top-menu-user-font-weight;
 						}
 
 						> img {
@@ -822,8 +822,8 @@ Page Header
 		.page-top {
 			padding: 0;
 			display: block;		
-			clear: both;
-			width: 100%;
+			//clear: both;
+			//width: 100%;
 		}	
 
 		/* Top navigation menu*/

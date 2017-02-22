@@ -1,11 +1,12 @@
 /* here you can put your own css to customize and override the theme */
 
+@import '../../bootstrap/_variables'; // import variables for media queries
 @import 'themes/_custom-variables'; // industry monitor theme level variables
 
 /* =Layout
 ---------------------------------------------------- */
 //.page-footer { background-color:$navy; }
-.footer-copyright { color:$grey; margin-right:1em; }
+.footer-copyright { margin-right:0.75em; }
 
 /* Typography
 ---------------------------------------------------- */
@@ -20,16 +21,30 @@ body {
 	-o-font-feature-settings:'lnum'; 
 }
 
-h1 { font-size:40px; color:$navy; font-weight:normal; text-transform:uppercase; }
-h2 { font-size:35px; color:$navy; font-weight:normal; }
-h3 { font-size:25px; color:$blue; font-weight:bold; }
-h4 { font-size:20px; color:$blue; font-weight:normal; } 
-//small { font-size:85%; }
-//.font-lg p { font-size:110%; }
+h1 { font-size:24px; color:$navy; font-weight:normal; text-transform:uppercase; }
+h2 { font-size:20px; color:$navy; font-weight:normal; }
+h3 { font-size:18px; color:$blue; font-weight:bold; }
+h4 { font-size:16px; color:$blue; font-weight:normal; } 
 
+@media (min-width:$screen-lg-min) {
+	h1 { font-size:40px; }
+	h2 { font-size:35px; }
+	h3 { font-size:25px; }
+	h4 { font-size:20px; } 
+}
+
+@media (max-width:$screen-md-max) {
+	ul,ol,p,
+	table th,
+	table td,
+	.btn { font-size:100% !important; }
+}
+
+/* 
 .font-status-positive { color:$green !important; }
 .font-status-static { color:gold !important; }
-.font-status-negative { color:$red !important; }
+.font-status-negative { color:$red !important; } 
+*/
 
 /* =Buttons
 ---------------------------------------------------- */
@@ -37,6 +52,15 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 	display:inline-block !important; 
 	border-radius:$br-sml; 
 	transition:all 0.25s ease-in-out; 
+	color:$grey;
+	background-color:#fff;
+	border:1px solid $grey;
+	border-radius:$br-lg; 
+}
+.btn-rounded { 
+	padding-left:2em; 
+	padding-right:2em; 
+	border-radius:$br-lg; 
 }
 .btn-default { 
 	color:$blue; 
@@ -60,50 +84,98 @@ h4 { font-size:20px; color:$blue; font-weight:normal; }
 }
 .btn-primary { 
 	color:#fff; 
-	background-color:$blue; 
-	border:2px solid $blue;
+	background-color:$red; 
+	border:2px solid $red;
 	&:hover, &:focus, &:active { 
 		color:#fff; 
-		background-color:darken($blue, 10%); 
-		border:2px solid darken($blue, 10%); 
+		background-color:darken($red, 10%); 
+		border:2px solid darken($red, 10%); 
 	}
 }
 .btn.blue { 
 	color:#fff; 
 	background-color:$blue !important; 
 	border:none; 
-}
-.btn.blue:hover { 
-	background-color:darken($blue, 15%) !important; 
-}
-.navbar .btn-logout {
-	color:$lightbluegrey;
-	margin-top:20px;
-}
-
-.btn-rounded { padding-left:2em; 
-	padding-right:2em; 
+	&:hover, &:focus, &:active { 
+		background-color:darken($blue, 15%) !important; 
+	}
+} 
+.btn.tool {
+	padding-left:1em;
+	padding-right:1em;
 	border-radius:$br-lg; 
 }
+.btn-group .btn.tool {
+	padding-left:0 !important;
+	padding-right:0 !important;
+}
 
-//.dropdown-menu-offset { left:; }
-//.open .dropdown-menu { left:0; }
+@media (max-width:$screen-xs-max) {
+	.actions.pull-left,
+	.actions.pull-right { 
+		float:left !important; 
+		clear:left; 
+	}
+	.actions.pull-left { 
+		margin-bottom:10px; 
+	}
+}
+
+.navbar-nav .btn-nav .username {
+	color:$lightbluegrey !important;
+	opacity:0.6;
+	margin-top:20px;
+	&:hover, &:focus, &:active { 
+		background:transparent; 
+		opacity:1; 
+	}
+
+	i { 
+		margin-left:1em; 
+	}
+}
+
+.nav > li > a {
+	color:$lightbluegrey !important;
+	opacity:0.6;
+	&:hover, &:focus, &:active { 
+		background:transparent; opacity:1; 
+	}
+}	
 
 /* Molecules
 ---------------------------------------------------- */
-.module { border-radius:$br-sml; }
+.module { 
+	border-radius:$br-sml; 
+}
 
 /* =Portlet
 ---------------------------------------------------- */
-.portlet.light > .portlet-title > .caption { color:$grey !important; font-weight:normal; }
+.portlet.light > .portlet-title > .caption { 
+	color:$grey !important; 
+	font-weight:normal; 
+}
 
-/* =Table
+/* =Table Overrides
 ---------------------------------------------------- */
-table thead { color:$grey; }
-table thead tr th { color:$grey; border:none !important; }
+table thead { 
+	color:$grey; 
+}
+table thead tr th { 
+	color:$grey; 
+	border:none !important; 
+}
 
 table.table-striped > tbody > tr:nth-of-type(odd) {
 	background-color:lighten($lightbluegrey, 2%);
+}
+
+.table-responsive { 
+	border:none; 
+}
+.kv-table-wrap th, 
+.kv-table-wrap td { 
+	text-align:left; 
 }
 
 /* =Dashboard
@@ -119,9 +191,15 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 	h3 { text-transform:uppercase; margin-top:0; }
 	p { font-size:120%; }
 }
-.dashboard-hero-logo { display:block; float:right; max-height:80px; }
+.dashboard-hero-logo { 
+	display:block; 
+	float:right; 
+	max-height:80px; 
+}
 
 .dashboard-stat2 {
-	.node-value { color:$bluedarkest; }
+	.node-value { 
+		color:$bluedarkest; 
+	}
 }
 

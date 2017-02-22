@@ -886,9 +886,9 @@ h6.block {
 /* Links */
 a {
   text-shadow: none;
-  color: #337ab7; }
+  color: #1655d6; }
   a:hover {
-    color: #23527c; }
+    color: #0f3991; }
   a:focus, a:hover, a:active {
     outline: 0; }
 
@@ -13705,11 +13705,11 @@ Custimized Bootstrap Wells
     color: #fff;
     border: 1px solid #ebf0f6;
     padding: 3px 10px;
-    background: #337ab7; }
+    background: #1655d6; }
     .widget-media .widget-btn-blue .widget-btn-icon {
       line-height: 1.5; }
     .widget-media .widget-btn-blue:hover {
-      color: #337ab7;
+      color: #1655d6;
       background: #fff;
       text-decoration: none; }
   .widget-media .widget-media-body {

@@ -8,10 +8,10 @@ $header-height-xs:														($header-height * 2) !default; // header height 
 $header-height-mobile:													46px !default; 
 
 $header-logo-height:														48px;
-$header-menu-toggler-width:											20px; 
-$header-menu-toggler-height:											14px;  
+$header-menu-toggler-width:											30px; 
+$header-menu-toggler-height:											30px;  
 $header-sidebar-toggler-margin:										($header-height - $header-menu-toggler-height - 1px) / 2 0 0 5px !default;
-$header-responsive-toggler-margin:									($header-height - $header-menu-toggler-height) / 2 14px 0 6px !default; 
+$header-responsive-toggler-margin:									($header-height - $header-menu-toggler-height) / 2.25 14px 0 6px !default; 
 //$header-logo-margin:													($header-height - $header-logo-height) / 3 10px 0 10px !default;  // adjsut logo's margin top. default: -1px
 $header-logo-margin:														10px 0 !default;
 
@@ -28,7 +28,7 @@ $header-top-menu-general-item-badge-top:							24px !default;  // adjust top men
 $header-top-menu-icon-font-size:										16px !default;   
 
 $header-top-menu-user-font-size:										14px !default; 
-$header-top-menu-user-font-weight:									600 !default; 
+$header-top-menu-user-font-weight:									normal; //600 !default; 
 $header-top-menu-user-dropdown-link-font-size:					14px !default;    
 $header-top-menu-user-dropdown-link-font-weight:				300 !default; 
 
@@ -56,7 +56,7 @@ $sidebar-logo-container-width-xs:									110px !default; // logo container widt
 $sidebar-logo-container-width-xxs:									100px !default; // logo container width in mobile landspace view. default:100px.
 
 $sidebar-menu-link-font-size:											14px !default;
-$sidebar-menu-link-font-weight:										400 !default;        
+$sidebar-menu-link-font-weight:										normal !default;        
 $sidebar-menu-link-icon-font-size:									18px !default;
 $sidebar-menu-link-arrow-font-size:									13px !default;
 $sidebar-menu-sub-menu-link-icon-font-size:						16px !default;
