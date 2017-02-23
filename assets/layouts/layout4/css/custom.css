@@ -1,14 +1,13 @@
 /* here you can put your own css to customize and override the theme */
-/* =Layout
----------------------------------------------------- */
-.footer-copyright {
-  margin-right: 0.75em; }
-
 /* Typography
 ---------------------------------------------------- */
+html, body {
+  min-height: 100%; }
+
 body {
   color: #333333;
   background-color: #e9ecf3;
+  background-size: 100% auto;
   font-family: 'Raleway', sans-serif;
   font-feature-settings: 'lnum';
   -moz-font-feature-settings: 'lnum=1';
@@ -54,11 +53,58 @@ h4 {
   .btn {
     font-size: 100% !important; } }
 
+a {
+  color: #1655d6; }
+  a:hover, a:focus {
+    color: #1143a8;
+    text-decoration: underline; }
+
 /* 
 .font-status-positive { color:$green !important; }
 .font-status-static { color:gold !important; }
 .font-status-negative { color:$red !important; } 
 */
+/* =Add-on design
+---------------------------------------------------- */
+.page-boxed .page-wrapper {
+  background: transparent url(/images/footer-bg-mobile.png) center bottom no-repeat; }
+  @media (min-width: 480px) {
+    .page-boxed .page-wrapper {
+      background: transparent url(/images/footer-bg.png) center bottom no-repeat; } }
+
+.page-boxed .page-container {
+  background-color: transparent; }
+
+.page-boxed .page-footer {
+  text-align: center;
+  color: #7c8eb8;
+  height: auto;
+  padding-top: 200px;
+  padding-bottom: 20px; }
+
+.page-boxed .footer-nav {
+  list-style: none;
+  margin: 0 0 1em 0;
+  padding: 0; }
+
+.page-boxed .footer-nav li {
+  display: inline-block; }
+
+.page-boxed .footer-nav li a {
+  display: block;
+  color: #7c8eb8;
+  text-decoration: none;
+  padding: 0.5em; }
+  .page-boxed .footer-nav li a:hover, .page-boxed .footer-nav li a:focus {
+    color: #e9ecf3; }
+
+.page-boxed .go-top {
+  margin-left: 0.5em; }
+  .page-boxed .go-top a {
+    color: #7c8eb8; }
+    .page-boxed .go-top a:hover, .page-boxed .go-top a:focus {
+      color: #fff; }
+
 /* =Buttons
 ---------------------------------------------------- */
 .btn {
@@ -70,16 +116,11 @@ h4 {
   border: 1px solid #333333;
   border-radius: 3em; }
 
-.btn-rounded {
-  padding-left: 2em;
-  padding-right: 2em;
-  border-radius: 3em; }
-
 .btn-default {
   color: #1655d6;
   background-color: transparent;
   border: 2px solid #1655d6; }
-  .btn-default:hover, .btn-default:focus, .btn-default:active {
+  .btn-default:hover, .btn-default:focus {
     color: #fff;
     background-color: #1655d6;
     border: 2px solid #1655d6; }
@@ -88,7 +129,7 @@ h4 {
   color: #e03412;
   background-color: transparent;
   border: 2px solid #e03412; }
-  .btn-info:hover, .btn-info:focus, .btn-info:active {
+  .btn-info:hover, .btn-info:focus {
     color: #fff;
     background-color: #e03412;
     border: 2px solid #e03412; }
@@ -97,7 +138,7 @@ h4 {
   color: #fff;
   background-color: #e03412;
   border: 2px solid #e03412; }
-  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  .btn-primary:hover, .btn-primary:focus {
     color: #fff;
     background-color: #b1290e;
     border: 2px solid #b1290e; }
@@ -106,17 +147,22 @@ h4 {
   color: #fff;
   background-color: #1655d6 !important;
   border: none; }
-  .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
+  .btn.blue:hover, .btn.blue:focus {
     background-color: #0f3991 !important; }
 
-.btn.tool {
+.btn-rounded {
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 3em; }
+
+.btn-tool {
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 3em; }
 
-.btn-group .btn.tool {
-  padding-left: 0 !important;
-  padding-right: 0 !important; }
+button.btn-tool.dropdown-toggle {
+  padding-left: 0.25em !important;
+  padding-right: 0.25em !important; }
 
 @media (max-width: 767px) {
   .actions.pull-left,
@@ -136,6 +182,21 @@ h4 {
   .navbar-nav .btn-nav .username i {
     margin-left: 1em; }
 
+/* =Molecules
+---------------------------------------------------- */
+.glyphicon-chevron-up {
+  color: #2ab4c0; }
+
+.glyphicon-chevron-down {
+  color: #e03412; }
+
+/* =Modules
+---------------------------------------------------- */
+.module {
+  border-radius: 5px; }
+
+/* =Nav
+---------------------------------------------------- */
 .nav > li > a {
   color: #e9ecf3 !important;
   opacity: 0.6; }
@@ -143,13 +204,21 @@ h4 {
     background: transparent;
     opacity: 1; }
 
-/* Molecules
+/* =Dropdowns
 ---------------------------------------------------- */
-.module {
-  border-radius: 5px; }
+/* =Stat Boxes
+---------------------------------------------------- */
+.dashboard-stat2 .node-value {
+  color: #092c7b; }
+
+.dashboard-stat2 small i {
+  font-size: 75% !important; }
 
 /* =Portlet
 ---------------------------------------------------- */
+/* .portlet table a { 
+	
+} */
 .portlet.light > .portlet-title > .caption {
   color: #333333 !important;
   font-weight: normal; }
@@ -160,11 +229,21 @@ table thead {
   color: #333333; }
 
 table thead tr th {
-  color: #333333;
   border: none !important; }
 
 table.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f0f2f7; }
+
+.table.table-light > thead > tr > th {
+  color: #333333; }
+
+.table.table-light > tbody > tr > td {
+  color: #333333; }
+  .table.table-light > tbody > tr > td a {
+    color: #333333;
+    text-decoration: underline; }
+    .table.table-light > tbody > tr > td a:hover, .table.table-light > tbody > tr > td a:focus {
+      color: #1655d6; }
 
 .table-responsive {
   border: none; }
@@ -172,6 +251,32 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 .kv-table-wrap th,
 .kv-table-wrap td {
   text-align: left; }
+
+.floatThead-wrapper > div {
+  z-index: 0 !important; }
+
+/* =Pagination
+---------------------------------------------------- */
+.pagination {
+  margin-top: 15px; }
+  .pagination > li > a,
+  .pagination > li > span {
+    color: #1655d6;
+    background-color: #fff; }
+  .pagination > li > a:hover, .pagination > li > a:focus,
+  .pagination > li > span:hover,
+  .pagination > li > span:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #1655d6;
+    border-color: #1655d6; }
+  .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+  .pagination > .active > span,
+  .pagination > .active > span:hover,
+  .pagination > .active > span:focus {
+    color: #fff;
+    background-color: #1655d6;
+    border-color: #1655d6; }
 
 /* =Dashboard
 ---------------------------------------------------- */
@@ -195,5 +300,7 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
   float: right;
   max-height: 80px; }
 
-.dashboard-stat2 .node-value {
-  color: #092c7b; }
+/* =Manage Margets
+---------------------------------------------------- */
+.list-view > div:nth-of-type(2n+3) {
+  clear: left; }

@@ -32,12 +32,12 @@ $text-light-color:				#ffffff !default;
 $text-muted-color:				#444444 !default;
    
 // Global textual link color.
-$link-color:						#5b9bd1 !default;
+$link-color:						$brand-primary; //#5b9bd1 !default;
 
-// Link hover color.
+// Link hover color
 $link-hover-color:				darken($link-color, 15%) !default;
 
-$primary-link-color:				#65A0D0 !default;
+$primary-link-color:				$brand-primary; //#65A0D0 !default;
 
 $general-border-radius:			4px !default;
 

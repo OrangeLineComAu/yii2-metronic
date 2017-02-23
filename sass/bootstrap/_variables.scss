@@ -244,7 +244,7 @@ $dropdown-fallback-border:       #ccc !default;
 $dropdown-divider-bg:            #0f40a8; //#e5e5e5 !default;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $gray-dark !default;
+$dropdown-link-color:            #fff; //$gray-dark !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
 //** Hover background for dropdown links.

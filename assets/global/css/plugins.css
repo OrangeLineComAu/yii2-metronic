@@ -255,13 +255,13 @@ Bootstrap Markdown
 Error state for WYSIWYG Editors
 ***/
 .has-error .md-editor {
-  border: 1px solid #fbe1e3 !important; }
+  border: 1px solid #f59582 !important; }
 
 .has-success .md-editor {
-  border: 1px solid #abe7ed !important; }
+  border: 1px solid #4efec3 !important; }
 
 .has-warning .md-editor {
-  border: 1px solid #f9e491 !important; }
+  border: 1px solid #f59986 !important; }
 
 /***
 Bootstrap Modal
@@ -293,13 +293,13 @@ Bootstrap Select
   border-color: #c2cad8; }
 
 .has-error .bootstrap-select .btn {
-  border-color: #fbe1e3; }
+  border-color: #f59582; }
 
 .has-success .bootstrap-select .btn {
-  border-color: #abe7ed; }
+  border-color: #4efec3; }
 
 .has-warning .bootstrap-select .btn {
-  border-color: #f9e491; }
+  border-color: #f59986; }
 
 .bootstrap-select.open .btn {
   border-color: #93a1bb; }
@@ -360,27 +360,27 @@ Color variants
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
   color: #fff;
-  background: #337ab7; }
+  background: #1655d6; }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
   color: #fff;
-  background: #659be0; }
+  background: #e03412; }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-success,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-success {
   color: #fff;
-  background: #36c6d3; }
+  background: #01bc7d; }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-warning,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-warning {
   color: #fff;
-  background: #F1C40F; }
+  background: #e03412; }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-danger,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-danger {
   color: #fff;
-  background: #ed6b75; }
+  background: #e03412; }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
@@ -501,12 +501,12 @@ Bootstrap Wizard
       .form-wizard .steps > li > a.step > .desc > i {
         display: none; }
   .form-wizard .steps > li.active > a.step .number {
-    background-color: #36c6d3;
+    background-color: #01bc7d;
     color: #fff; }
   .form-wizard .steps > li.active > a.step .desc {
     color: #333; }
   .form-wizard .steps > li.done > a.step .number {
-    background-color: #F1C40F;
+    background-color: #e03412;
     color: #fff; }
   .form-wizard .steps > li.done > a.step .desc {
     color: #333; }
@@ -565,13 +565,13 @@ wysihtml5
 Error state for WYSIWYG Editors
 ***/
 .has-error .wysihtml5-sandbox {
-  border: 1px solid #fbe1e3 !important; }
+  border: 1px solid #f59582 !important; }
 
 .has-success .wysihtml5-sandbox {
-  border: 1px solid #abe7ed !important; }
+  border: 1px solid #4efec3 !important; }
 
 .has-warning .wysihtml5-sandbox {
-  border: 1px solid #f9e491 !important; }
+  border: 1px solid #f59986 !important; }
 
 /***
 Error state for WYSIWYG Editors
@@ -612,13 +612,13 @@ Error state for WYSIWYG Editors
   margin-left: 20px; }
 
 .has-error .note-editor {
-  border: 1px solid #fbe1e3 !important; }
+  border: 1px solid #f59582 !important; }
 
 .has-success .note-editor {
-  border: 1px solid #abe7ed !important; }
+  border: 1px solid #4efec3 !important; }
 
 .has-warning .note-editor {
-  border: 1px solid #f9e491 !important; }
+  border: 1px solid #f59986 !important; }
 
 /***
 Bootstrap GtreeTable
@@ -909,13 +909,13 @@ CKEditor css changes
 Error state for WYSIWYG Editors
 ***/
 .has-error .cke {
-  border: 1px solid #fbe1e3 !important; }
+  border: 1px solid #f59582 !important; }
 
 .has-success .cke {
-  border: 1px solid #abe7ed !important; }
+  border: 1px solid #4efec3 !important; }
 
 .has-warning .cke {
-  border: 1px solid #f9e491 !important; }
+  border: 1px solid #f59986 !important; }
 
 /***
 Clockface
@@ -1195,7 +1195,7 @@ table.dataTable.dtr-column > tbody > tr.parent td.control:before,
 table.dataTable.dtr-column > tbody > tr.parent th.control:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
 table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-  background-color: #36c6d3;
+  background-color: #01bc7d;
   font-weight: 300;
   vertical-align: middle;
   border: 0; }
@@ -1433,7 +1433,7 @@ Fullcalendar
     display: inline-block; }
   .portlet.calendar.light .fc-button.fc-state-active, .portlet.calendar.light .fc-button.fc-state-hover {
     color: #333;
-    border-bottom: 2px solid #36c6d3; }
+    border-bottom: 2px solid #01bc7d; }
   .portlet.calendar.light .fc-button.fc-state-disabled {
     color: #aaa; }
 
@@ -1846,19 +1846,19 @@ NoUIRangeSlider
 Color variants
 ***/
 .noUi-primary .noUi-connect {
-  background: #337ab7; }
+  background: #1655d6; }
 
 .noUi-info .noUi-connect {
-  background: #659be0; }
+  background: #e03412; }
 
 .noUi-success .noUi-connect {
-  background: #36c6d3; }
+  background: #01bc7d; }
 
 .noUi-warning .noUi-connect {
-  background: #F1C40F; }
+  background: #e03412; }
 
 .noUi-danger .noUi-connect {
-  background: #ed6b75; }
+  background: #e03412; }
 
 .noUi-default .noUi-connect {
   background: #bac3d0; }

@@ -3,16 +3,15 @@
 @import '../../bootstrap/_variables'; // import variables for media queries
 @import 'themes/_custom-variables'; // industry monitor theme level variables
 
-/* =Layout
----------------------------------------------------- */
-//.page-footer { background-color:$navy; }
-.footer-copyright { margin-right:0.75em; }
-
 /* Typography
 ---------------------------------------------------- */
+html, body {
+	min-height:100%;
+}
 body { 
 	color:$grey; 
-	background-color:$lightbluegrey; 
+	background-color:$light-blue-grey;
+	background-size:100% auto; 
 	font-family:'Raleway', sans-serif; 
 	font-feature-settings:'lnum';
 	-moz-font-feature-settings:'lnum=1';
@@ -40,11 +39,68 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 	.btn { font-size:100% !important; }
 }
 
+a { 
+	color:$blue; 
+	&:hover, &:focus {
+		color:darken($blue, 10%); 
+		text-decoration:underline;
+	}
+}
+
 /* 
 .font-status-positive { color:$green !important; }
 .font-status-static { color:gold !important; }
 .font-status-negative { color:$red !important; } 
 */
+
+/* =Add-on design
+---------------------------------------------------- */
+.page-boxed {
+	// apply custom footer to new .page-wrapper class (cannot apply to body due to ".page-header-fixed")
+	.page-wrapper{
+		background:transparent url(/images/footer-bg-mobile.png) center bottom no-repeat;
+		@media (min-width:$screen-xs-min) {
+			background:transparent url(/images/footer-bg.png) center bottom no-repeat;
+		}	
+	}
+	.page-container {
+		background-color:transparent;
+	}
+	.page-footer { 
+		text-align:center;
+		color:darken($light-blue-grey, 33%);
+		height:auto;
+		padding-top:200px;
+		padding-bottom:20px;
+	}
+	.footer-nav {
+		list-style:none;
+		margin:0 0 1em 0; 
+		padding:0;
+	}
+	.footer-nav li {
+		display:inline-block;
+	}
+	.footer-nav li a {
+		display:block;
+		color:darken($light-blue-grey, 33%);
+		text-decoration:none;
+		padding:0.5em;
+		&:hover, &:focus {
+			color:$light-blue-grey;
+		}
+	}	
+	.go-top { 
+		margin-left:0.5em; 
+		a {
+			color:darken($light-blue-grey, 33%);
+			&:hover, &:focus {
+				color:#fff;
+			}	
+		}
+	}
+
+}
 
 /* =Buttons
 ---------------------------------------------------- */
@@ -57,16 +113,11 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 	border:1px solid $grey;
 	border-radius:$br-lg; 
 }
-.btn-rounded { 
-	padding-left:2em; 
-	padding-right:2em; 
-	border-radius:$br-lg; 
-}
 .btn-default { 
 	color:$blue; 
 	background-color:transparent; 
 	border:2px solid $blue;
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus { 
 		color:#fff; 
 		background-color:$blue; 
 		border:2px solid $blue; 
@@ -76,7 +127,7 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 	color:$red; 
 	background-color:transparent; 
 	border:2px solid $red;
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus { 
 		color:#fff; 
 		background-color:$red; 
 		border:2px solid $red; 
@@ -86,7 +137,7 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 	color:#fff; 
 	background-color:$red; 
 	border:2px solid $red;
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus { 
 		color:#fff; 
 		background-color:darken($red, 10%); 
 		border:2px solid darken($red, 10%); 
@@ -96,18 +147,25 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 	color:#fff; 
 	background-color:$blue !important; 
 	border:none; 
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus { 
 		background-color:darken($blue, 15%) !important; 
 	}
-} 
-.btn.tool {
+}
+.btn-rounded { 
+	padding-left:2em; 
+	padding-right:2em; 
+	border-radius:$br-lg; 
+}
+
+// manage market widget
+.btn-tool {
 	padding-left:1em;
 	padding-right:1em;
 	border-radius:$br-lg; 
 }
-.btn-group .btn.tool {
-	padding-left:0 !important;
-	padding-right:0 !important;
+button.btn-tool.dropdown-toggle {
+	padding-left:0.25em !important;
+	padding-right:0.25em !important;
 }
 
 @media (max-width:$screen-xs-max) {
@@ -122,35 +180,56 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 }
 
 .navbar-nav .btn-nav .username {
-	color:$lightbluegrey !important;
+	color:$light-blue-grey !important;
 	opacity:0.6;
 	margin-top:20px;
 	&:hover, &:focus, &:active { 
 		background:transparent; 
 		opacity:1; 
 	}
-
 	i { 
 		margin-left:1em; 
 	}
 }
 
+/* =Molecules
+---------------------------------------------------- */
+.glyphicon-chevron-up { color:$green-sharp; }
+.glyphicon-chevron-down { color:$red; }
+
+/* =Modules
+---------------------------------------------------- */
+.module { 
+	border-radius:$br-sml; 
+}
+
+/* =Nav
+---------------------------------------------------- */
 .nav > li > a {
-	color:$lightbluegrey !important;
+	color:$light-blue-grey !important;
 	opacity:0.6;
 	&:hover, &:focus, &:active { 
 		background:transparent; opacity:1; 
 	}
 }	
 
-/* Molecules
+/* =Dropdowns
 ---------------------------------------------------- */
-.module { 
-	border-radius:$br-sml; 
+
+/* =Stat Boxes
+---------------------------------------------------- */
+.dashboard-stat2 {
+	.node-value { 
+		color:$blue-darkest; 
+	}
+	small i { font-size:75% !important; }
 }
 
 /* =Portlet
 ---------------------------------------------------- */
+/* .portlet table a { 
+	
+} */
 .portlet.light > .portlet-title > .caption { 
 	color:$grey !important; 
 	font-weight:normal; 
@@ -162,12 +241,25 @@ table thead {
 	color:$grey; 
 }
 table thead tr th { 
-	color:$grey; 
 	border:none !important; 
 }
-
 table.table-striped > tbody > tr:nth-of-type(odd) {
-	background-color:lighten($lightbluegrey, 2%);
+	background-color:lighten($light-blue-grey, 2%);
+}
+
+.table.table-light > thead > tr > th {
+	color:$grey;	
+}
+.table.table-light > tbody > tr > td { 
+	color:$grey;
+	a {
+		color:$grey;
+		text-decoration:underline;
+		&:hover, &:focus {
+			color:$blue;
+		}
+	}
+	
 }
 
 .table-responsive { 
@@ -176,6 +268,49 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 .kv-table-wrap th, 
 .kv-table-wrap td { 
 	text-align:left; 
+}
+.floatThead-wrapper > div { z-index:0 !important; }
+
+/* =Pagination
+---------------------------------------------------- */
+.pagination {
+	margin-top:15px;
+	> li {
+		> a,
+		> span {
+			color:$blue;
+			background-color:#fff;
+		}
+  }
+  > li > a,
+  > li > span {
+		&:hover,
+		&:focus {
+			z-index: 2;
+			color:#fff;
+			background-color:$blue;
+			border-color:$blue;
+		}
+	}
+	> .active > a,
+	> .active > span {
+		&,
+		&:hover,
+		&:focus {
+			color:#fff;
+			background-color:$blue;
+			border-color:$blue;
+		}
+ 	}
+	> .disabled {
+		> span,
+		> span:hover,
+		> span:focus,
+		> a,
+		> a:hover,
+		> a:focus {
+		}
+	}
 }
 
 /* =Dashboard
@@ -197,9 +332,9 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 	max-height:80px; 
 }
 
-.dashboard-stat2 {
-	.node-value { 
-		color:$bluedarkest; 
-	}
+/* =Manage Margets
+---------------------------------------------------- */
+.list-view > div:nth-of-type(2n+3) {
+	clear:left;	
 }
 
