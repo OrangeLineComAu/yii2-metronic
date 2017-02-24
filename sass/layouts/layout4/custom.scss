@@ -41,7 +41,7 @@ h4 { font-size:16px; color:$blue; font-weight:normal; }
 
 a { 
 	color:$blue; 
-	&:hover, &:focus {
+	&:hover, &:focus, &:active {
 		color:darken($blue, 10%); 
 		text-decoration:underline;
 	}
@@ -55,6 +55,22 @@ a {
 
 /* =Add-on design
 ---------------------------------------------------- */
+.login-wrapper {
+	// NOTE: image also used on .dashboard-hero
+	background:#fff url(/images/bg-hills.jpg) center no-repeat; 
+	background-position:center bottom; 
+	min-height:100%;
+	@media (min-width:$screen-lg) {
+		background-size:100% auto;
+	}
+	#root { 
+		margin-top:0 !important; 
+	}
+	#root > div {
+		margin-top:30px !important; 
+	}
+	.a0-footer { display:none; }
+}
 .page-boxed {
 	// apply custom footer to new .page-wrapper class (cannot apply to body due to ".page-header-fixed")
 	.page-wrapper{
@@ -86,7 +102,7 @@ a {
 		color:darken($light-blue-grey, 33%);
 		text-decoration:none;
 		padding:0.5em;
-		&:hover, &:focus {
+		&:hover, &:focus, &:active {
 			color:$light-blue-grey;
 		}
 	}	
@@ -94,7 +110,7 @@ a {
 		margin-left:0.5em; 
 		a {
 			color:darken($light-blue-grey, 33%);
-			&:hover, &:focus {
+			&:hover, &:focus, &:active {
 				color:#fff;
 			}	
 		}
@@ -117,7 +133,7 @@ a {
 	color:$blue; 
 	background-color:transparent; 
 	border:2px solid $blue;
-	&:hover, &:focus { 
+	&:hover, &:focus, &:active { 
 		color:#fff; 
 		background-color:$blue; 
 		border:2px solid $blue; 
@@ -127,7 +143,7 @@ a {
 	color:$red; 
 	background-color:transparent; 
 	border:2px solid $red;
-	&:hover, &:focus { 
+	&:hover, &:focus, &:active { 
 		color:#fff; 
 		background-color:$red; 
 		border:2px solid $red; 
@@ -137,7 +153,7 @@ a {
 	color:#fff; 
 	background-color:$red; 
 	border:2px solid $red;
-	&:hover, &:focus { 
+	&:hover, &:focus, &:active { 
 		color:#fff; 
 		background-color:darken($red, 10%); 
 		border:2px solid darken($red, 10%); 
@@ -147,7 +163,7 @@ a {
 	color:#fff; 
 	background-color:$blue !important; 
 	border:none; 
-	&:hover, &:focus { 
+	&:hover, &:focus, &:active { 
 		background-color:darken($blue, 15%) !important; 
 	}
 }
@@ -183,7 +199,7 @@ button.btn-tool.dropdown-toggle {
 	color:$light-blue-grey !important;
 	opacity:0.6;
 	margin-top:20px;
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus, &:active, &:active { 
 		background:transparent; 
 		opacity:1; 
 	}
@@ -208,10 +224,14 @@ button.btn-tool.dropdown-toggle {
 .nav > li > a {
 	color:$light-blue-grey !important;
 	opacity:0.6;
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus, &:active, &:active { 
 		background:transparent; opacity:1; 
 	}
-}	
+}
+.page-sidebar .page-sidebar-menu > li.divider {
+	border-top:2px solid lighten($blue, 10%);
+	//border-bottom:1px solid $blue-darkest;
+}
 
 /* =Dropdowns
 ---------------------------------------------------- */
@@ -255,7 +275,7 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 	a {
 		color:$grey;
 		text-decoration:underline;
-		&:hover, &:focus {
+		&:hover, &:focus, &:active {
 			color:$blue;
 		}
 	}
@@ -317,6 +337,7 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 ---------------------------------------------------- */
 .dashboard-hero { 
 	padding:20px;
+	// NOTE: image also used on .login-wrapper
 	background:#fff url(/images/bg-hills.jpg) center no-repeat; 
 	background-size:100% auto;
 	background-position:center bottom; 

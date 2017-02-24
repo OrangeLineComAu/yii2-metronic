@@ -55,7 +55,7 @@ h4 {
 
 a {
   color: #1655d6; }
-  a:hover, a:focus {
+  a:hover, a:focus, a:active {
     color: #1143a8;
     text-decoration: underline; }
 
@@ -66,6 +66,20 @@ a {
 */
 /* =Add-on design
 ---------------------------------------------------- */
+.login-wrapper {
+  background: #fff url(/images/bg-hills.jpg) center no-repeat;
+  background-position: center bottom;
+  min-height: 100%; }
+  @media (min-width: 1200px) {
+    .login-wrapper {
+      background-size: 100% auto; } }
+  .login-wrapper #root {
+    margin-top: 0 !important; }
+  .login-wrapper #root > div {
+    margin-top: 30px !important; }
+  .login-wrapper .a0-footer {
+    display: none; }
+
 .page-boxed .page-wrapper {
   background: transparent url(/images/footer-bg-mobile.png) center bottom no-repeat; }
   @media (min-width: 480px) {
@@ -95,14 +109,14 @@ a {
   color: #7c8eb8;
   text-decoration: none;
   padding: 0.5em; }
-  .page-boxed .footer-nav li a:hover, .page-boxed .footer-nav li a:focus {
+  .page-boxed .footer-nav li a:hover, .page-boxed .footer-nav li a:focus, .page-boxed .footer-nav li a:active {
     color: #e9ecf3; }
 
 .page-boxed .go-top {
   margin-left: 0.5em; }
   .page-boxed .go-top a {
     color: #7c8eb8; }
-    .page-boxed .go-top a:hover, .page-boxed .go-top a:focus {
+    .page-boxed .go-top a:hover, .page-boxed .go-top a:focus, .page-boxed .go-top a:active {
       color: #fff; }
 
 /* =Buttons
@@ -120,7 +134,7 @@ a {
   color: #1655d6;
   background-color: transparent;
   border: 2px solid #1655d6; }
-  .btn-default:hover, .btn-default:focus {
+  .btn-default:hover, .btn-default:focus, .btn-default:active {
     color: #fff;
     background-color: #1655d6;
     border: 2px solid #1655d6; }
@@ -129,7 +143,7 @@ a {
   color: #e03412;
   background-color: transparent;
   border: 2px solid #e03412; }
-  .btn-info:hover, .btn-info:focus {
+  .btn-info:hover, .btn-info:focus, .btn-info:active {
     color: #fff;
     background-color: #e03412;
     border: 2px solid #e03412; }
@@ -138,7 +152,7 @@ a {
   color: #fff;
   background-color: #e03412;
   border: 2px solid #e03412; }
-  .btn-primary:hover, .btn-primary:focus {
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #fff;
     background-color: #b1290e;
     border: 2px solid #b1290e; }
@@ -147,7 +161,7 @@ a {
   color: #fff;
   background-color: #1655d6 !important;
   border: none; }
-  .btn.blue:hover, .btn.blue:focus {
+  .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
     background-color: #0f3991 !important; }
 
 .btn-rounded {
@@ -176,7 +190,7 @@ button.btn-tool.dropdown-toggle {
   color: #e9ecf3 !important;
   opacity: 0.6;
   margin-top: 20px; }
-  .navbar-nav .btn-nav .username:hover, .navbar-nav .btn-nav .username:focus, .navbar-nav .btn-nav .username:active {
+  .navbar-nav .btn-nav .username:hover, .navbar-nav .btn-nav .username:focus, .navbar-nav .btn-nav .username:active, .navbar-nav .btn-nav .username:active {
     background: transparent;
     opacity: 1; }
   .navbar-nav .btn-nav .username i {
@@ -200,9 +214,12 @@ button.btn-tool.dropdown-toggle {
 .nav > li > a {
   color: #e9ecf3 !important;
   opacity: 0.6; }
-  .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
+  .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active, .nav > li > a:active {
     background: transparent;
     opacity: 1; }
+
+.page-sidebar .page-sidebar-menu > li.divider {
+  border-top: 2px solid #3570ea; }
 
 /* =Dropdowns
 ---------------------------------------------------- */
@@ -242,7 +259,7 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
   .table.table-light > tbody > tr > td a {
     color: #333333;
     text-decoration: underline; }
-    .table.table-light > tbody > tr > td a:hover, .table.table-light > tbody > tr > td a:focus {
+    .table.table-light > tbody > tr > td a:hover, .table.table-light > tbody > tr > td a:focus, .table.table-light > tbody > tr > td a:active {
       color: #1655d6; }
 
 .table-responsive {
