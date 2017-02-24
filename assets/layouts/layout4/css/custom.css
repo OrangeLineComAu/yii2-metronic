@@ -124,7 +124,6 @@ a {
 .btn {
   display: inline-block !important;
   border-radius: 5px;
-  transition: all 0.25s ease-in-out;
   color: #333333;
   background-color: #fff;
   border: 1px solid #333333;
@@ -139,15 +138,6 @@ a {
     background-color: #1655d6;
     border: 2px solid #1655d6; }
 
-.btn-info {
-  color: #e03412;
-  background-color: transparent;
-  border: 2px solid #e03412; }
-  .btn-info:hover, .btn-info:focus, .btn-info:active {
-    color: #fff;
-    background-color: #e03412;
-    border: 2px solid #e03412; }
-
 .btn-primary {
   color: #fff;
   background-color: #e03412;
@@ -156,6 +146,24 @@ a {
     color: #fff;
     background-color: #b1290e;
     border: 2px solid #b1290e; }
+
+.btn.btn-warning {
+  color: orange;
+  background-color: transparent;
+  border: 2px solid orange; }
+  .btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active {
+    color: #fff;
+    background-color: orange;
+    border: 2px solid orange; }
+
+.btn-info {
+  color: #e03412;
+  background-color: transparent;
+  border: 2px solid #e03412; }
+  .btn-info:hover, .btn-info:focus, .btn-info:active {
+    color: #fff;
+    background-color: #e03412;
+    border: 2px solid #e03412; }
 
 .btn.blue {
   color: #fff;
@@ -271,6 +279,9 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 
 .floatThead-wrapper > div {
   z-index: 0 !important; }
+
+.portlet .kv-table-wrap th {
+  display: table-cell !important; }
 
 /* =Pagination
 ---------------------------------------------------- */

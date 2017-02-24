@@ -123,7 +123,7 @@ a {
 .btn { 
 	display:inline-block !important; 
 	border-radius:$br-sml; 
-	transition:all 0.25s ease-in-out; 
+	//transition:all 0.25s ease-in-out; 
 	color:$grey;
 	background-color:#fff;
 	border:1px solid $grey;
@@ -139,16 +139,6 @@ a {
 		border:2px solid $blue; 
 	}
 }
-.btn-info { 
-	color:$red; 
-	background-color:transparent; 
-	border:2px solid $red;
-	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:$red; 
-		border:2px solid $red; 
-	}
-}
 .btn-primary { 
 	color:#fff; 
 	background-color:$red; 
@@ -157,6 +147,26 @@ a {
 		color:#fff; 
 		background-color:darken($red, 10%); 
 		border:2px solid darken($red, 10%); 
+	}
+}
+.btn.btn-warning { 
+	color:$gold; 
+	background-color:transparent; 
+	border:2px solid $gold;
+	&:hover, &:focus, &:active { 
+		color:#fff; 
+		background-color:$gold; 
+		border:2px solid $gold; 
+	}
+}
+.btn-info { 
+	color:$red; 
+	background-color:transparent; 
+	border:2px solid $red;
+	&:hover, &:focus, &:active { 
+		color:#fff; 
+		background-color:$red; 
+		border:2px solid $red; 
 	}
 }
 .btn.blue { 
@@ -282,14 +292,22 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 	
 }
 
-.table-responsive { 
-	border:none; 
+// override .kv-table javascript styles
+.table-responsive {
+	border:none;
 }
-.kv-table-wrap th, 
-.kv-table-wrap td { 
-	text-align:left; 
+.kv-table-wrap th,
+.kv-table-wrap td {
+	text-align:left;
 }
 .floatThead-wrapper > div { z-index:0 !important; }
+// override stacking the TH's on mobile
+.portlet {
+	.kv-table-wrap th {
+		display:table-cell !important;
+	}
+}
+
 
 /* =Pagination
 ---------------------------------------------------- */
@@ -358,4 +376,3 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 .list-view > div:nth-of-type(2n+3) {
 	clear:left;	
 }
-
