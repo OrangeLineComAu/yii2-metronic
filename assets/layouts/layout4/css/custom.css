@@ -67,18 +67,60 @@ a {
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
-  background: #fff url(/images/bg-hills.jpg) center no-repeat;
+  background: #e5f6ff url(/images/login-bg.jpg) center no-repeat;
   background-position: center bottom;
-  min-height: 100%; }
+  min-height: 100%;
+  padding-top: 2%; }
   @media (min-width: 1200px) {
     .login-wrapper {
       background-size: 100% auto; } }
-  .login-wrapper #root {
+  .login-wrapper .login-logo {
+    display: block;
+    margin: 0 auto 2em; }
+  .login-wrapper .login-heading {
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center; }
+  .login-wrapper .login-widget {
     margin-top: 0 !important; }
-  .login-wrapper #root > div {
-    margin-top: 30px !important; }
-  .login-wrapper .a0-footer {
-    display: none; }
+    .login-wrapper .login-widget #a0-lock .a0-panel {
+      margin: 0 auto;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: 1px solid #e9ecf3;
+      border-radius: 1em; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container {
+        height: 20px; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image img {
+        height: 0; }
+    .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary {
+      padding: 1em 2em;
+      border-radius: 3em;
+      background-color: #e03412; }
+      .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary:hover, .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary:focus, .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary:active {
+        background-color: #b1290e; }
+    .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel .a0-footer .a0-logo {
+      display: none; }
+  .login-wrapper .login-footer {
+    margin: 2em auto;
+    max-width: 90%;
+    text-align: center;
+    color: #fff;
+    font-size: 100%; }
+    .login-wrapper .login-footer a {
+      padding: 0.25em 1em;
+      color: #333333;
+      font-size: 80%;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #fff;
+      border-color: 1px solid #333333;
+      border-radius: 3em; }
+      .login-wrapper .login-footer a:hover, .login-wrapper .login-footer a:focus, .login-wrapper .login-footer a:active {
+        color: #333333;
+        background-color: #d9d9d9;
+        text-decoration: none; }
 
 .page-boxed .page-wrapper {
   background: transparent url(/images/footer-bg-mobile.png) center bottom no-repeat; }
@@ -86,8 +128,26 @@ a {
     .page-boxed .page-wrapper {
       background: transparent url(/images/footer-bg.png) center bottom no-repeat; } }
 
+.page-boxed .page-header.navbar .page-logo .logo-default {
+  max-width: 125px; }
+  @media (max-width: 480px) {
+    .page-boxed .page-header.navbar .page-logo .logo-default {
+      margin-top: 18px; } }
+  @media (min-width: 480px) {
+    .page-boxed .page-header.navbar .page-logo .logo-default {
+      max-width: 170px; } }
+
+@media (max-width: 480px) {
+  .page-boxed .container {
+    padding-left: 0;
+    padding-right: 0; } }
+
 .page-boxed .page-container {
   background-color: transparent; }
+
+@media (max-width: 480px) {
+  .page-boxed .portlet {
+    padding: 10px 10px 15px; } }
 
 .page-boxed .page-footer {
   text-align: center;
@@ -95,6 +155,9 @@ a {
   height: auto;
   padding-top: 200px;
   padding-bottom: 20px; }
+  @media (max-width: 480px) {
+    .page-boxed .page-footer {
+      padding-top: 120px; } }
 
 .page-boxed .footer-nav {
   list-style: none;
@@ -217,6 +280,13 @@ button.btn-tool.dropdown-toggle {
 .module {
   border-radius: 5px; }
 
+h3.help-text {
+  font-weight: normal;
+  color: #aab5bc; }
+
+h3.help-text i {
+  margin-bottom: 0.66em; }
+
 /* =Nav
 ---------------------------------------------------- */
 .nav > li > a {
@@ -225,6 +295,9 @@ button.btn-tool.dropdown-toggle {
   .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active, .nav > li > a:active {
     background: transparent;
     opacity: 1; }
+
+.page-sidebar .page-sidebar-menu > li > a {
+  border-top: none; }
 
 .page-sidebar .page-sidebar-menu > li.divider {
   border-top: 2px solid #3570ea; }

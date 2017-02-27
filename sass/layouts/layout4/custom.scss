@@ -57,21 +57,77 @@ a {
 ---------------------------------------------------- */
 .login-wrapper {
 	// NOTE: image also used on .dashboard-hero
-	background:#fff url(/images/bg-hills.jpg) center no-repeat; 
+	background:#e5f6ff url(/images/login-bg.jpg) center no-repeat; 
 	background-position:center bottom; 
 	min-height:100%;
+	padding-top:2%;
 	@media (min-width:$screen-lg) {
 		background-size:100% auto;
 	}
-	#root { 
+	.login-logo {
+		display:block;
+		margin:0 auto 2em;
+	}
+	.login-heading {
+		margin:0 auto;
+		max-width:90%;
+		text-align:center;
+	}
+	.login-widget { 
 		margin-top:0 !important; 
+
+		#a0-lock .a0-panel {
+			margin:0 auto;
+			-webkit-box-shadow:none;
+			box-shadow:none;
+			border:1px solid $light-blue-grey;
+			border-radius:1em;
+
+			.a0-icon-container {
+				height:20px;
+			}
+			.a0-icon-container .a0-image img {
+				height:0;
+			}
+		}
+		#a0-lock.a0-theme-default .a0-panel button.a0-primary {
+			padding:1em 2em;
+			border-radius:$br-lg;
+			background-color:$red;
+			&:hover, &:focus, &:active {
+				background-color:darken($red, 10%);
+			}
+		}
+		#a0-lock.a0-theme-default .a0-panel .a0-footer .a0-logo { 
+			display:none; 
+		}
 	}
-	#root > div {
-		margin-top:30px !important; 
+	.login-footer {
+		margin:2em auto;
+		max-width:90%;
+		text-align:center;
+		color:#fff;
+		font-size:100%;
+		a {
+			padding:0.25em 1em;
+			color:$grey;
+			font-size:80%;
+			letter-spacing:1px;
+			font-weight:bold;
+			text-transform:uppercase; 
+			background-color:#fff;
+			border-color:1px solid $grey;
+			border-radius:$br-lg;
+			&:hover, &:focus, &:active {
+				color:$grey;
+				background-color:darken(#fff, 15%);
+				text-decoration:none;
+			}
+		}
 	}
-	.a0-footer { display:none; }
 }
 .page-boxed {
+
 	// apply custom footer to new .page-wrapper class (cannot apply to body due to ".page-header-fixed")
 	.page-wrapper{
 		background:transparent url(/images/footer-bg-mobile.png) center bottom no-repeat;
@@ -79,8 +135,19 @@ a {
 			background:transparent url(/images/footer-bg.png) center bottom no-repeat;
 		}	
 	}
+	.page-header.navbar .page-logo .logo-default {
+		max-width:125px;
+		@media (max-width:$screen-xs) { margin-top:18px; }
+		@media (min-width:$screen-xs) { max-width:170px; }
+	}
+	.container {
+		@media (max-width:$screen-xs) { padding-left:0; padding-right:0; }
+	}
 	.page-container {
 		background-color:transparent;
+	}
+	.portlet {
+		@media (max-width:$screen-xs) { padding:10px 10px 15px; }
 	}
 	.page-footer { 
 		text-align:center;
@@ -88,6 +155,7 @@ a {
 		height:auto;
 		padding-top:200px;
 		padding-bottom:20px;
+		@media (max-width:$screen-xs) { padding-top:120px; }
 	}
 	.footer-nav {
 		list-style:none;
@@ -228,6 +296,9 @@ button.btn-tool.dropdown-toggle {
 .module { 
 	border-radius:$br-sml; 
 }
+// portlet help text
+h3.help-text { font-weight:normal; color:$mid-grey; }
+h3.help-text i { margin-bottom:0.66em; }
 
 /* =Nav
 ---------------------------------------------------- */
@@ -238,10 +309,13 @@ button.btn-tool.dropdown-toggle {
 		background:transparent; opacity:1; 
 	}
 }
+.page-sidebar .page-sidebar-menu > li > a {
+	border-top:none;
+}
 .page-sidebar .page-sidebar-menu > li.divider {
 	border-top:2px solid lighten($blue, 10%);
-	//border-bottom:1px solid $blue-darkest;
 }
+
 
 /* =Dropdowns
 ---------------------------------------------------- */
