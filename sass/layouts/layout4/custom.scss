@@ -56,7 +56,6 @@ a {
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
-	// NOTE: image also used on .dashboard-hero
 	background:#e5f6ff url(/images/login-bg.jpg) center no-repeat; 
 	background-position:center bottom; 
 	min-height:100%;
@@ -288,17 +287,55 @@ button.btn-tool.dropdown-toggle {
 
 /* =Molecules
 ---------------------------------------------------- */
-.glyphicon-chevron-up { color:$green-sharp; }
-.glyphicon-chevron-down { color:$red; }
 
 /* =Modules
 ---------------------------------------------------- */
-.module { 
-	border-radius:$br-sml; 
+.mntns-bg {
+	background:#fff url(/images/bg-hills.jpg) center no-repeat;
+	background-size:100% auto;
+	background-position:center bottom; 
+}	
+
+/* =portlet
+---------------------------------------------------- */
+.portlet.light > .portlet-title > .caption { 
+	color:$grey !important; 
+	font-weight:normal; 
 }
 // portlet help text
 h3.help-text { font-weight:normal; color:$mid-grey; }
 h3.help-text i { margin-bottom:0.66em; }
+
+/* =Dashboard
+---------------------------------------------------- */
+.dashboard-hero { 
+	padding:20px;
+	margin-bottom:20px;
+
+	h2 { font-weight:bold; margin-top:0; }	
+	h3 { text-transform:uppercase; margin-top:0; }
+}
+.dashboard-hero-logo { 
+	display:block; 
+	float:right; 
+	max-height:50px; 
+	margin:0 0 1em 1em; 
+	@media (min-width:$screen-sm) { max-height:80px; }
+}
+
+/* =Stat Boxes
+---------------------------------------------------- */
+.dashboard-stat2 {
+	.node-value { 
+		color:$blue-darkest; 
+	}
+	small i { font-size:75% !important; }
+}
+
+.glyphicon-chevron-up,
+.glyphicon-chevron-up + span { color:$green-sharp !important; }
+.glyphicon-chevron-down,
+.glyphicon-chevron-down + span { color:$red !important; }
 
 /* =Nav
 ---------------------------------------------------- */
@@ -316,41 +353,23 @@ h3.help-text i { margin-bottom:0.66em; }
 	border-top:2px solid lighten($blue, 10%);
 }
 
-
-/* =Dropdowns
----------------------------------------------------- */
-
-/* =Stat Boxes
----------------------------------------------------- */
-.dashboard-stat2 {
-	.node-value { 
-		color:$blue-darkest; 
-	}
-	small i { font-size:75% !important; }
-}
-
-/* =Portlet
----------------------------------------------------- */
-/* .portlet table a { 
-	
-} */
-.portlet.light > .portlet-title > .caption { 
-	color:$grey !important; 
-	font-weight:normal; 
-}
-
 /* =Table Overrides
 ---------------------------------------------------- */
 table thead { 
 	color:$grey; 
 }
-table thead tr th { 
-	border:none !important; 
+table thead tr th,
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td { 
+	border:none !important;
 }
 table.table-striped > tbody > tr:nth-of-type(odd) {
 	background-color:lighten($light-blue-grey, 2%);
 }
-
 .table.table-light > thead > tr > th {
 	color:$grey;	
 }
@@ -367,21 +386,16 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 }
 
 // override .kv-table javascript styles
-.table-responsive {
-	border:none;
-}
-.kv-table-wrap th,
-.kv-table-wrap td {
-	text-align:left;
-}
+.table-responsive { border:none; }
 .floatThead-wrapper > div { z-index:0 !important; }
 // override stacking the TH's on mobile
-.portlet {
-	.kv-table-wrap th {
-		display:table-cell !important;
+@media screen and (max-width:480px){
+	.kv-table-wrap td,
+	.kv-table-wrap th { 
+		display:table-cell;
+		text-align:left;
 	}
 }
-
 
 /* =Pagination
 ---------------------------------------------------- */
@@ -423,26 +437,6 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 		> a:focus {
 		}
 	}
-}
-
-/* =Dashboard
----------------------------------------------------- */
-.dashboard-hero { 
-	padding:20px;
-	// NOTE: image also used on .login-wrapper
-	background:#fff url(/images/bg-hills.jpg) center no-repeat; 
-	background-size:100% auto;
-	background-position:center bottom; 
-	margin-bottom:20px;
-
-	h2 { font-weight:bold; margin-top:0; }	
-	h3 { text-transform:uppercase; margin-top:0; }
-	p { font-size:120%; }
-}
-.dashboard-hero-logo { 
-	display:block; 
-	float:right; 
-	max-height:80px; 
 }
 
 /* =Manage Margets
