@@ -285,9 +285,6 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 
-/* =Molecules
----------------------------------------------------- */
-
 /* =Forms
 ---------------------------------------------------- */
 .hint-block { 
@@ -345,6 +342,25 @@ h3.help-text i { margin-bottom:0.66em; }
 .glyphicon-chevron-down,
 .glyphicon-chevron-down + span { color:$red !important; }
 
+/* =Chart.js
+---------------------------------------------------- */
+.chart-legend {
+	margin:1em;
+	@media (min-width:$screen-sm) { columns:2; }
+	@media (min-width:$screen-lg) { columns:3; }
+}
+.chart-legend ul { 
+	list-style:none; 
+	margin:0; 
+	padding:0; 
+}
+.chart-legend ul li span { 
+	display:inline-block; 
+	width:20px; 
+	height:10px; 
+	margin-right:0.66em;
+}
+
 /* =Nav
 ---------------------------------------------------- */
 .nav > li > a {
@@ -359,6 +375,10 @@ h3.help-text i { margin-bottom:0.66em; }
 }
 .page-sidebar .page-sidebar-menu > li.divider {
 	border-top:2px solid lighten($blue, 10%);
+}
+.page-header.navbar .menu-toggler.responsive-toggler {
+	margin:20px 0 0 0;
+	@media (min-width:$screen-lg) { margin:20px 14px 0 6px; }
 }
 
 /* =Table Overrides
