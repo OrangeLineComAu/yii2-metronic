@@ -269,6 +269,13 @@ button.btn-tool.dropdown-toggle {
 
 /* =Molecules
 ---------------------------------------------------- */
+/* =Forms
+---------------------------------------------------- */
+.hint-block {
+  text-transform: uppercase;
+  font-size: 80%;
+  letter-spacing: 1px; }
+
 /* =Modules
 ---------------------------------------------------- */
 .mntns-bg {
