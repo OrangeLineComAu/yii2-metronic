@@ -279,6 +279,25 @@ button.btn-tool.dropdown-toggle {
   font-size: 80%;
   letter-spacing: 1px; }
 
+.control-label {
+  font-weight: bold; }
+
+.control-label + .hint-block {
+  margin-top: 0;
+  margin-bottom: 10px; }
+
+/* =Molecules
+---------------------------------------------------- */
+.mmw-date,
+.mmw-url {
+  display: inline-block;
+  font-size: 50%;
+  color: #aab5bc;
+  background-color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  vertical-align: top; }
+
 /* =Modules
 ---------------------------------------------------- */
 .mntns-bg {
@@ -407,6 +426,8 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
     text-decoration: underline; }
     .table.table-light > tbody > tr > td a:hover, .table.table-light > tbody > tr > td a:focus, .table.table-light > tbody > tr > td a:active {
       color: #1655d6; }
+    .table.table-light > tbody > tr > td a:visited {
+      color: #999999; }
 
 .table-responsive {
   border: none; }
@@ -418,7 +439,8 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
   .kv-table-wrap td,
   .kv-table-wrap th {
     display: table-cell;
-    text-align: left; } }
+    text-align: left;
+    width: auto !important; } }
 
 /* =Pagination
 ---------------------------------------------------- */

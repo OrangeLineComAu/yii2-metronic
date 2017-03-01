@@ -290,6 +290,7 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 
+
 /* =Forms
 ---------------------------------------------------- */
 .hint-block { 
@@ -297,6 +298,25 @@ button.btn-tool.dropdown-toggle {
 	font-size:80%; 
 	letter-spacing:1px;
 }
+.control-label { font-weight:bold; }
+.control-label + .hint-block { 
+	margin-top:0; 
+	margin-bottom:10px; 
+}
+
+/* =Molecules
+---------------------------------------------------- */
+.mmw-date,
+.mmw-url { 
+	display:inline-block; 
+	font-size:50%;
+	color:$mid-grey;
+	background-color:#fff;
+	padding:0.5em 1em;
+	border-radius:$br-sml;
+	vertical-align:top;
+}
+
 
 /* =Modules
 ---------------------------------------------------- */
@@ -415,6 +435,9 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 		&:hover, &:focus, &:active {
 			color:$blue;
 		}
+		&:visited { 
+			color:lighten($grey, 40%); 
+		}	
 	}
 	
 }
@@ -428,6 +451,7 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 	.kv-table-wrap th { 
 		display:table-cell;
 		text-align:left;
+		width:auto !important; 
 	}
 }
 
