@@ -56,16 +56,21 @@ a {
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
-	background:#e5f6ff url(/images/login-bg.jpg) center no-repeat; 
-	background-position:center bottom; 
+	background:#01264a url(/images/login-bg.jpg?v3) center no-repeat; 
+	background-position:center top; 
 	min-height:100%;
 	padding-top:2%;
+	padding-bottom:2%;
 	@media (min-width:$screen-lg) {
-		background-size:100% auto;
+		background-size:cover;
 	}
 	.login-logo {
 		display:block;
 		margin:0 auto 2em;
+		max-width:100px;
+		@media (min-width:$screen-xs) {
+			max-width:150px; 
+		}
 	}
 	.login-heading {
 		margin:0 auto;
@@ -318,7 +323,7 @@ h3.help-text i { margin-bottom:0.66em; }
 	margin-bottom:20px;
 
 	h2 { font-weight:bold; margin-top:0; }	
-	h3 { text-transform:uppercase; margin-top:0; }
+	h3 { text-transform:uppercase; margin-top:0.25em; }
 }
 .dashboard-hero-logo { 
 	display:block; 
@@ -345,7 +350,7 @@ h3.help-text i { margin-bottom:0.66em; }
 /* =Chart.js
 ---------------------------------------------------- */
 .chart-legend {
-	margin:1em;
+	margin:2em 1em;
 	@media (min-width:$screen-sm) { columns:2; }
 	@media (min-width:$screen-lg) { columns:3; }
 }
@@ -356,9 +361,10 @@ h3.help-text i { margin-bottom:0.66em; }
 }
 .chart-legend ul li span { 
 	display:inline-block; 
-	width:20px; 
-	height:10px; 
+	width:12px; 
+	height:12px; 
 	margin-right:0.66em;
+	border-radius:12px;
 }
 
 /* =Nav

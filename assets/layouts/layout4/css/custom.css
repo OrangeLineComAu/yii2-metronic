@@ -67,16 +67,21 @@ a {
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
-  background: #e5f6ff url(/images/login-bg.jpg) center no-repeat;
-  background-position: center bottom;
+  background: #01264a url(/images/login-bg.jpg?v3) center no-repeat;
+  background-position: center top;
   min-height: 100%;
-  padding-top: 2%; }
+  padding-top: 2%;
+  padding-bottom: 2%; }
   @media (min-width: 1200px) {
     .login-wrapper {
-      background-size: 100% auto; } }
+      background-size: cover; } }
   .login-wrapper .login-logo {
     display: block;
-    margin: 0 auto 2em; }
+    margin: 0 auto 2em;
+    max-width: 100px; }
+    @media (min-width: 480px) {
+      .login-wrapper .login-logo {
+        max-width: 150px; } }
   .login-wrapper .login-heading {
     margin: 0 auto;
     max-width: 90%;
@@ -304,7 +309,7 @@ h3.help-text i {
     margin-top: 0; }
   .dashboard-hero h3 {
     text-transform: uppercase;
-    margin-top: 0; }
+    margin-top: 0.25em; }
 
 .dashboard-hero-logo {
   display: block;
@@ -334,7 +339,7 @@ h3.help-text i {
 /* =Chart.js
 ---------------------------------------------------- */
 .chart-legend {
-  margin: 1em; }
+  margin: 2em 1em; }
   @media (min-width: 768px) {
     .chart-legend {
       columns: 2; } }
@@ -349,9 +354,10 @@ h3.help-text i {
 
 .chart-legend ul li span {
   display: inline-block;
-  width: 20px;
-  height: 10px;
-  margin-right: 0.66em; }
+  width: 12px;
+  height: 12px;
+  margin-right: 0.66em;
+  border-radius: 12px; }
 
 /* =Nav
 ---------------------------------------------------- */
