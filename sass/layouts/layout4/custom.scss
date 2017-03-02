@@ -20,7 +20,7 @@ body {
 	-o-font-feature-settings:'lnum'; 
 }
 
-h1 { font-size:24px; color:$navy; font-weight:normal; text-transform:uppercase; }
+h1 { font-size:24px; color:$navy; font-weight:normal; text-transform:uppercase; margin-top:0.5em; }
 h2 { font-size:20px; color:$navy; font-weight:normal; }
 h3 { font-size:18px; color:$blue; font-weight:bold; }
 h4 { font-size:16px; color:$blue; font-weight:normal; } 
@@ -356,8 +356,15 @@ h3.help-text i { margin-bottom:0.66em; }
 /* =Stat Boxes
 ---------------------------------------------------- */
 .dashboard-stat2 {
+	@media (min-width:$screen-lg) { 
+		.display {
+			min-height:5.5em;
+		}
+	}	
 	.node-value { 
 		color:$blue-darkest; 
+		letter-spacing:-1px;
+		font-size:200% !important; 
 	}
 	small i { font-size:75% !important; }
 }
@@ -501,4 +508,14 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
 	clear:left;	
+}
+
+/* =Graphs
+---------------------------------------------------- */
+@media (max-width:$screen-xs) { 
+	.graph-helper { padding:0.5em; border-radius:$br-sml; }
+	//.tools > a.fullscreen:before { color:$green; }
+}
+@media (min-width:$screen-xs) { 
+	.graph-helper { display:block; }
 }

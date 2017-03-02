@@ -19,7 +19,8 @@ h1 {
   font-size: 24px;
   color: #00103e;
   font-weight: normal;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-top: 0.5em; }
 
 h2 {
   font-size: 20px;
@@ -341,8 +342,14 @@ h3.help-text i {
 
 /* =Stat Boxes
 ---------------------------------------------------- */
+@media (min-width: 1200px) {
+  .dashboard-stat2 .display {
+    min-height: 5.5em; } }
+
 .dashboard-stat2 .node-value {
-  color: #092c7b; }
+  color: #092c7b;
+  letter-spacing: -1px;
+  font-size: 200% !important; }
 
 .dashboard-stat2 small i {
   font-size: 75% !important; }
@@ -469,3 +476,14 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
   clear: left; }
+
+/* =Graphs
+---------------------------------------------------- */
+@media (max-width: 480px) {
+  .graph-helper {
+    padding: 0.5em;
+    border-radius: 5px; } }
+
+@media (min-width: 480px) {
+  .graph-helper {
+    display: block; } }
