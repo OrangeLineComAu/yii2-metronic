@@ -83,27 +83,52 @@ a {
 		#a0-lock .a0-panel {
 			margin:0 auto;
 			-webkit-box-shadow:none;
-			box-shadow:none;
+			//box-shadow:0 0 5px rgba(0,0,0,0.25);
 			border:1px solid $light-blue-grey;
 			border-radius:1em;
+			overflow:hidden; 
 
+			.a0-top-header {
+				min-height:85px; 
+			}
 			.a0-icon-container {
-				height:20px;
+				height:0;
+				min-height:auto;
+			}
+			.a0-icon-container .a0-image {
+				padding:0;
 			}
 			.a0-icon-container .a0-image img {
 				height:0;
 			}
-		}
-		#a0-lock.a0-theme-default .a0-panel button.a0-primary {
-			padding:1em 2em;
-			border-radius:$br-lg;
-			background-color:$red;
-			&:hover, &:focus, &:active {
-				background-color:darken($red, 10%);
+			button.a0-primary {
+				padding:0;
+				//border-radius:$br-lg;
+				border-radius:0 0 1em 1em;
+				background-color:$red;
+				&:hover, &:focus, &:active {
+					//background-color:darken($red, 10%);
+				}
 			}
-		}
-		#a0-lock.a0-theme-default .a0-panel .a0-footer .a0-logo { 
-			display:none; 
+			.a0-footer .a0-logo { 
+				display:none; 
+			}
+			.a0-forgot-pass {
+				border:1px solid $mid-grey;
+				padding:0.25em 1em;
+				color:$grey;
+				font-size:80%;
+				font-weight:bold;
+				text-transform:uppercase; 
+				background-color:#fff;
+				border-color:1px solid $grey;
+				border-radius:$br-lg;
+				&:hover, &:focus, &:active {
+					color:$grey;
+					background-color:darken(#fff, 10%);
+					text-decoration:none;
+				}
+			}
 		}
 	}
 	.login-footer {
@@ -116,7 +141,6 @@ a {
 			padding:0.25em 1em;
 			color:$grey;
 			font-size:80%;
-			letter-spacing:1px;
 			font-weight:bold;
 			text-transform:uppercase; 
 			background-color:#fff;
@@ -124,7 +148,7 @@ a {
 			border-radius:$br-lg;
 			&:hover, &:focus, &:active {
 				color:$grey;
-				background-color:darken(#fff, 15%);
+				background-color:darken(#fff, 10%);
 				text-decoration:none;
 			}
 		}

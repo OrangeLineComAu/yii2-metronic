@@ -92,21 +92,38 @@ a {
     .login-wrapper .login-widget #a0-lock .a0-panel {
       margin: 0 auto;
       -webkit-box-shadow: none;
-      box-shadow: none;
       border: 1px solid #e9ecf3;
-      border-radius: 1em; }
+      border-radius: 1em;
+      overflow: hidden; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-top-header {
+        min-height: 85px; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container {
-        height: 20px; }
+        height: 0;
+        min-height: auto; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image {
+        padding: 0; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image img {
         height: 0; }
-    .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary {
-      padding: 1em 2em;
-      border-radius: 3em;
-      background-color: #e03412; }
-      .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary:hover, .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary:focus, .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel button.a0-primary:active {
-        background-color: #b1290e; }
-    .login-wrapper .login-widget #a0-lock.a0-theme-default .a0-panel .a0-footer .a0-logo {
-      display: none; }
+      .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary {
+        padding: 0;
+        border-radius: 0 0 1em 1em;
+        background-color: #e03412; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-footer .a0-logo {
+        display: none; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass {
+        border: 1px solid #aab5bc;
+        padding: 0.25em 1em;
+        color: #333333;
+        font-size: 80%;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #fff;
+        border-color: 1px solid #333333;
+        border-radius: 3em; }
+        .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:hover, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:focus, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:active {
+          color: #333333;
+          background-color: #e6e6e6;
+          text-decoration: none; }
   .login-wrapper .login-footer {
     margin: 2em auto;
     max-width: 90%;
@@ -117,7 +134,6 @@ a {
       padding: 0.25em 1em;
       color: #333333;
       font-size: 80%;
-      letter-spacing: 1px;
       font-weight: bold;
       text-transform: uppercase;
       background-color: #fff;
@@ -125,7 +141,7 @@ a {
       border-radius: 3em; }
       .login-wrapper .login-footer a:hover, .login-wrapper .login-footer a:focus, .login-wrapper .login-footer a:active {
         color: #333333;
-        background-color: #d9d9d9;
+        background-color: #e6e6e6;
         text-decoration: none; }
 
 .page-boxed .page-wrapper {
