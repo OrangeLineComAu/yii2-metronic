@@ -95,13 +95,6 @@ a {
       border: 1px solid #e9ecf3;
       border-radius: 1em;
       overflow: hidden; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-top-header {
-        min-height: 85px; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container {
-        height: 0;
-        min-height: auto; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image {
-        padding: 0; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image img {
         height: 0; }
       .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary {
@@ -110,6 +103,8 @@ a {
         background-color: #e03412; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-footer .a0-logo {
         display: none; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-success {
+        color: #01bc7d; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass {
         border: 1px solid #aab5bc;
         padding: 0.25em 1em;

@@ -88,16 +88,6 @@ a {
 			border-radius:1em;
 			overflow:hidden; 
 
-			.a0-top-header {
-				min-height:85px; 
-			}
-			.a0-icon-container {
-				height:0;
-				min-height:auto;
-			}
-			.a0-icon-container .a0-image {
-				padding:0;
-			}
 			.a0-icon-container .a0-image img {
 				height:0;
 			}
@@ -112,6 +102,9 @@ a {
 			}
 			.a0-footer .a0-logo { 
 				display:none; 
+			}
+			.a0-success {
+				color:$green;	
 			}
 			.a0-forgot-pass {
 				border:1px solid $mid-grey;
