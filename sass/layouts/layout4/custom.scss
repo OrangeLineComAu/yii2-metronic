@@ -47,12 +47,6 @@ a {
 	}
 }
 
-/* 
-.font-status-positive { color:$green !important; }
-.font-status-static { color:gold !important; }
-.font-status-negative { color:$red !important; } 
-*/
-
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
@@ -88,37 +82,48 @@ a {
 			border-radius:1em;
 			overflow:hidden; 
 
+			.a0-bg-gradient {
+				background-color:darken(#fff, 5%);
+				opacity:1;
+			}
 			.a0-icon-container .a0-image img {
 				height:0;
-			}
-			button.a0-primary {
-				padding:0;
-				//border-radius:$br-lg;
-				border-radius:0 0 1em 1em;
-				background-color:$red;
-				&:hover, &:focus, &:active {
-					//background-color:darken($red, 10%);
-				}
 			}
 			.a0-footer .a0-logo { 
 				display:none; 
 			}
+			button.a0-primary {
+				margin:0 auto; 
+				position:relative;
+				display:inline-block;
+				width:auto !important;
+				padding:0.66em 3em;
+				text-indent:0;
+				height:auto;
+				border-radius:5em;
+				&:after { 
+					display:none; 
+				}
+				&:hover, &:focus, &:active {
+					//background-color:darken($red, 10%);
+				}
+			}		
 			.a0-success {
 				color:$green;	
 			}
 			.a0-forgot-pass {
-				border:1px solid $mid-grey;
+				border:1px solid darken(#fff, 15%);
 				padding:0.25em 1em;
 				color:$grey;
 				font-size:80%;
-				font-weight:bold;
+				font-weight:600;
 				text-transform:uppercase; 
 				background-color:#fff;
 				border-color:1px solid $grey;
 				border-radius:$br-lg;
 				&:hover, &:focus, &:active {
 					color:$grey;
-					background-color:darken(#fff, 10%);
+					background-color:darken(#fff, 15%);
 					text-decoration:none;
 				}
 			}
@@ -134,14 +139,14 @@ a {
 			padding:0.25em 1em;
 			color:$grey;
 			font-size:80%;
-			font-weight:bold;
+			font-weight:600;
 			text-transform:uppercase; 
 			background-color:#fff;
-			border-color:1px solid $grey;
+			border-color:1px solid darken(#fff, 15%);
 			border-radius:$br-lg;
 			&:hover, &:focus, &:active {
 				color:$grey;
-				background-color:darken(#fff, 10%);
+				background-color:darken(#fff, 15%);
 				text-decoration:none;
 			}
 		}
