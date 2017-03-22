@@ -108,8 +108,6 @@ a {
         border-radius: 5em; }
         .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary:after {
           display: none; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-success {
-        color: #01bc7d; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass {
         border: 1px solid #d9d9d9;
         padding: 0.25em 1em;
@@ -261,6 +259,27 @@ a {
   padding-left: 2em;
   padding-right: 2em;
   border-radius: 3em; }
+
+.btn-header {
+  display: block;
+  float: right;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-right: 1em;
+  padding: 8px 1em;
+  border: 2px solid #01bc7d;
+  border-radius: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 80%;
+  transition: all 0.25s ease-in-out; }
+  .btn-header:hover, .btn-header:active, .btn-header:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #01bc7d; }
+  @media (min-width: 480px) {
+    .btn-header {
+      padding: 8px 2em; } }
 
 .btn-tool {
   padding-left: 1em;
@@ -417,10 +436,10 @@ h3.help-text i {
   border-top: 2px solid #3570ea; }
 
 .page-header.navbar .menu-toggler.responsive-toggler {
-  margin: 20px 0 0 0; }
+  margin: 22px 0 0 0; }
   @media (min-width: 1200px) {
     .page-header.navbar .menu-toggler.responsive-toggler {
-      margin: 20px 14px 0 6px; } }
+      margin: 22px 14px 0 6px; } }
 
 /* =Table Overrides
 ---------------------------------------------------- */
