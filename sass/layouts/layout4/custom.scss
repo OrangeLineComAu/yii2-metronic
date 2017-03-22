@@ -296,6 +296,12 @@ a {
 	}
 	@media (min-width:$screen-xs) { padding:8px 2em; }
 }
+.btn-update-payment {
+	// override min-height:30px set by stripe on this button
+	span {
+		min-height:0 !important;
+	}
+}
 
 // manage market widget
 .btn-tool {

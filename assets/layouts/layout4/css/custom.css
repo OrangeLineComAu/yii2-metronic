@@ -281,6 +281,9 @@ a {
     .btn-header {
       padding: 8px 2em; } }
 
+.btn-update-payment span {
+  min-height: 0 !important; }
+
 .btn-tool {
   padding-left: 1em;
   padding-right: 1em;
