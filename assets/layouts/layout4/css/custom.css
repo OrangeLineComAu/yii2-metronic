@@ -425,6 +425,44 @@ h3.help-text i {
   margin-right: 0.66em;
   border-radius: 12px; }
 
+/* =Graphs
+---------------------------------------------------- */
+@media (max-width: 480px) {
+  .graph-helper {
+    padding: 0.5em;
+    border-radius: 5px; } }
+
+@media (min-width: 480px) {
+  .graph-helper {
+    display: block; } }
+
+/* =Facebook Engagement Widget
+---------------------------------------------------- */
+.fb-detail-template {
+  margin-bottom: 2em;
+  color: #8d9ca6; }
+
+.fb-detail-title {
+  margin-bottom: 0.75em; }
+
+.preview-image {
+  border-radius: 5px;
+  overflow: hidden;
+  transition: filter 0.33s ease-in-out; }
+  .preview-image:hover {
+    filter: brightness(110%); }
+
+.fb-content {
+  border-left: 3px solid #e9ecf3;
+  padding-left: 1.33em;
+  line-height: 1.66; }
+
+.fb-meta {
+  text-align: right; }
+
+.fb-meta-label {
+  margin-right: 1em; }
+
 /* =Nav
 ---------------------------------------------------- */
 .nav > li > a {
@@ -516,14 +554,3 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
   clear: left; }
-
-/* =Graphs
----------------------------------------------------- */
-@media (max-width: 480px) {
-  .graph-helper {
-    padding: 0.5em;
-    border-radius: 5px; } }
-
-@media (min-width: 480px) {
-  .graph-helper {
-    display: block; } }

@@ -77,7 +77,6 @@ a {
 		#a0-lock .a0-panel {
 			margin:0 auto;
 			-webkit-box-shadow:none;
-			//box-shadow:0 0 5px rgba(0,0,0,0.25);
 			border:1px solid $light-blue-grey;
 			border-radius:1em;
 			overflow:hidden; 
@@ -107,7 +106,7 @@ a {
 				&:hover, &:focus, &:active {
 					//background-color:darken($red, 10%);
 				}
-			}		
+			}
 			.a0-success {
 				color:#fff;
 			}
@@ -239,8 +238,8 @@ a {
 	border:2px solid $red;
 	&:hover, &:focus, &:active { 
 		color:#fff; 
-		background-color:darken($red, 10%); 
-		border:2px solid darken($red, 10%); 
+		background-color:darken($red, 10%);
+		border:2px solid darken($red, 10%);
 	}
 }
 .btn.btn-warning { 
@@ -365,7 +364,6 @@ button.btn-tool.dropdown-toggle {
 	vertical-align:top;
 }
 
-
 /* =Modules
 ---------------------------------------------------- */
 .mntns-bg {
@@ -441,6 +439,47 @@ h3.help-text i { margin-bottom:0.66em; }
 	margin-right:0.66em;
 	border-radius:12px;
 }
+
+/* =Graphs
+---------------------------------------------------- */
+@media (max-width:$screen-xs) { 
+	.graph-helper { padding:0.5em; border-radius:$br-sml; }
+	//.tools > a.fullscreen:before { color:$green; }
+}
+@media (min-width:$screen-xs) { 
+	.graph-helper { display:block; }
+}
+
+/* =Facebook Engagement Widget
+---------------------------------------------------- */
+.fb-detail-template {
+ 	margin-bottom:2em;
+ 	color:darken($mid-grey, 10%);
+}
+.fb-detail-title {
+	margin-bottom:0.75em;
+}
+.preview-image {
+	border-radius:$br-sml;
+	overflow:hidden;
+	transition:filter 0.33s ease-in-out;
+	&:hover { 
+		filter:brightness(110%);
+	}
+}
+.fb-content {
+	border-left:3px solid $light-blue-grey;
+	padding-left:1.33em;
+	line-height:1.66;
+}
+.fb-meta {
+	text-align:right;
+}
+.fb-meta-label {
+	margin-right:1em; 
+}
+
+
 
 /* =Nav
 ---------------------------------------------------- */
@@ -556,14 +595,4 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
 	clear:left;	
-}
-
-/* =Graphs
----------------------------------------------------- */
-@media (max-width:$screen-xs) { 
-	.graph-helper { padding:0.5em; border-radius:$br-sml; }
-	//.tools > a.fullscreen:before { color:$green; }
-}
-@media (min-width:$screen-xs) { 
-	.graph-helper { display:block; }
 }
