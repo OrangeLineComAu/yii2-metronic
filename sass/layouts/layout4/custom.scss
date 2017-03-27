@@ -49,6 +49,10 @@ a {
 	}
 }
 
+// spacing finessing
+p.lead + p.lead { margin-top:-0.5em; }
+p.lead + p:not(.lead) { margin-top:-1em; }
+
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
@@ -456,12 +460,26 @@ h3.help-text i { margin-bottom:0.66em; }
 ---------------------------------------------------- */
 .social-post-title {
 	margin-bottom:0.75em;
+	color:$grey;
 }
 .social-post-template {
  	margin-bottom:2em;
- 	color:darken($mid-grey, 10%);
+ 	color:darken($mid-grey, 15%);
+}
+.social-post-image-wrapper {
+	position:relative;
+}
+.social-post-image-wrapper {
+	.fb-icon {
+		position:absolute;
+		z-index:5;
+		top:10px;
+		left:10px;
+		color:#fff;
+	}
 }
 .social-post-image {
+	position:relative;
 	display:block;
 	width:100%;
 	border-radius:$br-sml;
@@ -472,7 +490,7 @@ a .social-post-image {
 	transition:filter 0.33s ease-in-out;
 	&:hover { 
 		filter:brightness(110%);
-	}	
+	}
 }
 .social-post-link {
 }
@@ -486,6 +504,10 @@ a .social-post-image {
 }
 .social-post-meta-label {
 	margin-right:1em; 
+}
+
+.fb-icon {
+	font-size:150%;
 }
 
 .competitor-list {
@@ -508,7 +530,38 @@ a .social-post-image {
 		font-weight:bold;
 	}
 }
-.social-post-content .ad-description {
+
+.ad-template {
+	border:1px solid $light-blue-grey;
+	border-radius:$br-sml;
+	margin-bottom:1em;
+}
+.ad-content {
+	padding:0.25em 1em 0;
+	color:#545454;
+}
+.ad-title {
+	color:$blue;
+}
+.ad-icon {
+	background-color:#fff;
+	border-radius:2px;
+	color:#006621;
+	display:inline-block;
+	font-size:12px;
+	border:1px solid #006621;
+	padding:0 2px 0 2px;
+	line-height:14px;
+	vertical-align:baseline;
+	margin-right:5px;
+}
+.ad-link {
+	color:#006621;
+	&:hover { 
+		color:#006621; text-decoration:underline;
+	}
+}
+.ad-description {
 	margin-top:0.25em;
 }
 

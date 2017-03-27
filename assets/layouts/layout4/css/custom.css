@@ -67,6 +67,12 @@ a {
     color: #1143a8;
     text-decoration: underline; }
 
+p.lead + p.lead {
+  margin-top: -0.5em; }
+
+p.lead + p:not(.lead) {
+  margin-top: -1em; }
+
 /* =Add-on design
 ---------------------------------------------------- */
 .login-wrapper {
@@ -446,13 +452,25 @@ h3.help-text i {
 /* =Social Engagement Widgets (Facebook Engagement/Comptitor Sales Messaging)
 ---------------------------------------------------- */
 .social-post-title {
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.75em;
+  color: #333333; }
 
 .social-post-template {
   margin-bottom: 2em;
-  color: #8d9ca6; }
+  color: #7f909a; }
+
+.social-post-image-wrapper {
+  position: relative; }
+
+.social-post-image-wrapper .fb-icon {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 10px;
+  color: #fff; }
 
 .social-post-image {
+  position: relative;
   display: block;
   width: 100%;
   border-radius: 5px;
@@ -475,6 +493,9 @@ a .social-post-image {
 .social-post-meta-label {
   margin-right: 1em; }
 
+.fb-icon {
+  font-size: 150%; }
+
 .competitor-list {
   list-style: none;
   margin: 0 0 1em 0;
@@ -493,7 +514,37 @@ a .social-post-image {
   .competitor-list .competitor-radio:checked + span {
     font-weight: bold; }
 
-.social-post-content .ad-description {
+.ad-template {
+  border: 1px solid #e9ecf3;
+  border-radius: 5px;
+  margin-bottom: 1em; }
+
+.ad-content {
+  padding: 0.25em 1em 0;
+  color: #545454; }
+
+.ad-title {
+  color: #1655d6; }
+
+.ad-icon {
+  background-color: #fff;
+  border-radius: 2px;
+  color: #006621;
+  display: inline-block;
+  font-size: 12px;
+  border: 1px solid #006621;
+  padding: 0 2px 0 2px;
+  line-height: 14px;
+  vertical-align: baseline;
+  margin-right: 5px; }
+
+.ad-link {
+  color: #006621; }
+  .ad-link:hover {
+    color: #006621;
+    text-decoration: underline; }
+
+.ad-description {
   margin-top: 0.25em; }
 
 /* =Nav
