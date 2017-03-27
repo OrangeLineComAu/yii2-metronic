@@ -37,6 +37,11 @@ h4 {
   color: #1655d6;
   font-weight: normal; }
 
+h5 {
+  font-size: 16px;
+  color: inherit;
+  font-weight: normal; }
+
 @media (min-width: 1200px) {
   h1 {
     font-size: 40px; }
@@ -45,7 +50,9 @@ h4 {
   h3 {
     font-size: 25px; }
   h4 {
-    font-size: 20px; } }
+    font-size: 20px; }
+  h5 {
+    font-size: 18px; } }
 
 @media (max-width: 1199px) {
   ul, ol, p,
@@ -436,32 +443,58 @@ h3.help-text i {
   .graph-helper {
     display: block; } }
 
-/* =Facebook Engagement Widget
+/* =Social Engagement Widgets (Facebook Engagement/Comptitor Sales Messaging)
 ---------------------------------------------------- */
-.fb-detail-template {
+.social-post-title {
+  margin-bottom: 0.75em; }
+
+.social-post-template {
   margin-bottom: 2em;
   color: #8d9ca6; }
 
-.fb-detail-title {
-  margin-bottom: 0.75em; }
-
-.preview-image {
+.social-post-image {
+  display: block;
+  width: 100%;
   border-radius: 5px;
   overflow: hidden;
+  border: 1px solid #e9ecf3; }
+
+a .social-post-image {
   transition: filter 0.33s ease-in-out; }
-  .preview-image:hover {
+  a .social-post-image:hover {
     filter: brightness(110%); }
 
-.fb-content {
+.social-post-content {
   border-left: 3px solid #e9ecf3;
   padding-left: 1.33em;
   line-height: 1.66; }
 
-.fb-meta {
+.social-post-meta {
   text-align: right; }
 
-.fb-meta-label {
+.social-post-meta-label {
   margin-right: 1em; }
+
+.competitor-list {
+  list-style: none;
+  margin: 0 0 1em 0;
+  padding: 0; }
+
+.competitor-list li {
+  padding: 0.33em 1em; }
+  .competitor-list li:nth-of-type(odd) {
+    background-color: #f0f2f7; }
+
+.competitor-list label {
+  display: block; }
+
+.competitor-list .competitor-radio {
+  margin-right: 0.5em; }
+  .competitor-list .competitor-radio:checked + span {
+    font-weight: bold; }
+
+.social-post-content .ad-description {
+  margin-top: 0.25em; }
 
 /* =Nav
 ---------------------------------------------------- */

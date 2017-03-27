@@ -24,12 +24,14 @@ h1 { font-size:24px; color:$navy; font-weight:normal; text-transform:uppercase; 
 h2 { font-size:20px; color:$navy; font-weight:normal; }
 h3 { font-size:18px; color:$blue; font-weight:bold; }
 h4 { font-size:16px; color:$blue; font-weight:normal; } 
+h5 { font-size:16px; color:inherit; font-weight:normal; } 
 
 @media (min-width:$screen-lg-min) {
 	h1 { font-size:40px; }
 	h2 { font-size:35px; }
 	h3 { font-size:25px; }
-	h4 { font-size:20px; } 
+	h4 { font-size:20px; }
+	h5 { font-size:18px; } 
 }
 
 @media (max-width:$screen-md-max) {
@@ -450,36 +452,65 @@ h3.help-text i { margin-bottom:0.66em; }
 	.graph-helper { display:block; }
 }
 
-/* =Facebook Engagement Widget
+/* =Social Engagement Widgets (Facebook Engagement/Comptitor Sales Messaging)
 ---------------------------------------------------- */
-.fb-detail-template {
+.social-post-title {
+	margin-bottom:0.75em;
+}
+.social-post-template {
  	margin-bottom:2em;
  	color:darken($mid-grey, 10%);
 }
-.fb-detail-title {
-	margin-bottom:0.75em;
-}
-.preview-image {
+.social-post-image {
+	display:block;
+	width:100%;
 	border-radius:$br-sml;
 	overflow:hidden;
+	border:1px solid $light-blue-grey;
+}
+a .social-post-image {
 	transition:filter 0.33s ease-in-out;
 	&:hover { 
 		filter:brightness(110%);
-	}
+	}	
 }
-.fb-content {
+.social-post-link {
+}
+.social-post-content {
 	border-left:3px solid $light-blue-grey;
 	padding-left:1.33em;
 	line-height:1.66;
 }
-.fb-meta {
+.social-post-meta {
 	text-align:right;
 }
-.fb-meta-label {
+.social-post-meta-label {
 	margin-right:1em; 
 }
 
-
+.competitor-list {
+	list-style:none;
+	margin:0 0 1em 0; 
+	padding:0;
+}
+.competitor-list li {
+	padding:0.33em 1em;
+	&:nth-of-type(odd) {
+		background-color:lighten($light-blue-grey, 2%);
+	}
+}
+.competitor-list label {
+	display:block;
+}
+.competitor-list .competitor-radio {
+	margin-right:0.5em;
+	&:checked + span {
+		font-weight:bold;
+	}
+}
+.social-post-content .ad-description {
+	margin-top:0.25em;
+}
 
 /* =Nav
 ---------------------------------------------------- */
