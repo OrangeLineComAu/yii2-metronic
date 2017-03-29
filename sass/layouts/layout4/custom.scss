@@ -638,6 +638,61 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 	}
 }
 
+/* =Highlighting of Domains ('actor' and 'other')
+---------------------------------------------------- */
+// dashboard - digital leaderboard
+.table.table-light > tbody > tr {
+	&.actor-domain {
+		border-left:2px solid $blue;
+	}
+	&.actor-domain > td > a {
+		//color:darken($blue, 0%);
+	}
+	&.other-domain {
+		border-left:2px solid $gold;
+	}
+	&.other-domain > td > a {
+		//color:darken($gold, 10%);
+	}
+}
+// legend
+.domain-legend {
+	list-style:none;
+	margin:0; 
+	padding:0;
+	width:100%;
+}
+.domain-legend li {
+	width:33.33%;
+}
+.domain-legend li span:first-of-type {
+	display:inline-block;
+	width:10px; 
+	height:10px;
+	border-radius:10px;
+	margin-right:0.5em;
+}
+.actor-domain {
+	.domain-value {
+		background-color:$blue;
+	}	
+}
+.other-domain {
+	.domain-value {
+		background-color:$gold;
+	}	
+}
+
+// market settings - inputs
+input.actor-domain {
+	color:darken($blue, 0%);
+	border:1px solid $blue;
+}
+input.other-domain {
+	color:darken($gold, 10%);
+	border:1px solid $gold;
+}
+
 /* =Pagination
 ---------------------------------------------------- */
 .pagination {

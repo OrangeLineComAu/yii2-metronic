@@ -618,6 +618,44 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
     text-align: left;
     width: auto !important; } }
 
+/* =Highlighting of Domains ('actor' and 'other')
+---------------------------------------------------- */
+.table.table-light > tbody > tr.actor-domain {
+  border-left: 2px solid #1655d6; }
+
+.table.table-light > tbody > tr.other-domain {
+  border-left: 2px solid orange; }
+
+.domain-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+.domain-legend li {
+  width: 33.33%; }
+
+.domain-legend li span:first-of-type {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 0.5em; }
+
+.actor-domain .domain-value {
+  background-color: #1655d6; }
+
+.other-domain .domain-value {
+  background-color: orange; }
+
+input.actor-domain {
+  color: #1655d6;
+  border: 1px solid #1655d6; }
+
+input.other-domain {
+  color: #cc8400;
+  border: 1px solid orange; }
+
 /* =Pagination
 ---------------------------------------------------- */
 .pagination {
