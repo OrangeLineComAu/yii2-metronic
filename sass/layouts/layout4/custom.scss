@@ -643,16 +643,16 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 // dashboard - digital leaderboard
 .table.table-light > tbody > tr {
 	&.actor-domain {
-		border-left:2px solid $blue;
+		border-left:3px solid $blue;
 	}
 	&.actor-domain > td > a {
-		//color:darken($blue, 0%);
+		color:darken($blue, 0%);
 	}
 	&.other-domain {
-		border-left:2px solid $gold;
+		border-left:3px solid $gold;
 	}
 	&.other-domain > td > a {
-		//color:darken($gold, 10%);
+		color:darken($gold, 10%);
 	}
 }
 // legend

@@ -621,10 +621,16 @@ table.table-striped > tbody > tr:nth-of-type(odd) {
 /* =Highlighting of Domains ('actor' and 'other')
 ---------------------------------------------------- */
 .table.table-light > tbody > tr.actor-domain {
-  border-left: 2px solid #1655d6; }
+  border-left: 3px solid #1655d6; }
+
+.table.table-light > tbody > tr.actor-domain > td > a {
+  color: #1655d6; }
 
 .table.table-light > tbody > tr.other-domain {
-  border-left: 2px solid orange; }
+  border-left: 3px solid orange; }
+
+.table.table-light > tbody > tr.other-domain > td > a {
+  color: #cc8400; }
 
 .domain-legend {
   list-style: none;
