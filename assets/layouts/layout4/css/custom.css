@@ -73,89 +73,15 @@ p.lead + p.lead {
 p.lead + p:not(.lead) {
   margin-top: -1em; }
 
-/* =Add-on design
+/* =Layout
 ---------------------------------------------------- */
-.login-wrapper {
-  background: #01264a url(/images/login-bg.jpg?v3) center no-repeat;
-  background-position: center top;
-  min-height: 100%;
-  padding-top: 2%;
-  padding-bottom: 2%; }
-  @media (min-width: 1200px) {
-    .login-wrapper {
-      background-size: cover; } }
-  .login-wrapper .login-logo {
-    display: block;
-    margin: 0 auto 2em;
-    max-width: 100px; }
-    @media (min-width: 480px) {
-      .login-wrapper .login-logo {
-        max-width: 150px; } }
-  .login-wrapper .login-heading {
-    margin: 0 auto;
-    max-width: 90%;
-    text-align: center; }
-  .login-wrapper .login-widget {
-    margin-top: 0 !important; }
-    .login-wrapper .login-widget #a0-lock .a0-panel {
-      margin: 0 auto;
-      -webkit-box-shadow: none;
-      border: 1px solid #e9ecf3;
-      border-radius: 1em;
-      overflow: hidden; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-bg-gradient {
-        background-color: #f2f2f2;
-        opacity: 1; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image img {
-        height: 0; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-footer .a0-logo {
-        display: none; }
-      .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary {
-        margin: 0 auto;
-        position: relative;
-        display: inline-block;
-        width: auto !important;
-        padding: 0.66em 3em;
-        text-indent: 0;
-        height: auto;
-        border-radius: 5em; }
-        .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary:after {
-          display: none; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-success {
-        color: #fff; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass {
-        border: 1px solid #d9d9d9;
-        padding: 0.25em 1em;
-        color: #333333;
-        font-size: 80%;
-        font-weight: 600;
-        text-transform: uppercase;
-        background-color: #fff;
-        border-color: 1px solid #333333;
-        border-radius: 3em; }
-        .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:hover, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:focus, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:active {
-          color: #333333;
-          background-color: #d9d9d9;
-          text-decoration: none; }
-  .login-wrapper .login-footer {
-    margin: 2em auto;
-    max-width: 90%;
-    text-align: center;
-    color: #fff;
-    font-size: 100%; }
-    .login-wrapper .login-footer a {
-      padding: 0.25em 1em;
-      color: #333333;
-      font-size: 80%;
-      font-weight: 600;
-      text-transform: uppercase;
-      background-color: #fff;
-      border-color: 1px solid #d9d9d9;
-      border-radius: 3em; }
-      .login-wrapper .login-footer a:hover, .login-wrapper .login-footer a:focus, .login-wrapper .login-footer a:active {
-        color: #333333;
-        background-color: #d9d9d9;
-        text-decoration: none; }
+.page-sidebar-wrapper {
+  position: relative;
+  z-index: 5; }
+
+.page-content-wrapper {
+  position: relative;
+  z-index: 1; }
 
 .page-boxed .page-wrapper {
   background: transparent url(/images/footer-bg-mobile.png) center bottom no-repeat; }
@@ -359,7 +285,7 @@ button.btn-tool.dropdown-toggle {
   background-size: 100% auto;
   background-position: center bottom; }
 
-/* =portlet
+/* =Portlet
 ---------------------------------------------------- */
 .portlet.light > .portlet-title > .caption {
   color: #333333 !important;
@@ -575,6 +501,10 @@ a .social-post-image {
     .page-header.navbar .menu-toggler.responsive-toggler {
       margin: 22px 14px 0 6px; } }
 
+@media (min-width: 992px) {
+  .page-sidebar {
+    position: fixed; } }
+
 /* =Table Overrides
 ---------------------------------------------------- */
 table thead {
@@ -689,3 +619,87 @@ input.other-domain {
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
   clear: left; }
+
+/* =Add-on design
+---------------------------------------------------- */
+.login-wrapper {
+  background: #01264a url(/images/login-bg.jpg?v3) center no-repeat;
+  background-position: center top;
+  min-height: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%; }
+  @media (min-width: 1200px) {
+    .login-wrapper {
+      background-size: cover; } }
+  .login-wrapper .login-logo {
+    display: block;
+    margin: 0 auto 2em;
+    max-width: 100px; }
+    @media (min-width: 480px) {
+      .login-wrapper .login-logo {
+        max-width: 150px; } }
+  .login-wrapper .login-heading {
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center; }
+  .login-wrapper .login-widget {
+    margin-top: 0 !important; }
+    .login-wrapper .login-widget #a0-lock .a0-panel {
+      margin: 0 auto;
+      -webkit-box-shadow: none;
+      border: 1px solid #e9ecf3;
+      border-radius: 1em;
+      overflow: hidden; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-bg-gradient {
+        background-color: #f2f2f2;
+        opacity: 1; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-icon-container .a0-image img {
+        height: 0; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-footer .a0-logo {
+        display: none; }
+      .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary {
+        margin: 0 auto;
+        position: relative;
+        display: inline-block;
+        width: auto !important;
+        padding: 0.66em 3em;
+        text-indent: 0;
+        height: auto;
+        border-radius: 5em; }
+        .login-wrapper .login-widget #a0-lock .a0-panel button.a0-primary:after {
+          display: none; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-success {
+        color: #fff; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass {
+        border: 1px solid #d9d9d9;
+        padding: 0.25em 1em;
+        color: #333333;
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: #fff;
+        border-color: 1px solid #333333;
+        border-radius: 3em; }
+        .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:hover, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:focus, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:active {
+          color: #333333;
+          background-color: #d9d9d9;
+          text-decoration: none; }
+  .login-wrapper .login-footer {
+    margin: 2em auto;
+    max-width: 90%;
+    text-align: center;
+    color: #fff;
+    font-size: 100%; }
+    .login-wrapper .login-footer a {
+      padding: 0.25em 1em;
+      color: #333333;
+      font-size: 80%;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-color: #fff;
+      border-color: 1px solid #d9d9d9;
+      border-radius: 3em; }
+      .login-wrapper .login-footer a:hover, .login-wrapper .login-footer a:focus, .login-wrapper .login-footer a:active {
+        color: #333333;
+        background-color: #d9d9d9;
+        text-decoration: none; }

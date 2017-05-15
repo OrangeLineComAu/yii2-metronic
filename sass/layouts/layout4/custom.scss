@@ -53,110 +53,20 @@ a {
 p.lead + p.lead { margin-top:-0.5em; }
 p.lead + p:not(.lead) { margin-top:-1em; }
 
-/* =Add-on design
+
+/* =Layout
 ---------------------------------------------------- */
-.login-wrapper {
-	background:#01264a url(/images/login-bg.jpg?v3) center no-repeat; 
-	background-position:center top; 
-	min-height:100%;
-	padding-top:2%;
-	padding-bottom:2%;
-	@media (min-width:$screen-lg) {
-		background-size:cover;
-	}
-	.login-logo {
-		display:block;
-		margin:0 auto 2em;
-		max-width:100px;
-		@media (min-width:$screen-xs) {
-			max-width:150px; 
-		}
-	}
-	.login-heading {
-		margin:0 auto;
-		max-width:90%;
-		text-align:center;
-	}
-	.login-widget { 
-		margin-top:0 !important; 
 
-		#a0-lock .a0-panel {
-			margin:0 auto;
-			-webkit-box-shadow:none;
-			border:1px solid $light-blue-grey;
-			border-radius:1em;
-			overflow:hidden; 
-
-			.a0-bg-gradient {
-				background-color:darken(#fff, 5%);
-				opacity:1;
-			}
-			.a0-icon-container .a0-image img {
-				height:0;
-			}
-			.a0-footer .a0-logo { 
-				display:none; 
-			}
-			button.a0-primary {
-				margin:0 auto; 
-				position:relative;
-				display:inline-block;
-				width:auto !important;
-				padding:0.66em 3em;
-				text-indent:0;
-				height:auto;
-				border-radius:5em;
-				&:after { 
-					display:none; 
-				}
-				&:hover, &:focus, &:active {
-					//background-color:darken($red, 10%);
-				}
-			}
-			.a0-success {
-				color:#fff;
-			}
-			.a0-forgot-pass {
-				border:1px solid darken(#fff, 15%);
-				padding:0.25em 1em;
-				color:$grey;
-				font-size:80%;
-				font-weight:600;
-				text-transform:uppercase; 
-				background-color:#fff;
-				border-color:1px solid $grey;
-				border-radius:$br-lg;
-				&:hover, &:focus, &:active {
-					color:$grey;
-					background-color:darken(#fff, 15%);
-					text-decoration:none;
-				}
-			}
-		}
-	}
-	.login-footer {
-		margin:2em auto;
-		max-width:90%;
-		text-align:center;
-		color:#fff;
-		font-size:100%;
-		a {
-			padding:0.25em 1em;
-			color:$grey;
-			font-size:80%;
-			font-weight:600;
-			text-transform:uppercase; 
-			background-color:#fff;
-			border-color:1px solid darken(#fff, 15%);
-			border-radius:$br-lg;
-			&:hover, &:focus, &:active {
-				color:$grey;
-				background-color:darken(#fff, 15%);
-				text-decoration:none;
-			}
-		}
-	}
+// set z-index on major content areas for fixed nav
+.page-sidebar-wrapper {
+	position:relative;
+	z-index:5;
 }
+.page-content-wrapper {
+	position:relative;
+	z-index:1;
+}
+
 .page-boxed {
 
 	// apply custom footer to new .page-wrapper class (cannot apply to body due to ".page-header-fixed")
@@ -378,7 +288,7 @@ button.btn-tool.dropdown-toggle {
 	background-position:center bottom; 
 }	
 
-/* =portlet
+/* =Portlet
 ---------------------------------------------------- */
 .portlet.light > .portlet-title > .caption { 
 	color:$grey !important; 
@@ -590,6 +500,12 @@ a .social-post-image {
 	@media (min-width:$screen-lg) { margin:22px 14px 0 6px; }
 }
 
+@media (min-width:$screen-md-min) {
+	.page-sidebar {
+		position:fixed;
+	}	
+}
+
 /* =Table Overrides
 ---------------------------------------------------- */
 table thead { 
@@ -739,4 +655,109 @@ input.other-domain {
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
 	clear:left;	
+}
+
+/* =Add-on design
+---------------------------------------------------- */
+.login-wrapper {
+	background:#01264a url(/images/login-bg.jpg?v3) center no-repeat; 
+	background-position:center top; 
+	min-height:100%;
+	padding-top:2%;
+	padding-bottom:2%;
+	@media (min-width:$screen-lg) {
+		background-size:cover;
+	}
+	.login-logo {
+		display:block;
+		margin:0 auto 2em;
+		max-width:100px;
+		@media (min-width:$screen-xs) {
+			max-width:150px; 
+		}
+	}
+	.login-heading {
+		margin:0 auto;
+		max-width:90%;
+		text-align:center;
+	}
+	.login-widget { 
+		margin-top:0 !important; 
+
+		#a0-lock .a0-panel {
+			margin:0 auto;
+			-webkit-box-shadow:none;
+			border:1px solid $light-blue-grey;
+			border-radius:1em;
+			overflow:hidden; 
+
+			.a0-bg-gradient {
+				background-color:darken(#fff, 5%);
+				opacity:1;
+			}
+			.a0-icon-container .a0-image img {
+				height:0;
+			}
+			.a0-footer .a0-logo { 
+				display:none; 
+			}
+			button.a0-primary {
+				margin:0 auto; 
+				position:relative;
+				display:inline-block;
+				width:auto !important;
+				padding:0.66em 3em;
+				text-indent:0;
+				height:auto;
+				border-radius:5em;
+				&:after { 
+					display:none; 
+				}
+				&:hover, &:focus, &:active {
+					//background-color:darken($red, 10%);
+				}
+			}
+			.a0-success {
+				color:#fff;
+			}
+			.a0-forgot-pass {
+				border:1px solid darken(#fff, 15%);
+				padding:0.25em 1em;
+				color:$grey;
+				font-size:80%;
+				font-weight:600;
+				text-transform:uppercase; 
+				background-color:#fff;
+				border-color:1px solid $grey;
+				border-radius:$br-lg;
+				&:hover, &:focus, &:active {
+					color:$grey;
+					background-color:darken(#fff, 15%);
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.login-footer {
+		margin:2em auto;
+		max-width:90%;
+		text-align:center;
+		color:#fff;
+		font-size:100%;
+		a {
+			padding:0.25em 1em;
+			color:$grey;
+			font-size:80%;
+			font-weight:600;
+			text-transform:uppercase; 
+			background-color:#fff;
+			border-color:1px solid darken(#fff, 15%);
+			border-radius:$br-lg;
+			&:hover, &:focus, &:active {
+				color:$grey;
+				background-color:darken(#fff, 15%);
+				text-decoration:none;
+			}
+		}
+	}
 }
