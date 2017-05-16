@@ -620,7 +620,88 @@ input.other-domain {
 .list-view > div:nth-of-type(2n+3) {
   clear: left; }
 
-/* =Add-on design
+/* =Facebook Social Carousel
+---------------------------------------------------- */
+.carousel {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 3em; }
+
+.carousel-cell {
+  width: 90%;
+  margin: 2em 5%;
+  opacity: 0.5;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+  transform: scale(0.9);
+  transition: all 0.5s ease; }
+
+.carousel-cell.is-selected {
+  transform: scale(1);
+  opacity: 1; }
+
+.carousel-head {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e9ecf3; }
+
+.carousel-brand {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px; }
+
+.carousel-published {
+  display: block;
+  color: #aab5bc;
+  font-size: 80%; }
+
+.carousel-ext-link {
+  float: right;
+  margin-top: 10px;
+  color: #aab5bc; }
+  .carousel-ext-link:hover {
+    color: #333333;
+    text-decoration: none; }
+
+.carousel-copy {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.carousel-img {
+  height: 300px;
+  overflow: hidden; }
+  .carousel-imga:hover {
+    cursor: pointer; }
+
+.carousel-img img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.carousel-meta {
+  padding: 0 20px 15px; }
+
+.flickity-prev-next-button .arrow {
+  fill: gray; }
+
+.flickity-prev-next-button.no-svg {
+  color: white; }
+
+.flickity-prev-next-button.previous {
+  left: 5%; }
+
+.flickity-prev-next-button.next {
+  right: 5%; }
+
+@media (min-width: 480px) {
+  .carousel-cell {
+    width: 40%; }
+  .flickity-prev-next-button.previous {
+    left: 20%; }
+  .flickity-prev-next-button.next {
+    right: 20%; } }
+
+/* =Add-on design for login
 ---------------------------------------------------- */
 .login-wrapper {
   background: #01264a url(/images/login-bg.jpg?v3) center no-repeat;
