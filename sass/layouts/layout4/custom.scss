@@ -392,7 +392,6 @@ h3.help-text i { margin-bottom:0.66em; }
 	position:relative;
 	display:block;
 	width:100%;
-	border-radius:$br-sml;
 	overflow:hidden;
 	border:1px solid $light-blue-grey;
 }
@@ -659,6 +658,9 @@ input.other-domain {
 
 /* =Facebook Social Carousel
 ---------------------------------------------------- */
+.flickity-viewport {
+  transition: height 0.2s; // adaptive height animation
+}
 .carousel {
 	display:block;
 	margin-top:2em;
@@ -679,6 +681,9 @@ input.other-domain {
 }
 
 // design
+.carousel-template {
+	color:darken($mid-grey, 15%);
+}
 .carousel-head {
 	padding:15px 20px;
 	border-bottom:1px solid $light-blue-grey;
@@ -703,11 +708,22 @@ input.other-domain {
 	}
 }
 .carousel-copy {
-	padding-left:20px;
-	padding-right:20px;
+	padding:20px;
+	color:darken($mid-grey, 15%);
+}
+.carousel-copy p {
+	margin:0;
+}
+.carousel-copy-ext-link {
+	color:darken($mid-grey, 15%);
+	&:hover {
+		color:$grey;
+		text-decoration:none;
+	}
 }
 .carousel-img {
-	height:300px;
+	height:200px;
+	max-height:200px;
 	overflow:hidden;
 	&a:hover { 
 		cursor:pointer;
@@ -740,13 +756,22 @@ input.other-domain {
 
 @media (min-width:$screen-xs) {
 	.carousel-cell {
-		width:40%;
+		width:60%;
+	}
+	.carousel-img {
+		height:300px;
+		max-height:300px;
 	}
 	.flickity-prev-next-button.previous {
 		left:20%;
 	}
 	.flickity-prev-next-button.next {
 		right:20%;
+	}
+}
+@media (min-width:$screen-lg) {
+	.carousel-cell {
+		width:40%;
 	}
 }
 

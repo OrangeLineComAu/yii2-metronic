@@ -399,7 +399,6 @@ h3.help-text i {
   position: relative;
   display: block;
   width: 100%;
-  border-radius: 5px;
   overflow: hidden;
   border: 1px solid #e9ecf3; }
 
@@ -622,6 +621,9 @@ input.other-domain {
 
 /* =Facebook Social Carousel
 ---------------------------------------------------- */
+.flickity-viewport {
+  transition: height 0.2s; }
+
 .carousel {
   display: block;
   margin-top: 2em;
@@ -639,6 +641,9 @@ input.other-domain {
 .carousel-cell.is-selected {
   transform: scale(1);
   opacity: 1; }
+
+.carousel-template {
+  color: #7f909a; }
 
 .carousel-head {
   padding: 15px 20px;
@@ -663,11 +668,21 @@ input.other-domain {
     text-decoration: none; }
 
 .carousel-copy {
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding: 20px;
+  color: #7f909a; }
+
+.carousel-copy p {
+  margin: 0; }
+
+.carousel-copy-ext-link {
+  color: #7f909a; }
+  .carousel-copy-ext-link:hover {
+    color: #333333;
+    text-decoration: none; }
 
 .carousel-img {
-  height: 300px;
+  height: 200px;
+  max-height: 200px;
   overflow: hidden; }
   .carousel-imga:hover {
     cursor: pointer; }
@@ -695,11 +710,18 @@ input.other-domain {
 
 @media (min-width: 480px) {
   .carousel-cell {
-    width: 40%; }
+    width: 60%; }
+  .carousel-img {
+    height: 300px;
+    max-height: 300px; }
   .flickity-prev-next-button.previous {
     left: 20%; }
   .flickity-prev-next-button.next {
     right: 20%; } }
+
+@media (min-width: 1200px) {
+  .carousel-cell {
+    width: 40%; } }
 
 /* =Add-on design for login
 ---------------------------------------------------- */
