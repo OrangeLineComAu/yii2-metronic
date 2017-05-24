@@ -507,61 +507,74 @@ a .social-post-image {
 
 /* =Table Overrides
 ---------------------------------------------------- */
-table thead {
+table {
   color: #333333; }
 
+td {
+  text-align: left;
+  background-color: transparent; }
+
+/* table thead { 
+	color:$grey; 
+}
 table thead tr th,
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
-  border: none !important; }
-
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td { 
+	border:none !important;
+}
 table.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f0f2f7; }
-
+	background-color:lighten($light-blue-grey, 2%);
+}
 .table.table-light > thead > tr > th {
-  color: #333333; }
+	color:$grey;	
+}
+.table.table-light > tbody > tr > td { 
+	color:$grey;
+	a {
+		color:$grey;
+		text-decoration:underline;
+		&:hover, &:focus, &:active {
+			color:$blue;
+		}
+		&:visited { 
+			color:lighten($grey, 40%); 
+		}	
+	}
+	
+}
 
-.table.table-light > tbody > tr > td {
-  color: #333333; }
-  .table.table-light > tbody > tr > td a {
-    color: #333333;
-    text-decoration: underline; }
-    .table.table-light > tbody > tr > td a:hover, .table.table-light > tbody > tr > td a:focus, .table.table-light > tbody > tr > td a:active {
-      color: #1655d6; }
-    .table.table-light > tbody > tr > td a:visited {
-      color: #999999; }
-
-.table-responsive {
-  border: none; }
-
-.floatThead-wrapper > div {
-  z-index: 0 !important; }
-
-@media screen and (max-width: 480px) {
-  .kv-table-wrap td,
-  .kv-table-wrap th {
-    display: table-cell;
-    text-align: left;
-    width: auto !important; } }
-
+// override .kv-table javascript styles
+.table-responsive { border:none; }
+.floatThead-wrapper > div { z-index:0 !important; }
+// override stacking the TH's on mobile
+@media screen and (max-width:480px){
+	.kv-table-wrap td,
+	.kv-table-wrap th { 
+		display:table-cell;
+		text-align:left;
+		width:auto !important; 
+	}
+} */
 /* =Highlighting of Domains ('actor' and 'other')
 ---------------------------------------------------- */
-.table.table-light > tbody > tr.actor-domain {
-  border-left: 3px solid #1655d6; }
-
-.table.table-light > tbody > tr.actor-domain > td > a {
-  color: #1655d6; }
-
-.table.table-light > tbody > tr.other-domain {
-  border-left: 3px solid orange; }
-
-.table.table-light > tbody > tr.other-domain > td > a {
-  color: #cc8400; }
-
+/* .table.table-light > tbody > tr {
+	&.actor-domain {
+		border-left:3px solid $blue;
+	}
+	&.actor-domain > td > a {
+		color:darken($blue, 0%);
+	}
+	&.other-domain {
+		border-left:3px solid $gold;
+	}
+	&.other-domain > td > a {
+		color:darken($gold, 10%);
+	}
+} */
 .domain-legend {
   list-style: none;
   margin: 1em 0;
@@ -808,20 +821,57 @@ input.other-domain {
         background-color: #d9d9d9;
         text-decoration: none; }
 
-.market-overview {
+/* =AmCharts Animations
+---------------------------------------------------- */
+.amcharts-graph-stroke {
+  stroke-dasharray: 3px 3px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: am-moving-dashes 1s linear infinite;
+  animation: am-moving-dashes 1s linear infinite; }
+
+@-webkit-keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px; } }
+
+@keyframes am-moving-dashes {
+  100% {
+    stroke-dashoffset: -31px; } }
+
+/* =Dashboard 1.1
+---------------------------------------------------- */
+.im-module {
   border-radius: 5px;
   overflow: hidden;
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
 
+/* =Market Overview
+---------------------------------------------------- */
 .market-overview-graphic {
   position: relative;
   width: 100%;
   display: block; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .market-overview-graphic {
       float: left;
       width: 33.33%; } }
 
+/* .market-overview-graphic:before {
+	display:block;
+	content:" ";
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%; 
+	height:100%;
+	background-color:#fff;
+	opacity:0.75;
+	z-index:2;
+} */
 .market-overview-info {
   position: absolute;
   top: 0;
@@ -847,6 +897,9 @@ input.other-domain {
   text-align: center;
   color: #fff;
   text-shadow: 0 0 20px black; }
+  @media (min-width: 992px) {
+    .market-overview-name {
+      padding-bottom: 20%; } }
 
 .market-overview-img {
   position: relative;
@@ -854,17 +907,68 @@ input.other-domain {
   height: 250px;
   background-color: #aab5bc;
   background-size: cover; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .market-overview-img {
       height: 400px; } }
 
 .market-overview-graph {
   display: block;
   height: 400px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .market-overview-graph {
       width: 66.66%;
       float: left; } }
 
 .graph {
   height: 100%; }
+
+/* =Leaderboard
+---------------------------------------------------- */
+@media (min-width: 768px) {
+  .leaderboard-searchbar {
+    width: 66.66%; } }
+
+.table-leaderboard th,
+.table-leaderboard td {
+  font-size: 12px !important; }
+
+.lb-stats {
+  width: 100%; }
+
+.lb-movement {
+  display: block;
+  float: left;
+  width: 20%; }
+
+.lb-percentage-line-wrap {
+  position: relative;
+  display: block;
+  float: left;
+  width: 52%; }
+
+.lb-percentage-line {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #2ab4c0;
+  height: 3px;
+  border-radius: 3px;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.lb-percentage-number {
+  display: block;
+  float: left;
+  width: 25%; }
+
+.lb-pos .lb-movement {
+  color: #01bc7d; }
+
+.lb-pos .lb-percentage-line {
+  background-color: #01bc7d; }
+
+.lb-neg .lb-movement {
+  color: #e03412; }
+
+.lb-neg .lb-percentage-line {
+  background-color: #e03412; }
