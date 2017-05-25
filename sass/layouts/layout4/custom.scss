@@ -1010,9 +1010,32 @@ $market-overview-height-lg:400px;
 	}
 }
 
+// override
 .table-leaderboard th,
 .table-leaderboard td {
-	font-size:12px !important;
+	font-size:12px !important; 
+}
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th, 
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td {
+	padding:0;
+}
+// END override
+
+.table-leaderboard > thead > tr > th,
+.table-leaderboard > tbody > tr > td {
+	padding:8px;
+}
+
+// styles
+.trigger-drawr {
+	cursor:pointer;
+	&:hover {
+		background-color:#f3f3f3;
+	}
 }
 
 .lb-stats {
@@ -1037,8 +1060,6 @@ $market-overview-height-lg:400px;
 	background-color:$mid-grey;
 	border-radius:3px;
 	vertical-align:middle;
-	// top:50%;
-	// transform:translateY(-50%);
 }
 .lb-percentage-number {
 	position:absolute;
@@ -1074,10 +1095,20 @@ $market-overview-height-lg:400px;
 	}
 }
 
-// drawr
-.drawr {
+// table-drawr
+.drawr .drawr-inner {
 	display:none;
 }
-.table-leaderboard tr td {
-	cursor:pointer;
+
+// overrides
+.table-leaderboard > tbody > tr.drawr > td {
+	padding:0;
 }
+.drawr.active .drawr-inner {
+	display:block;
+	padding:8px;
+}
+// END more overrides
+
+
+

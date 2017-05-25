@@ -932,6 +932,23 @@ input.other-domain {
 .table-leaderboard td {
   font-size: 12px !important; }
 
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 0; }
+
+.table-leaderboard > thead > tr > th,
+.table-leaderboard > tbody > tr > td {
+  padding: 8px; }
+
+.trigger-drawr {
+  cursor: pointer; }
+  .trigger-drawr:hover {
+    background-color: #f3f3f3; }
+
 .lb-stats {
   width: 300px; }
 
@@ -980,8 +997,12 @@ input.other-domain {
 .lb-steady .lb-percentage-line {
   background-color: #1655d6; }
 
-.drawr {
+.drawr .drawr-inner {
   display: none; }
 
-.table-leaderboard tr td {
-  cursor: pointer; }
+.table-leaderboard > tbody > tr.drawr > td {
+  padding: 0; }
+
+.drawr.active .drawr-inner {
+  display: block;
+  padding: 8px; }
