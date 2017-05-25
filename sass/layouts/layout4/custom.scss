@@ -1016,33 +1016,36 @@ $market-overview-height-lg:400px;
 }
 
 .lb-stats {
-	width:100%;
+	width:300px;
 }
 .lb-movement {
 	display:block;
 	float:left;
-	width:20%;
+	width:25px;
 }
-.lb-percentage-line-wrap {
+.lb-percentage-wrap {
 	position:relative;
 	display:block;
 	float:left;
-	width:52%;
+	width:275px;
 }
 .lb-percentage-line {
-	display:block;
+	position:relative;
+	display:inline-block;
 	width:100%;
-	height:100%;
-	background-color:$green-sharp;
 	height:3px;
+	background-color:$mid-grey;
 	border-radius:3px;
-	top:50%;
-	transform:translateY(-50%);
+	vertical-align:middle;
+	// top:50%;
+	// transform:translateY(-50%);
 }
 .lb-percentage-number {
-	display:block;
-	float:left;
-	width:25%;
+	position:absolute;
+	top:-7px;
+	right:0;
+	width:25px;
+	margin-right:-35px;
 }
 
 // positive and negative movement colour coding
@@ -1061,4 +1064,20 @@ $market-overview-height-lg:400px;
 	.lb-percentage-line {
 		background-color:$red;
 	}
+}
+.lb-steady {
+	.lb-movement {
+		color:$blue;
+	}
+	.lb-percentage-line {
+		background-color:$blue;
+	}
+}
+
+// drawr
+.drawr {
+	display:none;
+}
+.table-leaderboard tr td {
+	cursor:pointer;
 }
