@@ -131,7 +131,7 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 ---------------------------------------------------- */
 .btn { 
 	display:inline-block !important; 
-	border-radius:$br-sml; 
+	border-radius:$br-sm; 
 	//transition:all 0.25s ease-in-out; 
 	color:$grey;
 	background-color:#fff;
@@ -279,7 +279,7 @@ button.btn-tool.dropdown-toggle {
 	color:$mid-grey;
 	background-color:#fff;
 	padding:0.5em 1em;
-	border-radius:$br-sml;
+	border-radius:$br-sm;
 	vertical-align:top;
 }
 
@@ -362,7 +362,7 @@ h3.help-text i { margin-bottom:0.66em; }
 /* =Graphs
 ---------------------------------------------------- */
 @media (max-width:$screen-xs) { 
-	.graph-helper { padding:0.5em; border-radius:$br-sml; }
+	.graph-helper { padding:0.5em; border-radius:$br-sm; }
 	//.tools > a.fullscreen:before { color:$green; }
 }
 @media (min-width:$screen-xs) { 
@@ -443,7 +443,7 @@ a .social-post-image {
 
 .ad-template {
 	border:1px solid $light-blue-grey;
-	border-radius:$br-sml;
+	border-radius:$br-sm;
 	margin-bottom:1em;
 }
 .ad-content {
@@ -914,11 +914,11 @@ input.other-domain {
 /* =Dashboard 1.1
 ---------------------------------------------------- */
 .im-module {
-	border-radius:$br-sml;
-	overflow:hidden;
-	background-color:#fff;
-	margin-bottom:20px;
-	box-shadow:0 0 10px 0 rgba(0,0,0,0.1);
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #fff;
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* =Market Overview
@@ -926,31 +926,14 @@ input.other-domain {
 $market-overview-height-sm:250px;
 $market-overview-height-lg:400px;
 
-.market-overview {}
-
 .market-overview-graphic {
 	position:relative;
 	width:100%;
 	display:block;
-	@media (min-width:$screen-md) {
-		float:left;
-		width:33.33%;
-	}
+	border-radius:$br-sm;
+	overflow:hidden;
+	margin-bottom:25px;
 }
-/* .market-overview-graphic:before {
-	display:block;
-	content:" ";
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	width:100%; 
-	height:100%;
-	background-color:#fff;
-	opacity:0.75;
-	z-index:2;
-} */
 .market-overview-info {
 	position:absolute;
 	top:0;
@@ -964,26 +947,28 @@ $market-overview-height-lg:400px;
 	z-index:5;
 }
 .market-overview-pill {
-	border-radius:$br-sml;
+	border-radius:$br-sm;
 }
 .market-overview-name {
 	position:absolute;
 	left:0;
 	right:0;
 	bottom:0;
+	top:0;
 	margin:0;
 	padding:20px;
 	text-align:center;
 	color:#fff;
 	text-shadow:0 0 20px rgba(0,0,0,1);
 	@media (min-width:$screen-md) {
+		top:auto;
 		padding-bottom:20%;
 	}
 }
 .market-overview-img {
 	position:relative;
 	overflow:hidden;
-	height:$market-overview-height-sm;
+	height:60px;
 	background-color:$mid-grey;
 	background-size:cover;
 	@media (min-width:$screen-md) {
@@ -993,13 +978,9 @@ $market-overview-height-lg:400px;
 .market-overview-graph {
 	display:block;
 	height:$market-overview-height-lg;
-	@media (min-width:$screen-md) {
-		width:66.66%;
-		float:left;
-	}
 }
-.graph { 
-	height:100%;
+.graph-market-overview {
+	height:380px;
 }
 
 /* =Leaderboard
@@ -1013,7 +994,7 @@ $market-overview-height-lg:400px;
 // override
 .table-leaderboard th,
 .table-leaderboard td {
-	font-size:12px !important; 
+	//font-size:12px !important; 
 }
 .table > thead > tr > th, 
 .table > tbody > tr > th, 
@@ -1026,16 +1007,16 @@ $market-overview-height-lg:400px;
 // END override
 
 .table-leaderboard > thead > tr > th,
+.table-leaderboard > thead > tr > td,
+.table-leaderboard > tbody > tr > th,
 .table-leaderboard > tbody > tr > td {
-	padding:8px;
+	padding:20px 10px;
 }
 
 // styles
 .trigger-drawr {
 	cursor:pointer;
-	&:hover {
-		background-color:#f3f3f3;
-	}
+	//&:hover { background-color:#f3f3f3; }
 }
 
 .lb-stats {
@@ -1104,11 +1085,23 @@ $market-overview-height-lg:400px;
 .table-leaderboard > tbody > tr.drawr > td {
 	padding:0;
 }
+
+// note:
+// tr.active bckground colour is set in table-roww.less file apparently, thanks metronic?
+
 .drawr.active .drawr-inner {
 	display:block;
 	padding:8px;
+	background-color:#fff;
 }
 // END more overrides
 
+// leaderboard drawr portlets overrides
+.portlet > .portlet-title > .caption {
+	float:right;
+}
+.portlet > .portlet-title > .nav-tabs {
+	float:left;
+}
 
 
