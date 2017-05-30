@@ -2109,14 +2109,16 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.active,
 .table > tfoot > tr.active > td,
 .table > tfoot > tr.active > th {
-  background-color: #eef1f5; }
+  background-color: #eef1f5;
+  background-color: none; }
 
 .table-hover > tbody > tr > td.active:hover,
 .table-hover > tbody > tr > th.active:hover,
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-  background-color: #dee5ec; }
+  background-color: #dee5ec;
+  background-color: none; }
 
 .table > thead > tr > td.success,
 .table > thead > tr > th.success,
@@ -2130,14 +2132,16 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.success,
 .table > tfoot > tr.success > td,
 .table > tfoot > tr.success > th {
-  background-color: #4efec3; }
+  background-color: #4efec3;
+  background-color: none; }
 
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-  background-color: #34feba; }
+  background-color: #34feba;
+  background-color: none; }
 
 .table > thead > tr > td.info,
 .table > thead > tr > th.info,
@@ -2151,14 +2155,16 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.info,
 .table > tfoot > tr.info > td,
 .table > tfoot > tr.info > th {
-  background-color: #f6a190; }
+  background-color: #f6a190;
+  background-color: none; }
 
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover,
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-  background-color: #f48d78; }
+  background-color: #f48d78;
+  background-color: none; }
 
 .table > thead > tr > td.warning,
 .table > thead > tr > th.warning,
@@ -2172,14 +2178,16 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.warning,
 .table > tfoot > tr.warning > td,
 .table > tfoot > tr.warning > th {
-  background-color: #f59986; }
+  background-color: #f59986;
+  background-color: none; }
 
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-  background-color: #f3856f; }
+  background-color: #f3856f;
+  background-color: none; }
 
 .table > thead > tr > td.danger,
 .table > thead > tr > th.danger,
@@ -2193,14 +2201,16 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.danger,
 .table > tfoot > tr.danger > td,
 .table > tfoot > tr.danger > th {
-  background-color: #f59582; }
+  background-color: #f59582;
+  background-color: none; }
 
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #f3816a; }
+  background-color: #f3816a;
+  background-color: none; }
 
 .table-responsive {
   overflow-x: auto;

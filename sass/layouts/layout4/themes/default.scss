@@ -14,7 +14,7 @@ $brand-main-color:																	$navy !default;
 $brand-main-font-color:																#ffffff !default;   
 
 // Body and header    
-$bg-color:																				$light-blue-grey !default;
+$bg-color:																				$grey-steel !default;
 $header-bg-color:																		$navy !default;
 $header-top-shadow:																	0px 1px 10px 0px rgba(50, 50, 50, 0.2);
 $header-mobile-menu-border:														lighten($header-bg-color, 3%);  
@@ -35,7 +35,7 @@ $header-top-menu-badge-font-color:												lighten($header-bg-color, 15%) !de
 $header-top-menu-icon-font-color:												lighten($header-bg-color, 25%) !default;
 
 // Top menu user bar
-$header-top-menu-user-font-color:												$mid-grey; //lighten($header-bg-color, 45%) !default; 
+$header-top-menu-user-font-color:												$grey-salsa; //lighten($header-bg-color, 45%) !default; 
 $header-top-menu-user-bg-color:													none !default;
 
 //begin: Top Menu Extended Dropdowns  
