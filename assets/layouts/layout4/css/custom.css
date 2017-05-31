@@ -214,29 +214,6 @@ p.lead + p:not(.lead) {
 	padding-right:2em; 
 	border-radius:$br-lg; 
 }
-.btn-header {
-	display:block; 
-	float:right; 
-	vertical-align:top; 
-	margin-top:20px; 
-	margin-right:1em;
-	padding:8px 1em; 
-	border:2px solid $green;
-	border-radius:$br-lg; 
-	color:#fff;
-	text-transform:uppercase; 
-	font-size:80%; 
-	transition:all 0.25s ease-in-out;
-	&:hover, &:active, &:focus { 
-		color:#fff; 
-		text-decoration:none;
-		background-color:$green; 
-	}
-	&:visited {
-		color:#fff; 
-	}
-	@media (min-width:$screen-xs) { padding:8px 2em; }
-}
 .btn-update-payment {
 	// override min-height:30px set by stripe on this button
 	span {
@@ -279,6 +256,29 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 */
+.btn-header {
+  display: block;
+  float: right;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-right: 1em;
+  padding: 8px 1em;
+  border: 2px solid #01bc7d;
+  border-radius: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 80%;
+  transition: all 0.25s ease-in-out; }
+  .btn-header:hover, .btn-header:active, .btn-header:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #01bc7d; }
+  .btn-header:visited {
+    color: #fff; }
+  @media (min-width: 480px) {
+    .btn-header {
+      padding: 8px 2em; } }
+
 .btn.blue:not(.btn-outline) {
   background-color: #1655d6;
   border-color: #1655d6; }
@@ -373,11 +373,11 @@ h3.help-text i {
 
 .glyphicon-chevron-up,
 .glyphicon-chevron-up + span {
-  color: #2ab4c0 !important; }
+  color: #01bc7d !important; }
 
 .glyphicon-chevron-down,
 .glyphicon-chevron-down + span {
-  color: #e03412 !important; }
+  color: #e43a45 !important; }
 
 /* =Chart.js
 ---------------------------------------------------- */
@@ -927,9 +927,11 @@ input.other-domain {
 
 /* =Leaderboard
 ---------------------------------------------------- */
-@media (min-width: 768px) {
-  .leaderboard-searchbar {
-    width: 66.66%; } }
+.leaderboard-searchbar {
+  padding: 1em 0.5em; }
+  @media (min-width: 768px) {
+    .leaderboard-searchbar {
+      width: 66.66%; } }
 
 .table-leaderboard > tbody > tr.drawr > td {
   padding: 0; }
@@ -953,11 +955,13 @@ input.other-domain {
 
 .table-leaderboard > thead > tr > td,
 .table-leaderboard > tbody > tr > td {
-  padding: 5px 10px;
+  padding: 10px;
   vertical-align: middle; }
 
-.trigger-drawr {
+.drawr-trigger {
   cursor: pointer; }
+  .drawr-trigger:hover {
+    background-color: #f3f5f8; }
 
 @media (min-width: 1260px) {
   .lb-stats {
@@ -982,9 +986,9 @@ input.other-domain {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background-color: #acb5c3;
-  border-radius: 3px;
+  border-radius: 4px;
   vertical-align: middle; }
 
 .lb-percentage-number {
@@ -1003,10 +1007,10 @@ input.other-domain {
   background-color: #01bc7d; }
 
 .lb-neg .lb-movement {
-  color: #e03412; }
+  color: #e43a45; }
 
 .lb-neg .lb-percentage-line {
-  background-color: #e03412; }
+  background-color: #e43a45; }
 
 .lb-steady .lb-movement {
   color: #1655d6; }
@@ -1035,20 +1039,22 @@ input.other-domain {
 .portlet.portlet-nested > .portlet-title > .nav-tabs {
   float: left; }
 
-.mini-profile .content {
+.mini-profile-content {
   padding-left: 1em; }
 
-.logo-circled {
-  background-color: #fff;
-  width: 75px;
-  height: 75px;
-  border-radius: 75px;
-  border: 1px solid #e9ecf3;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px; }
+.mini-profile-url {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.66em; }
 
-.logo-circled img {
+[class^="logo-circled"] {
+  border-radius: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #fff;
+  text-align: center; }
+
+[class^="logo-circled"] img {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -1056,11 +1062,13 @@ input.other-domain {
   top: 48%;
   transform: translateY(-48%); }
 
-.trigger-drawr .logo-circled {
+.logo-circled-md {
+  width: 75px;
+  height: 75px; }
+
+.logo-circled-sm {
   width: 50px;
   height: 50px;
-  padding-left: 4px;
-  padding-right: 4px;
   margin: 0 auto; }
 
 .dashboard-stat3 .number {
@@ -1090,7 +1098,7 @@ input.other-domain {
   color: orange; }
 
 .fa-fire {
-  color: #e03412; }
+  color: #e43a45; }
 
 /* =AmCharts Animations
 ---------------------------------------------------- */

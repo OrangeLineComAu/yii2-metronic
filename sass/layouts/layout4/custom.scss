@@ -201,29 +201,6 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 	padding-right:2em; 
 	border-radius:$br-lg; 
 }
-.btn-header {
-	display:block; 
-	float:right; 
-	vertical-align:top; 
-	margin-top:20px; 
-	margin-right:1em;
-	padding:8px 1em; 
-	border:2px solid $green;
-	border-radius:$br-lg; 
-	color:#fff;
-	text-transform:uppercase; 
-	font-size:80%; 
-	transition:all 0.25s ease-in-out;
-	&:hover, &:active, &:focus { 
-		color:#fff; 
-		text-decoration:none;
-		background-color:$green; 
-	}
-	&:visited {
-		color:#fff; 
-	}
-	@media (min-width:$screen-xs) { padding:8px 2em; }
-}
 .btn-update-payment {
 	// override min-height:30px set by stripe on this button
 	span {
@@ -266,6 +243,30 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 */
+
+.btn-header {
+	display:block; 
+	float:right; 
+	vertical-align:top; 
+	margin-top:20px; 
+	margin-right:1em;
+	padding:8px 1em; 
+	border:2px solid $green;
+	border-radius:$br-lg; 
+	color:#fff;
+	text-transform:uppercase; 
+	font-size:80%; 
+	transition:all 0.25s ease-in-out;
+	&:hover, &:active, &:focus { 
+		color:#fff; 
+		text-decoration:none;
+		background-color:$green; 
+	}
+	&:visited {
+		color:#fff; 
+	}
+	@media (min-width:$screen-xs) { padding:8px 2em; }
+}
 
 .btn.blue:not(.btn-outline) {
 	background-color:$blue;
@@ -359,7 +360,7 @@ h3.help-text i { margin-bottom:0.66em; }
 }
 
 .glyphicon-chevron-up,
-.glyphicon-chevron-up + span { color:$green-sharp !important; }
+.glyphicon-chevron-up + span { color:$green !important; }
 .glyphicon-chevron-down,
 .glyphicon-chevron-down + span { color:$red !important; }
 
@@ -989,8 +990,9 @@ $market-overview-height-lg:400px;
 /* =Leaderboard
 ---------------------------------------------------- */
 .leaderboard-searchbar {
+	padding:1em 0.5em;
 	@media (min-width:$screen-sm) {
-		width:66.66%;	
+		width:66.66%;
 	}
 }
 
@@ -1024,14 +1026,16 @@ $market-overview-height-lg:400px;
 }
 .table-leaderboard > thead > tr > td,
 .table-leaderboard > tbody > tr > td {
-	padding:5px 10px;
+	padding:10px;
 	vertical-align:middle;
 }
 
 // styles
-.trigger-drawr {
+.drawr-trigger {
 	cursor:pointer;
-	//&:hover { background-color:#f3f3f3; }
+	&:hover { 
+		background-color:lighten($grey-steel, 3%);
+	}
 }
 
 .lb-stats {
@@ -1058,9 +1062,9 @@ $market-overview-height-lg:400px;
 	position:relative;
 	display:inline-block;
 	width:100%;
-	height:3px;
+	height:4px;
 	background-color:$grey-salsa;
-	border-radius:3px;
+	border-radius:4px;
 	vertical-align:middle;
 }
 .lb-percentage-number {
@@ -1101,11 +1105,21 @@ $market-overview-height-lg:400px;
 
 // table-drawr
 .drawr .drawr-inner {
+	// max-height:0;
+	// overflow:hidden;
+	// opacity:0;
+	// transition:all 0.5s ease-in-out;
+	// border:1px solid red;
 	display:none;
 }
 .drawr.active .drawr-inner {
+	// opacity:1;
+	// max-height:2000px;
 	display:block;
 }
+// dirty override to remove padding!
+
+
 // END more overrides
 
 // note:
@@ -1129,21 +1143,27 @@ $market-overview-height-lg:400px;
 }
 
 .mini-profile {
-	.content {
-		padding-left:1em;
-	}
 }
-.logo-circled { 
-	background-color:#fff;
-	width:75px; 
-	height:75px;
-	border-radius:75px;
-	border:1px solid $grey-steel;
-	text-align:center;
+.mini-profile-content {
+	padding-left:1em;
+}
+.mini-profile-icon {
+}
+.mini-profile-url {
+	font-weight:bold;
+	display:block;
+	margin-bottom:0.66em;
+}
+
+[class^="logo-circled"] {
+	border-radius:100px;	
 	padding-left:10px;
 	padding-right:10px;
+	background-color:#fff;
+	text-align:center;
+	//border:1px solid $grey-steel;
 }
-.logo-circled img {
+[class^="logo-circled"] img {
 	display:block;
 	width:100%;
 	max-width:100%;
@@ -1151,11 +1171,13 @@ $market-overview-height-lg:400px;
 	top:48%;
 	transform:translateY(-48%);
 }
-.trigger-drawr .logo-circled {
+.logo-circled-md { 
+	width:75px; 
+	height:75px;
+}
+.logo-circled-sm {
 	width:50px; 
 	height:50px;
-	padding-left:4px;
-	padding-right:4px;
 	margin:0 auto;
 }
 
