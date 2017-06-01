@@ -188,14 +188,6 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 		border:2px solid $red; 
 	}
 }
-.btn.blue { 
-	color:#fff; 
-	background-color:$blue !important; 
-	border:none; 
-	&:hover, &:focus, &:active { 
-		background-color:darken($blue, 15%) !important; 
-	}
-}
 .btn-rounded { 
 	padding-left:2em; 
 	padding-right:2em; 
@@ -205,28 +197,6 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 	// override min-height:30px set by stripe on this button
 	span {
 		min-height:0 !important;
-	}
-}
-
-// manage market widget
-.btn-tool {
-	padding-left:1em;
-	padding-right:1em;
-	border-radius:$br-lg; 
-}
-button.btn-tool.dropdown-toggle {
-	padding-left:0.25em !important;
-	padding-right:0.25em !important;
-}
-
-@media (max-width:$screen-xs-max) {
-	.actions.pull-left,
-	.actions.pull-right { 
-		float:left !important; 
-		clear:left; 
-	}
-	.actions.pull-left { 
-		margin-bottom:10px; 
 	}
 }
 
@@ -243,6 +213,37 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 */
+
+.btn.blue { 
+	color:#fff; 
+	background-color:$blue !important; 
+	border:none; 
+	&:hover, &:focus, &:active { 
+		background-color:darken($blue, 15%) !important; 
+	}
+}
+
+// manage market widget
+.btn-tool {
+	padding-left:1em;
+	padding-right:1em;
+	//border-radius:$br-lg; 
+}
+button.btn-tool.dropdown-toggle {
+	padding-left:0.25em !important;
+	padding-right:0.25em !important;
+}
+
+@media (max-width:$screen-xs-max) {
+	.actions.pull-left,
+	.actions.pull-right { 
+		float:left !important; 
+		clear:left; 
+	}
+	.actions.pull-left { 
+		margin-bottom:10px; 
+	}
+}
 
 .btn-header {
 	display:block; 
@@ -1130,7 +1131,8 @@ $market-overview-height-lg:400px;
 	margin-bottom:0;
 }
 .portlet-nested .portlet > .portlet-title > .caption {
-	font-size:15px !important;
+	font-size:inherit;
+	font-weight:bold;
 }
 /*.portlet.portlet-nested > .portlet-title {
 	margin-bottom:0;
