@@ -895,7 +895,7 @@ input.other-domain {
   padding: 20px;
   text-align: center;
   color: #fff;
-  text-shadow: 0 0 20px black; }
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.33); }
   @media (min-width: 992px) {
     .market-overview-name {
       top: auto;
@@ -906,6 +906,7 @@ input.other-domain {
   overflow: hidden;
   height: 60px;
   background-color: #acb5c3;
+  background-position: center;
   background-size: cover; }
   @media (min-width: 992px) {
     .market-overview-img {
@@ -925,6 +926,20 @@ input.other-domain {
   @media (min-width: 768px) {
     .leaderboard-searchbar {
       width: 66.66%; } }
+
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+  background-color: transparent; }
 
 .table-leaderboard > tbody > tr.drawr > td {
   padding: 0; }
@@ -1012,6 +1027,7 @@ input.other-domain {
   background-color: #1655d6; }
 
 .drawr .drawr-inner {
+  background-color: #f3f5f8;
   display: none; }
 
 .drawr.active .drawr-inner {

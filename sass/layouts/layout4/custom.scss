@@ -964,7 +964,7 @@ $market-overview-height-lg:400px;
 	padding:20px;
 	text-align:center;
 	color:#fff;
-	text-shadow:0 0 20px rgba(0,0,0,1);
+	text-shadow:0 0 20px rgba(0,0,0,0.33);
 	@media (min-width:$screen-md) {
 		top:auto;
 		padding-bottom:20%;
@@ -975,6 +975,7 @@ $market-overview-height-lg:400px;
 	overflow:hidden;
 	height:60px;
 	background-color:$grey-salsa;
+	background-position:center;
 	background-size:cover;
 	@media (min-width:$screen-md) {
 		height:$market-overview-height-lg;
@@ -998,6 +999,21 @@ $market-overview-height-lg:400px;
 }
 
 // override
+.table > thead > tr > td.active, 
+.table > tbody > tr > td.active, 
+.table > tfoot > tr > td.active, 
+.table > thead > tr > th.active, 
+.table > tbody > tr > th.active, 
+.table > tfoot > tr > th.active, 
+.table > thead > tr.active > td, 
+.table > tbody > tr.active > td, 
+.table > tfoot > tr.active > td, 
+.table > thead > tr.active > th, 
+.table > tbody > tr.active > th, 
+.table > tfoot > tr.active > th {
+	background-color:transparent;
+}
+
 .table-leaderboard th,
 .table-leaderboard td {
 	//font-size:12px !important; 
@@ -1111,6 +1127,7 @@ $market-overview-height-lg:400px;
 	// opacity:0;
 	// transition:all 0.5s ease-in-out;
 	// border:1px solid red;
+	background-color:lighten($grey-steel, 3%);
 	display:none;
 }
 .drawr.active .drawr-inner {
