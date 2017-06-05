@@ -192,9 +192,24 @@ p.lead + p:not(.lead) {
 .btn.blue {
   color: #fff;
   background-color: #1655d6 !important;
+  border-color: #1655d6;
   border: none; }
-  .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
+  .btn.blue:hover, .btn.blue:focus, .btn.blue:active, .btn.blue.active {
     background-color: #0f3991 !important; }
+
+.btn.btn-outline.blue {
+  color: #1655d6 !important;
+  border: 1px solid #1655d6 !important;
+  background-color: transparent !important; }
+  .btn.btn-outline.blue:hover, .btn.btn-outline.blue:focus, .btn.btn-outline.blue:active, .btn.btn-outline.blue.active {
+    color: inherit;
+    border-color: inherit;
+    background-color: inherit; }
+
+.open .btn.btn-outline.blue {
+  color: #fff !important;
+  border-color: #1655d6 !important;
+  background-color: #1655d6 !important; }
 
 .btn-rounded {
   padding-left: 2em;
@@ -225,22 +240,9 @@ p.lead + p:not(.lead) {
 .btn-update-payment span {
   min-height: 0 !important; }
 
-.btn-tool {
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 3em; }
-
 button.btn-tool.dropdown-toggle {
   padding-left: 0.25em !important;
   padding-right: 0.25em !important; }
-
-@media (max-width: 767px) {
-  .actions.pull-left,
-  .actions.pull-right {
-    float: left !important;
-    clear: left; }
-  .actions.pull-left {
-    margin-bottom: 10px; } }
 
 .navbar-nav .btn-nav .username {
   color: #e9ecf3 !important;
@@ -251,6 +253,32 @@ button.btn-tool.dropdown-toggle {
     opacity: 1; }
   .navbar-nav .btn-nav .username i {
     margin-left: 1em; }
+
+/* =Manage Market Widget
+---------------------------------------------------- */
+.market-menu-markets,
+.market-menu-filter,
+.market-menu-time-travel {
+  clear: both;
+  margin-bottom: 10px; }
+
+@media (min-width: 768px) {
+  .market-menu-markets,
+  .market-menu-filter {
+    display: inline-block; }
+  .market-menu-time-travel {
+    float: right; } }
+
+.dropdown-menu > li {
+  color: #555; }
+
+.dropdown-menu .mt-radio,
+.dropdown-menu .mt-checkbox,
+.dropdown-menu a.btn.action {
+  margin: 8px 16px; }
+
+.dropdown-menu li:last-child:hover > a {
+  border-radius: 3em; }
 
 /* =Forms
 ---------------------------------------------------- */

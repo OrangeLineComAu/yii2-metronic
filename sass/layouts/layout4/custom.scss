@@ -131,7 +131,7 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 ---------------------------------------------------- */
 .btn { 
 	display:inline-block !important; 
-	border-radius:$br-sml; 
+	border-radius:$br-sm; 
 	//transition:all 0.25s ease-in-out; 
 	color:$grey;
 	background-color:#fff;
@@ -181,10 +181,26 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 .btn.blue { 
 	color:#fff; 
 	background-color:$blue !important; 
+	border-color:$blue;
 	border:none; 
-	&:hover, &:focus, &:active { 
-		background-color:darken($blue, 15%) !important; 
+	&:hover, &:focus, &:active, &.active { 
+		background-color:darken($blue, 15%) !important;
 	}
+}
+.btn.btn-outline.blue { 
+	color:$blue !important; 
+	border:1px solid $blue !important;
+	background-color:transparent !important;
+	&:hover, &:focus, &:active, &.active { 
+		color:inherit; 
+		border-color:inherit;
+		background-color:inherit;
+	}
+}
+.open .btn.btn-outline.blue { 
+	color:#fff !important; 
+	border-color:$blue !important;
+	background-color:$blue !important; 
 }
 .btn-rounded { 
 	padding-left:2em; 
@@ -218,26 +234,9 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 	}
 }
 
-// manage market widget
-.btn-tool {
-	padding-left:1em;
-	padding-right:1em;
-	border-radius:$br-lg; 
-}
 button.btn-tool.dropdown-toggle {
 	padding-left:0.25em !important;
 	padding-right:0.25em !important;
-}
-
-@media (max-width:$screen-xs-max) {
-	.actions.pull-left,
-	.actions.pull-right { 
-		float:left !important; 
-		clear:left; 
-	}
-	.actions.pull-left { 
-		margin-bottom:10px; 
-	}
 }
 
 .navbar-nav .btn-nav .username {
@@ -252,6 +251,40 @@ button.btn-tool.dropdown-toggle {
 		margin-left:1em; 
 	}
 }
+
+/* =Manage Market Widget
+---------------------------------------------------- */
+// responsive layout
+.market-menu-markets,
+.market-menu-filter,
+.market-menu-time-travel {
+	clear:both;
+	margin-bottom:10px; 
+}
+@media (min-width:$screen-sm) {
+	.market-menu-markets,
+	.market-menu-filter { 
+		display:inline-block;
+	}
+	.market-menu-time-travel {
+		float:right;
+	}
+}
+ 
+.dropdown-menu > li {
+	color:#555; // override
+}
+// padding for non-link items in dropdowns
+.dropdown-menu {
+	.mt-radio, 
+	.mt-checkbox,
+	a.btn.action {
+		margin:8px 16px;
+	}
+	li:last-child:hover > a {
+		border-radius:$br-lg; // override
+	}
+} 
 
 
 /* =Forms
@@ -276,7 +309,7 @@ button.btn-tool.dropdown-toggle {
 	color:$mid-grey;
 	background-color:#fff;
 	padding:0.5em 1em;
-	border-radius:$br-sml;
+	border-radius:$br-sm;
 	vertical-align:top;
 }
 
@@ -359,7 +392,7 @@ h3.help-text i { margin-bottom:0.66em; }
 /* =Graphs
 ---------------------------------------------------- */
 @media (max-width:$screen-xs) { 
-	.graph-helper { padding:0.5em; border-radius:$br-sml; }
+	.graph-helper { padding:0.5em; border-radius:$br-sm; }
 	//.tools > a.fullscreen:before { color:$green; }
 }
 @media (min-width:$screen-xs) { 
@@ -440,7 +473,7 @@ a .social-post-image {
 
 .ad-template {
 	border:1px solid $light-blue-grey;
-	border-radius:$br-sml;
+	border-radius:$br-sm;
 	margin-bottom:1em;
 }
 .ad-content {
