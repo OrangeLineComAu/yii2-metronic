@@ -60,9 +60,13 @@ h5 {
   .btn {
     font-size: 100% !important; } }
 
-a {
+a,
+a:visited {
   color: #1655d6; }
-  a:hover, a:focus, a:active {
+  a:hover, a:focus, a:active,
+  a:visited:hover,
+  a:visited:focus,
+  a:visited:active {
     color: #1143a8;
     text-decoration: underline; }
 
@@ -671,73 +675,60 @@ input.other-domain {
   display: block;
   margin-top: 2em;
   margin-bottom: 3em; }
-
-.carousel-cell {
-  width: 90%;
-  margin: 2em 5%;
-  opacity: 0.5;
-  border-radius: 5px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
-  transform: scale(0.9);
-  transition: all 0.5s ease; }
-
-.carousel-cell.is-selected {
-  transform: scale(1);
-  opacity: 1; }
-
-.carousel-template {
-  color: #808da3; }
-
-.carousel-head {
-  padding: 15px 20px;
-  border-bottom: 1px solid #e9ecf3; }
-
-.carousel-brand {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px; }
-
-.carousel-published {
-  display: block;
-  color: #acb5c3;
-  font-size: 80%; }
-
-.carousel-ext-link {
-  float: right;
-  margin-top: 10px;
-  color: #acb5c3; }
-  .carousel-ext-link:hover {
-    color: #333333;
-    text-decoration: none; }
-
-.carousel-copy {
-  padding: 20px;
-  color: #808da3; }
-
-.carousel-copy p {
-  margin: 0; }
-
-.carousel-copy-ext-link {
-  color: #808da3; }
-  .carousel-copy-ext-link:hover {
-    color: #333333;
-    text-decoration: none; }
-
-.carousel-img {
-  height: 200px;
-  max-height: 200px;
-  overflow: hidden; }
-  .carousel-imga:hover {
-    cursor: pointer; }
-
-.carousel-img img {
-  width: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
-
-.carousel-meta {
-  padding: 0 20px 15px; }
+  .carousel .carousel-cell {
+    width: 90%;
+    margin: 2em 5%;
+    opacity: 0.5;
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.25);
+    transform: scale(0.9);
+    transition: all 0.5s ease; }
+  .carousel .carousel-cell.is-selected {
+    transform: scale(1);
+    opacity: 1; }
+  .carousel .carousel-template {
+    color: #808da3; }
+  .carousel .carousel-head {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecf3; }
+  .carousel .carousel-brand {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; }
+  .carousel .carousel-published {
+    display: block;
+    color: #acb5c3;
+    font-size: 80%; }
+  .carousel .carousel-ext-link {
+    float: right;
+    margin-top: 10px;
+    color: #acb5c3; }
+    .carousel .carousel-ext-link:hover {
+      color: #333333;
+      text-decoration: none; }
+  .carousel .carousel-copy {
+    padding: 20px;
+    color: #808da3; }
+  .carousel .carousel-copy p {
+    margin: 0; }
+  .carousel .carousel-copy-ext-link {
+    color: #808da3; }
+    .carousel .carousel-copy-ext-link:hover {
+      color: #333333;
+      text-decoration: none; }
+  .carousel .carousel-img {
+    height: 200px;
+    max-height: 200px;
+    overflow: hidden; }
+    .carousel .carousel-imga:hover {
+      cursor: pointer; }
+  .carousel .carousel-img img {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  .carousel .carousel-meta {
+    padding: 0 20px 15px; }
 
 .flickity-prev-next-button .arrow {
   fill: gray; }
@@ -752,19 +743,29 @@ input.other-domain {
   right: 5%; }
 
 @media (min-width: 480px) {
-  .carousel-cell {
+  .carousel .carousel-cell {
     width: 60%; }
-  .carousel-img {
+  .carousel .carousel-img {
     height: 300px;
     max-height: 300px; }
-  .flickity-prev-next-button.previous {
+  .carousel .flickity-prev-next-button.previous {
     left: 20%; }
-  .flickity-prev-next-button.next {
+  .carousel .flickity-prev-next-button.next {
     right: 20%; } }
 
 @media (min-width: 1200px) {
-  .carousel-cell {
+  .carousel .carousel-cell {
     width: 40%; } }
+
+/* =Flickity as a slider
+---------------------------------------------------- */
+.slider {
+  margin-bottom: 40px; }
+  .slider .carousel-cell {
+    width: 100%;
+    padding: 20px 20px 40px; }
+  .slider .flickity-prev-next-button {
+    display: none; }
 
 /* =Add-on design for login
 ---------------------------------------------------- */
@@ -939,6 +940,10 @@ input.other-domain {
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
   background-color: transparent; }
+
+.table-leaderboard th,
+.table-leaderboard td {
+  font-size: 12px !important; }
 
 .table-leaderboard > tbody > tr.drawr > td {
   padding: 0; }
