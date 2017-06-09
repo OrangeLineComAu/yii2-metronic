@@ -9,11 +9,11 @@ body {
   background-color: #e9ecf3;
   background-size: 100% auto;
   font-family: 'Raleway', sans-serif;
-  font-feature-settings: 'lnum';
   -moz-font-feature-settings: 'lnum=1';
   -ms-font-feature-settings: 'lnum';
   -webkit-font-feature-settings: 'lnum';
-  -o-font-feature-settings: 'lnum'; }
+  -o-font-feature-settings: 'lnum';
+  font-feature-settings: 'lnum'; }
 
 h1 {
   font-size: 24px;
@@ -75,6 +75,9 @@ p.lead + p.lead {
 p.lead + p:not(.lead) {
   margin-top: -1em; }
 
+.text-info {
+  color: #1655d6; }
+
 .cf {
   *zoom: 1; }
   .cf:before, .cf:after {
@@ -85,6 +88,10 @@ p.lead + p:not(.lead) {
 
 /* =Layout
 ---------------------------------------------------- */
+.page-content-wrapper .page-content {
+  margin-left: 0;
+  padding-left: 0; }
+
 .page-sidebar-wrapper {
   position: relative;
   z-index: 5; }
@@ -92,6 +99,14 @@ p.lead + p:not(.lead) {
 .page-content-wrapper {
   position: relative;
   z-index: 1; }
+
+/* =Nav
+---------------------------------------------------- */
+.page-header.navbar .menu-toggler.sidebar-toggler {
+  display: none; }
+
+.page-boxed .page-header.navbar .page-logo {
+  width: auto; }
 
 .page-boxed .page-wrapper {
   background: transparent url(/images/footer-bg-mobile.png) center bottom no-repeat; }
@@ -305,6 +320,10 @@ button.btn-tool.dropdown-toggle {
   border-radius: 4px;
   vertical-align: top; }
 
+.input-group-addon-60 {
+  text-align: left;
+  width: 60%; }
+
 /* =Modules
 ---------------------------------------------------- */
 .mntns-bg {
@@ -328,6 +347,11 @@ h3.help-text {
 
 h3.help-text i {
   margin-bottom: 0.66em; }
+
+@media (min-width: 992px) {
+  .im-half-width {
+    width: 50%;
+    margin: 0 auto; } }
 
 /* =Dashboard
 ---------------------------------------------------- */
@@ -509,31 +533,6 @@ a .social-post-image {
   width: 100%;
   overflow: hidden;
   border: 1px solid #fff; }
-
-/* =Nav
----------------------------------------------------- */
-/* .nav > li > a {
-	color:$grey-steel !important;
-	opacity:0.6;
-	&:hover, &:focus, &:active, &:active { 
-		background:transparent; opacity:1; 
-	}
-} */
-.page-sidebar .page-sidebar-menu > li > a {
-  border-top: none; }
-
-.page-sidebar .page-sidebar-menu > li.divider {
-  border-top: 2px solid #3570ea; }
-
-.page-header.navbar .menu-toggler.responsive-toggler {
-  margin: 22px 0 0 0; }
-  @media (min-width: 1200px) {
-    .page-header.navbar .menu-toggler.responsive-toggler {
-      margin: 22px 14px 0 6px; } }
-
-@media (min-width: 992px) {
-  .page-sidebar {
-    position: fixed; } }
 
 /* =Table Overrides
 ---------------------------------------------------- */
