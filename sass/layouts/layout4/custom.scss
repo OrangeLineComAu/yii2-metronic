@@ -42,13 +42,15 @@ h5 { font-size:16px; color:inherit; font-weight:normal; }
 	.btn { font-size:100% !important; }
 }
 
-a,
-a:visited { 
+a { 
 	color:$blue; 
 	&:hover, &:focus, &:active {
 		color:darken($blue, 10%); 
 		text-decoration:underline;
 	}
+}
+a:visited {
+	color:inherit;
 }
 
 .align-center {
@@ -99,6 +101,25 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 	width:auto;
 }
 
+
+// settings dropdown
+
+
+.navbar-nav > li > a,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user > .dropdown-toggle > i {
+	color:$grey-steel;
+}
+
+/* 
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu .dropdown-menu-list > li > a {
+	padding:8px 16px;
+}
+// width
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu {
+	width:auto;
+	min-width:175px;
+} */
+
 .page-boxed {
 
 	// apply custom footer to new .page-wrapper class (cannot apply to body due to ".page-header-fixed")
@@ -113,6 +134,16 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 		@media (max-width:$screen-xs) { margin-top:18px; }
 		@media (min-width:$screen-xs) { max-width:170px; }
 	}
+
+	// tweaks to setting dropdown
+	.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu:after {
+		border-bottom-color:#fff;
+	}
+	.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu {
+		margin-top:-10px;
+		margin-right:5px;
+	}
+
 	.container {
 		@media (max-width:$screen-xs) { padding-left:0; padding-right:0; }
 	}
@@ -1223,8 +1254,8 @@ $market-overview-height-lg:400px;
 	height:75px;
 }
 .logo-circled-sm {
-	width:50px; 
-	height:50px;
+	width:40px; 
+	height:40px;
 	margin:0 auto;
 }
 

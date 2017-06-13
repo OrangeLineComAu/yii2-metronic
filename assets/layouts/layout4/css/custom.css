@@ -60,15 +60,14 @@ h5 {
   .btn {
     font-size: 100% !important; } }
 
-a,
-a:visited {
+a {
   color: #1655d6; }
-  a:hover, a:focus, a:active,
-  a:visited:hover,
-  a:visited:focus,
-  a:visited:active {
+  a:hover, a:focus, a:active {
     color: #1143a8;
     text-decoration: underline; }
+
+a:visited {
+  color: inherit; }
 
 .align-center {
   text-align: center; }
@@ -112,6 +111,19 @@ p.lead + p:not(.lead) {
 .page-boxed .page-header.navbar .page-logo {
   width: auto; }
 
+.navbar-nav > li > a,
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-user > .dropdown-toggle > i {
+  color: #e9ecf3; }
+
+/* 
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu .dropdown-menu-list > li > a {
+	padding:8px 16px;
+}
+// width
+.page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu {
+	width:auto;
+	min-width:175px;
+} */
 .page-boxed .page-wrapper {
   background: transparent url(/images/footer-bg-mobile.png) center bottom no-repeat; }
   @media (min-width: 480px) {
@@ -126,6 +138,13 @@ p.lead + p:not(.lead) {
   @media (min-width: 480px) {
     .page-boxed .page-header.navbar .page-logo .logo-default {
       max-width: 170px; } }
+
+.page-boxed .page-header.navbar .top-menu .navbar-nav > li.dropdown-extended .dropdown-menu:after {
+  border-bottom-color: #fff; }
+
+.page-boxed .page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu {
+  margin-top: -10px;
+  margin-right: 5px; }
 
 @media (max-width: 480px) {
   .page-boxed .container {
@@ -1081,8 +1100,8 @@ input.other-domain {
   height: 75px; }
 
 .logo-circled-sm {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 0 auto; }
 
 .dashboard-stat3 .number {
