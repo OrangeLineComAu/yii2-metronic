@@ -15,37 +15,35 @@ body {
   -o-font-feature-settings: 'lnum';
   font-feature-settings: 'lnum'; }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #00103e; }
+
 h1 {
   font-size: 24px;
-  color: #00103e;
   font-weight: normal;
   margin-top: 0.5em; }
 
 h2 {
   font-size: 20px;
-  color: #00103e;
   font-weight: normal; }
 
 h3 {
   font-size: 18px;
-  color: #1655d6;
   font-weight: bold; }
 
 h4 {
   font-size: 16px;
-  color: #1655d6;
   font-weight: normal; }
 
 h5 {
   font-size: 16px;
-  color: inherit;
   font-weight: normal; }
 
 @media (min-width: 1200px) {
   h1 {
     font-size: 40px; }
   h2 {
-    font-size: 32px; }
+    font-size: 30px; }
   h3 {
     font-size: 22px; }
   h4 {
@@ -72,14 +70,17 @@ a:visited {
 .align-center {
   text-align: center; }
 
+.text-muted {
+  color: #acb5c3; }
+
+.text-info {
+  color: #1655d6; }
+
 p.lead + p.lead {
   margin-top: -0.5em; }
 
 p.lead + p:not(.lead) {
   margin-top: -1em; }
-
-.text-info {
-  color: #1655d6; }
 
 .cf {
   *zoom: 1; }
@@ -271,9 +272,13 @@ p.lead + p:not(.lead) {
   .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
     background-color: #0f3991 !important; }
 
+.btn.green:not(.btn-outline) {
+  background-color: #01bc7d; }
+
 .btn-tool {
   padding-left: 1em;
-  padding-right: 1em; }
+  padding-right: 1em;
+  border-radius: 3em; }
 
 button.btn-tool.dropdown-toggle {
   padding-left: 0.25em !important;
@@ -940,12 +945,6 @@ input.other-domain {
 
 /* =Leaderboard
 ---------------------------------------------------- */
-.leaderboard-searchbar {
-  padding: 1em 0.5em; }
-  @media (min-width: 768px) {
-    .leaderboard-searchbar {
-      width: 66.66%; } }
-
 .table > thead > tr > td.active,
 .table > tbody > tr > td.active,
 .table > tfoot > tr > td.active,
@@ -959,10 +958,6 @@ input.other-domain {
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
   background-color: transparent; }
-
-.table-leaderboard th,
-.table-leaderboard td {
-  font-size: 12px !important; }
 
 .table-leaderboard > tbody > tr.drawr > td {
   padding: 0; }
@@ -989,10 +984,52 @@ input.other-domain {
   padding: 10px;
   vertical-align: middle; }
 
+.leaderboard-searchbar {
+  padding: 1em 0.5em; }
+  @media (min-width: 768px) {
+    .leaderboard-searchbar {
+      float: left;
+      width: 60%; } }
+
+.leaderboard-legend {
+  text-align: right; }
+  @media (min-width: 768px) {
+    .leaderboard-legend {
+      float: right;
+      width: 30%;
+      padding: 1em 0.5em; } }
+
+.lb-legend {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 90% !important; }
+
+.lb-legend > li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 0.5em; }
+
+.lb-legend-node {
+  display: block;
+  margin: 0 auto 3px;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 4px; }
+  .lb-legend-node.lb-pos {
+    background-color: #01bc7d; }
+  .lb-legend-node.lb-neg {
+    background-color: #e43a45; }
+  .lb-legend-node.lb-steady {
+    background-color: #1655d6; }
+
 .drawr-trigger {
   cursor: pointer; }
-  .drawr-trigger:hover {
-    background-color: #f3f5f8; }
+  .drawr-trigger.active, .drawr-trigger:hover {
+    background-color: #f6f7fa; }
 
 @media (min-width: 1260px) {
   .lb-stats {
@@ -1050,7 +1087,6 @@ input.other-domain {
   background-color: #1655d6; }
 
 .drawr .drawr-inner {
-  background-color: #f3f5f8;
   display: none; }
 
 .drawr.active .drawr-inner {
@@ -1063,14 +1099,22 @@ input.other-domain {
   font-size: inherit;
   font-weight: bold; }
 
-/*.portlet.portlet-nested > .portlet-title {
-	margin-bottom:0;
-} */
-.portlet.portlet-nested > .portlet-title > .caption {
-  float: right; }
+.tabbable-line {
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
-.portlet.portlet-nested > .portlet-title > .nav-tabs {
-  float: left; }
+.nav-pills > li > a {
+  border-radius: 3em;
+  border: 1px solid #1655d6;
+  padding: 6px 12px; }
+
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #1655d6; }
 
 .mini-profile-content {
   padding-left: 1em; }

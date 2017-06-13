@@ -21,15 +21,16 @@ body {
 	font-feature-settings:'lnum';
 }
 
-h1 { font-size:24px; color:$navy; font-weight:normal; margin-top:0.5em; }
-h2 { font-size:20px; color:$navy; font-weight:normal; }
-h3 { font-size:18px; color:$blue; font-weight:bold; }
-h4 { font-size:16px; color:$blue; font-weight:normal; } 
-h5 { font-size:16px; color:inherit; font-weight:normal; } 
+h1,h2,h3,h4,h5,h6 { color:$navy; }
+h1 { font-size:24px; font-weight:normal; margin-top:0.5em; }
+h2 { font-size:20px; font-weight:normal; }
+h3 { font-size:18px; font-weight:bold; }
+h4 { font-size:16px; font-weight:normal; } 
+h5 { font-size:16px; font-weight:normal; } 
 
 @media (min-width:$screen-lg-min) {
 	h1 { font-size:40px; }
-	h2 { font-size:32px; }
+	h2 { font-size:30px; }
 	h3 { font-size:22px; }
 	h4 { font-size:18px; }
 	h5 { font-size:16px; } 
@@ -53,15 +54,13 @@ a:visited {
 	color:inherit;
 }
 
-.align-center {
-	text-align:center;
-}
+.align-center { text-align:center; }
+.text-muted { color:$grey-salsa; }
+.text-info { color:$blue; }
 
 // spacing finessing
 p.lead + p.lead { margin-top:-0.5em; }
 p.lead + p:not(.lead) { margin-top:-1em; }
-
-.text-info { color:$blue; }
 
 // =clearfix 
 .cf {
@@ -274,11 +273,15 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 	}
 }
 
+.btn.green:not(.btn-outline) {
+	background-color:$green;
+}
+
 // manage market widget
 .btn-tool {
 	padding-left:1em;
 	padding-right:1em;
-	//border-radius:$br-lg; 
+	border-radius:$br-lg; 
 }
 button.btn-tool.dropdown-toggle {
 	padding-left:0.25em !important;
@@ -1050,13 +1053,6 @@ $market-overview-height-lg:400px;
 
 /* =Leaderboard
 ---------------------------------------------------- */
-.leaderboard-searchbar {
-	padding:1em 0.5em;
-	@media (min-width:$screen-sm) {
-		width:66.66%;
-	}
-}
-
 // override
 .table > thead > tr > td.active, 
 .table > tbody > tr > td.active, 
@@ -1075,7 +1071,7 @@ $market-overview-height-lg:400px;
 
 .table-leaderboard th,
 .table-leaderboard td {
-	font-size:12px !important; 
+	//font-size:12px !important; 
 }
 .table-leaderboard > tbody > tr.drawr > td {
 	padding:0;
@@ -1106,11 +1102,62 @@ $market-overview-height-lg:400px;
 	vertical-align:middle;
 }
 
+// leaderboard search bar
+.leaderboard-searchbar {
+	padding:1em 0.5em;
+	@media (min-width:$screen-sm) {
+		float:left;
+		width:60%;
+	}
+}
+
+// leaderboard legend 
+.leaderboard-legend {
+	text-align:right;
+	@media (min-width:$screen-sm) {
+		float:right;
+		width:30%;
+		padding:1em 0.5em;
+	}
+}
+.lb-legend {
+	display:inline-block;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	font-size:90% !important;
+}
+.lb-legend > li {
+	display:inline-block;
+	text-align:center;
+	margin:0 0.5em;
+}
+.lb-legend-node {
+	display:block;
+	margin:0 auto 3px;
+	padding:0;
+	width:6px; 
+	height:6px;
+	border-radius:$br-sm;
+
+	&.lb-pos {
+		background-color:$green;
+	}
+	&.lb-neg {
+		background-color:$red;
+	}
+	&.lb-steady {
+		background-color:$blue;
+	}
+}
+
 // styles
 .drawr-trigger {
 	cursor:pointer;
+	&.active,
 	&:hover { 
-		background-color:lighten($grey-steel, 3%);
+		background-color:lighten($grey-steel, 4%);
 	}
 }
 
@@ -1181,26 +1228,12 @@ $market-overview-height-lg:400px;
 
 // table-drawr
 .drawr .drawr-inner {
-	// max-height:0;
-	// overflow:hidden;
-	// opacity:0;
-	// transition:all 0.5s ease-in-out;
-	// border:1px solid red;
-	background-color:lighten($grey-steel, 3%);
+	//background-color:lighten($grey-steel, 3%);
 	display:none;
 }
 .drawr.active .drawr-inner {
-	// opacity:1;
-	// max-height:2000px;
 	display:block;
 }
-// dirty override to remove padding!
-
-
-// END more overrides
-
-// note:
-// tr.active bckground colour is set in table-roww.less file apparently, thanks metronic? removed those lines.
 
 // leaderboard drawr portlets overrides
 .portlet.portlet-nested {
@@ -1210,14 +1243,22 @@ $market-overview-height-lg:400px;
 	font-size:inherit;
 	font-weight:bold;
 }
-/*.portlet.portlet-nested > .portlet-title {
-	margin-bottom:0;
-} */
-.portlet.portlet-nested > .portlet-title > .caption {
-	float:right;
+.tabbable-line {
+	margin-top:1em;
+	margin-bottom:1em;
 }
-.portlet.portlet-nested > .portlet-title > .nav-tabs {
-	float:left;
+.nav-pills > li > a {
+	border-radius:$br-lg;
+	border:1px solid $blue;
+	padding:6px 12px;
+}
+.nav-pills > li > a:hover, 
+.nav-pills > li > a:focus,
+.nav-pills > li.active > a, 
+.nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a:focus {
+	color:#fff;
+	background-color:$blue;
 }
 
 .mini-profile {
