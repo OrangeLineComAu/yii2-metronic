@@ -1,4 +1,13 @@
 /* here you can put your own css to customize and override the theme */
+.font-red-mint {
+  colour: #e43a45; }
+
+.font-blue {
+  colour: #1655d6; }
+
+.font-green {
+  colour: #01bc7d; }
+
 /* Typography
 ---------------------------------------------------- */
 html, body {
@@ -356,8 +365,10 @@ button.btn-tool.dropdown-toggle {
     padding: 10px 10px 15px !important; } }
 
 .portlet.light > .portlet-title > .caption {
-  color: #333333 !important;
-  font-weight: normal; }
+  color: #333333 !important; }
+
+.portlet.light > .portlet-title > .caption > .caption-subject {
+  text-transform: uppercase; }
 
 h3.help-text {
   font-weight: normal;
@@ -1081,15 +1092,7 @@ input.other-domain {
 .drawr.active .drawr-inner {
   display: block; }
 
-.portlet.portlet-nested {
-  margin-bottom: 0; }
-
-.portlet-nested .portlet > .portlet-title > .caption {
-  font-size: inherit;
-  font-weight: bold; }
-
 .tabbable-line {
-  margin-top: 1em;
   margin-bottom: 1em; }
 
 .nav-pills > li > a {
@@ -1137,22 +1140,27 @@ input.other-domain {
   height: 40px;
   margin: 0 auto; }
 
-.dashboard-stat3 .number {
+.stats {
+  list-style: none;
+  padding-left: 0; }
+
+.stat-item {
+  text-transform: uppercase;
+  font-size: 75%;
+  display: inline-block;
+  min-width: 6em; }
+
+.dashboard-stat3 .number,
+.dashboard-stat3 .stats {
   display: block;
   float: left;
   width: 50%; }
-  .dashboard-stat3 .number h1, .dashboard-stat3 .number h2, .dashboard-stat3 .number h3 {
+  .dashboard-stat3 .number h1, .dashboard-stat3 .number h2, .dashboard-stat3 .number h3,
+  .dashboard-stat3 .stats h1,
+  .dashboard-stat3 .stats h2,
+  .dashboard-stat3 .stats h3 {
     margin: 0;
     color: inherit; }
-
-.dashboard-stat3 .status {
-  display: block;
-  float: left;
-  width: 50%; }
-
-.dashboard-stat3 .status-item {
-  display: block;
-  font-weight: bold; }
 
 .img-width-full {
   display: block;
@@ -1165,6 +1173,19 @@ input.other-domain {
 
 .fa-fire {
   color: #e43a45; }
+
+/* =Modals
+---------------------------------------------------- */
+.modal-lg {
+  width: 90%; }
+
+@media (min-width: 1200px) {
+  .modal-lg {
+    width: 1100px; } }
+
+.modal-content {
+  border: none;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.25); }
 
 /* =AmCharts Animations
 ---------------------------------------------------- */
