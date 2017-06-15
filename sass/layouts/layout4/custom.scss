@@ -172,91 +172,69 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 
 /* =Buttons
 ---------------------------------------------------- */
-/*
-.btn { 
-	display:inline-block !important; 
-	border-radius:$br-sm; 
-	//transition:all 0.25s ease-in-out; 
-	color:$grey;
-	background-color:#fff;
-	border:1px solid $grey;
+.btn {
+	border:none;
 	border-radius:$br-lg; 
 }
-.btn-default { 
-	color:$blue; 
-	background-color:transparent; 
-	border:2px solid $blue;
+.btn.btn-default { 
+	color:darken($grey-steel, 50%); 
+	background-color:darken($grey-steel, 5%); 
 	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:$blue; 
-		border:2px solid $blue; 
+		color:$grey; 
+		background-color:darken($grey-steel, 15%); 
 	}
 }
-.btn-primary { 
+.btn.btn-primary { 
 	color:#fff; 
-	background-color:$red; 
-	border:2px solid $red;
+	background-color:$blue; 
 	&:hover, &:focus, &:active { 
 		color:#fff; 
-		background-color:darken($red, 10%);
-		border:2px solid darken($red, 10%);
+		background-color:darken($blue, 15%); 
 	}
+}
+.btn.btn-success { 
+	color:#fff; 
+	background-color:$green; 
+	&:hover, &:focus, &:active { 
+		color:#fff; 
+		background-color:darken($green, 15%); 
+	}
+}
+.btn.btn-info { 
+	color:#fff;
 }
 .btn.btn-warning { 
-	color:$gold; 
-	background-color:transparent; 
-	border:2px solid $gold;
+	color:#fff; 
+	background-color:$gold; 
 	&:hover, &:focus, &:active { 
 		color:#fff; 
-		background-color:$gold; 
-		border:2px solid $gold; 
+		background-color:darken($gold, 15%); 
 	}
 }
-.btn-info { 
-	color:$red; 
-	background-color:transparent; 
-	border:2px solid $red;
+.btn.btn-danger { 
+	color:#fff; 
+	background-color:$red; 
 	&:hover, &:focus, &:active { 
 		color:#fff; 
-		background-color:$red; 
-		border:2px solid $red; 
+		background-color:darken($red, 15%); 
 	}
 }
-.btn-rounded { 
-	padding-left:2em; 
-	padding-right:2em; 
-	border-radius:$br-lg; 
-}
-.btn-update-payment {
-	// override min-height:30px set by stripe on this button
-	span {
-		min-height:0 !important;
-	}
-}
-
-.navbar-nav .btn-nav .username {
-	color:$grey-steel !important;
-	opacity:0.6;
-	margin-top:20px;
-	&:hover, &:focus, &:active, &:active { 
-		background:transparent; 
-		opacity:1; 
-	}
-	i { 
-		margin-left:1em; 
-	}
-}
-*/
 
 .btn.blue { 
 	color:#fff; 
 	background-color:$blue !important; 
-	border:none; 
 	&:hover, &:focus, &:active { 
 		background-color:darken($blue, 15%) !important; 
 	}
 }
-
+.btn.blue:not(.btn-outline) {
+	background-color:$blue;
+	border-color:$blue;
+	&:hover {
+		background-color:darken($blue,10%);
+		border-color:darken($blue,10%);
+	}
+}
 .btn.green:not(.btn-outline) {
 	background-color:$green;
 }
@@ -283,6 +261,33 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 
+/*
+.btn-rounded { 
+	padding-left:2em; 
+	padding-right:2em; 
+	border-radius:$br-lg; 
+}
+.btn-update-payment {
+	// override min-height:30px set by stripe on this button
+	span {
+		min-height:0 !important;
+	}
+}
+
+.navbar-nav .btn-nav .username {
+	color:$grey-steel !important;
+	opacity:0.6;
+	margin-top:20px;
+	&:hover, &:focus, &:active, &:active { 
+		background:transparent; 
+		opacity:1; 
+	}
+	i { 
+		margin-left:1em; 
+	}
+}
+*/
+
 /* .btn-header {
 	display:block; 
 	float:right; 
@@ -306,15 +311,6 @@ button.btn-tool.dropdown-toggle {
 	}
 	@media (min-width:$screen-xs) { padding:8px 2em; }
 } */
-
-.btn.blue:not(.btn-outline) {
-	background-color:$blue;
-	border-color:$blue;
-	&:hover {
-		background-color:darken($blue,10%);
-		border-color:darken($blue,10%);
-	}
-}
 
 /* =Forms
 ---------------------------------------------------- */

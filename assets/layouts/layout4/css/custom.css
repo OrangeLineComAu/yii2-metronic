@@ -189,56 +189,82 @@ p.lead + p:not(.lead) {
 
 /* =Buttons
 ---------------------------------------------------- */
+.btn {
+  border: none;
+  border-radius: 3em; }
+
+.btn.btn-default {
+  color: #4e628f;
+  background-color: #d9deea; }
+  .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active {
+    color: #333333;
+    background-color: #b8c1d8; }
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #1655d6; }
+  .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+    color: #fff;
+    background-color: #0f3991; }
+
+.btn.btn-success {
+  color: #fff;
+  background-color: #01bc7d; }
+  .btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active {
+    color: #fff;
+    background-color: #01704a; }
+
+.btn.btn-info {
+  color: #fff; }
+
+.btn.btn-warning {
+  color: #fff;
+  background-color: #ffa500; }
+  .btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active {
+    color: #fff;
+    background-color: #b37400; }
+
+.btn.btn-danger {
+  color: #fff;
+  background-color: #e43a45; }
+  .btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active {
+    color: #fff;
+    background-color: #b81924; }
+
+.btn.blue {
+  color: #fff;
+  background-color: #1655d6 !important; }
+  .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
+    background-color: #0f3991 !important; }
+
+.btn.blue:not(.btn-outline) {
+  background-color: #1655d6;
+  border-color: #1655d6; }
+  .btn.blue:not(.btn-outline):hover {
+    background-color: #1143a8;
+    border-color: #1143a8; }
+
+.btn.green:not(.btn-outline) {
+  background-color: #01bc7d; }
+
+.btn-tool {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 3em; }
+
+button.btn-tool.dropdown-toggle {
+  padding-left: 0.25em !important;
+  padding-right: 0.25em !important; }
+
+@media (max-width: 767px) {
+  .actions.pull-left,
+  .actions.pull-right {
+    float: left !important;
+    clear: left; }
+  .actions.pull-left {
+    margin-bottom: 10px; } }
+
 /*
-.btn { 
-	display:inline-block !important; 
-	border-radius:$br-sm; 
-	//transition:all 0.25s ease-in-out; 
-	color:$grey;
-	background-color:#fff;
-	border:1px solid $grey;
-	border-radius:$br-lg; 
-}
-.btn-default { 
-	color:$blue; 
-	background-color:transparent; 
-	border:2px solid $blue;
-	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:$blue; 
-		border:2px solid $blue; 
-	}
-}
-.btn-primary { 
-	color:#fff; 
-	background-color:$red; 
-	border:2px solid $red;
-	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:darken($red, 10%);
-		border:2px solid darken($red, 10%);
-	}
-}
-.btn.btn-warning { 
-	color:$gold; 
-	background-color:transparent; 
-	border:2px solid $gold;
-	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:$gold; 
-		border:2px solid $gold; 
-	}
-}
-.btn-info { 
-	color:$red; 
-	background-color:transparent; 
-	border:2px solid $red;
-	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:$red; 
-		border:2px solid $red; 
-	}
-}
 .btn-rounded { 
 	padding-left:2em; 
 	padding-right:2em; 
@@ -264,33 +290,6 @@ p.lead + p:not(.lead) {
 	}
 }
 */
-.btn.blue {
-  color: #fff;
-  background-color: #1655d6 !important;
-  border: none; }
-  .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
-    background-color: #0f3991 !important; }
-
-.btn.green:not(.btn-outline) {
-  background-color: #01bc7d; }
-
-.btn-tool {
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 3em; }
-
-button.btn-tool.dropdown-toggle {
-  padding-left: 0.25em !important;
-  padding-right: 0.25em !important; }
-
-@media (max-width: 767px) {
-  .actions.pull-left,
-  .actions.pull-right {
-    float: left !important;
-    clear: left; }
-  .actions.pull-left {
-    margin-bottom: 10px; } }
-
 /* .btn-header {
 	display:block; 
 	float:right; 
@@ -314,13 +313,6 @@ button.btn-tool.dropdown-toggle {
 	}
 	@media (min-width:$screen-xs) { padding:8px 2em; }
 } */
-.btn.blue:not(.btn-outline) {
-  background-color: #1655d6;
-  border-color: #1655d6; }
-  .btn.blue:not(.btn-outline):hover {
-    background-color: #1143a8;
-    border-color: #1143a8; }
-
 /* =Forms
 ---------------------------------------------------- */
 .hint-block {
