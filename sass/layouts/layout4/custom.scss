@@ -25,8 +25,8 @@ h1,h2,h3,h4,h5,h6 { color:$navy; font-family:'Raleway', sans-serif; }
 h1 { font-size:24px; font-weight:300; margin-top:0.5em; }
 h2 { font-size:20px; font-weight:300; }
 h3 { font-size:18px; font-weight:bold; }
-h4 { font-size:16px; font-weight:bold; } 
-h5 { font-size:16px; font-weight:bold; } 
+h4 { font-size:inherit; font-weight:bold; text-transform:uppercase; } 
+h5 { font-size:inherit; font-weight:bold; } 
 
 @media (min-width:$screen-lg-min) {
 	h1 { font-size:40px; }
@@ -344,9 +344,9 @@ button.btn-tool.dropdown-toggle {
 	vertical-align:top;
 }
 
-.input-group-addon-60 {
-	text-align:left;
-	width:60%;
+.input-group-addon-big-label {
+	//text-align:left;
+	//width:100%;
 }
 
 .circled {
@@ -983,9 +983,9 @@ td a {
 	vertical-align:middle;
 }
 
-// leaderboard search bar
-.leaderboard-searchbar {
-	padding:1em 0.5em;
+// table search bar
+.table-searchbar {
+	padding:0 0.5em 10px;
 	@media (min-width:$screen-sm) {
 		float:left;
 		width:60%;
@@ -998,7 +998,7 @@ td a {
 	@media (min-width:$screen-sm) {
 		float:right;
 		width:30%;
-		padding:1em 0.5em;
+		padding:0 0.5em 10px;
 	}
 }
 .lb-legend {
@@ -1186,7 +1186,7 @@ td a {
 .stat-figure {
 }
 
-.dashboard-stat3 {
+.portlet {
 	.number,
 	.stats {
 		display:block;
@@ -1195,6 +1195,12 @@ td a {
 		h1, h2, h3 {
 			margin:0;
 		}
+	}
+}
+
+.oppcalc-step-2 {
+	.portlet-body {
+		min-height:7em;
 	}
 }
 

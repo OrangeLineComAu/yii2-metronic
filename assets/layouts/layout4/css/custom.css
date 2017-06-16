@@ -42,11 +42,12 @@ h3 {
   font-weight: bold; }
 
 h4 {
-  font-size: 16px;
-  font-weight: bold; }
+  font-size: inherit;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 h5 {
-  font-size: 16px;
+  font-size: inherit;
   font-weight: bold; }
 
 @media (min-width: 1200px) {
@@ -351,10 +352,6 @@ button.btn-tool.dropdown-toggle {
   padding: 0.5em 1em;
   border-radius: 4px;
   vertical-align: top; }
-
-.input-group-addon-60 {
-  text-align: left;
-  width: 60%; }
 
 .circled {
   display: block; }
@@ -921,10 +918,10 @@ td a {
   padding: 10px;
   vertical-align: middle; }
 
-.leaderboard-searchbar {
-  padding: 1em 0.5em; }
+.table-searchbar {
+  padding: 0 0.5em 10px; }
   @media (min-width: 768px) {
-    .leaderboard-searchbar {
+    .table-searchbar {
       float: left;
       width: 60%; } }
 
@@ -934,7 +931,7 @@ td a {
     .leaderboard-legend {
       float: right;
       width: 30%;
-      padding: 1em 0.5em; } }
+      padding: 0 0.5em 10px; } }
 
 .lb-legend {
   display: inline-block;
@@ -1087,16 +1084,19 @@ td a {
   display: inline-block;
   min-width: 6em; }
 
-.dashboard-stat3 .number,
-.dashboard-stat3 .stats {
+.portlet .number,
+.portlet .stats {
   display: block;
   float: left;
   width: 50%; }
-  .dashboard-stat3 .number h1, .dashboard-stat3 .number h2, .dashboard-stat3 .number h3,
-  .dashboard-stat3 .stats h1,
-  .dashboard-stat3 .stats h2,
-  .dashboard-stat3 .stats h3 {
+  .portlet .number h1, .portlet .number h2, .portlet .number h3,
+  .portlet .stats h1,
+  .portlet .stats h2,
+  .portlet .stats h3 {
     margin: 0; }
+
+.oppcalc-step-2 .portlet-body {
+  min-height: 7em; }
 
 /* =Modals
 ---------------------------------------------------- */
