@@ -169,7 +169,7 @@ Page Header
               font-size: 14px; }
           .page-header.navbar .top-menu .navbar-nav > li.dropdown > .dropdown-toggle > .badge {
             display: inline-block;
-            font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: -6px 0 0 0;
             font-weight: 600;
             padding: 6px 9px;
@@ -1368,7 +1368,7 @@ Theme Panel
   z-index: 1000;
   min-width: 575px;
   padding: 20px 10px;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .theme-panel h3 {
     margin: 8px 0 8px 0;
     font-size: 15px;

@@ -10,7 +10,7 @@ html, body {
 	min-height:100%;
 }
 body { 
-	color:$grey; 
+	color:$grey-shuttle; 
 	background-color:$grey-steel;
 	background-size:100% auto; 
 	font-family:'Raleway', sans-serif; 
@@ -21,19 +21,19 @@ body {
 	font-feature-settings:'lnum';
 }
 
-h1,h2,h3,h4,h5,h6 { color:$navy; }
-h1 { font-size:24px; font-weight:normal; margin-top:0.5em; }
-h2 { font-size:20px; font-weight:normal; }
+h1,h2,h3,h4,h5,h6 { color:$navy; font-family:'Raleway', sans-serif; }
+h1 { font-size:24px; font-weight:300; margin-top:0.5em; }
+h2 { font-size:20px; font-weight:300; }
 h3 { font-size:18px; font-weight:bold; }
-h4 { font-size:16px; font-weight:normal; } 
-h5 { font-size:16px; font-weight:normal; } 
+h4 { font-size:16px; font-weight:bold; } 
+h5 { font-size:16px; font-weight:bold; } 
 
 @media (min-width:$screen-lg-min) {
 	h1 { font-size:40px; }
 	h2 { font-size:30px; }
-	h3 { font-size:22px; }
-	h4 { font-size:18px; }
-	h5 { font-size:16px; } 
+	h3 { font-size:24px; }
+	h4 { font-size:20px; }
+	h5 { font-size:18px; } 
 }
 
 @media (max-width:$screen-md-max) {
@@ -43,11 +43,13 @@ h5 { font-size:16px; font-weight:normal; }
 	.btn { font-size:100% !important; }
 }
 
+.semibold { font-weight:600; }
+
 a { 
 	color:$blue; 
 	&:hover, &:focus, &:active {
 		color:darken($blue, 10%); 
-		text-decoration:underline;
+		text-decoration:none;
 	}
 }
 a:visited {
@@ -57,6 +59,10 @@ a:visited {
 .align-center { text-align:center; }
 .text-muted { color:$grey-salsa; }
 .text-info { color:$blue; }
+
+.text-positive { color:$green; }
+.text-steady { color:$blue; }
+.text-negative { color:$red; }
 
 // spacing finessing
 p.lead + p.lead { margin-top:-0.5em; }
@@ -343,6 +349,57 @@ button.btn-tool.dropdown-toggle {
 	width:60%;
 }
 
+.circled {
+	display:block;
+}
+.circled-content {
+	display:block;
+	position:relative;
+	margin:0 auto 10px;
+	width:50px; 
+	height:50px;
+	border-radius:50%;
+	border:1px solid $grey-salsa;
+	line-height:1;
+	text-align:center;
+}
+.circled-content span,
+.circled-content i {
+	position:relative;
+	display:inline-block;
+	top:50%;
+	transform:translateY(-50%);
+}
+.circled-text {
+	display:block;
+	color:$blue;
+}
+.circled-link {
+	color:$blue;
+	.circled-icon { border-color:$blue; }
+	.circled-icon i { color:$blue; }
+	.circled-text { color:$blue; }
+	&:hover {
+		.circled-icon { border-color:darken($blue, 15%); }
+		.circled-icon i { color:darken($blue, 15%); }
+		.circled-text { color:darken($blue, 15%); }
+	}
+}
+
+.img-width-full {
+	display:block;
+	width:100%;
+	max-width:100%;
+	margin-bottom:1em;
+}
+
+.fa-bell {
+	color:$gold;
+}
+.fa-fire {
+	color:$red;
+}
+
 /* =Modules
 ---------------------------------------------------- */
 .mntns-bg {
@@ -359,11 +416,14 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 .portlet.light > .portlet-title > .caption { 
-	color:$grey !important; 
-	//font-weight:normal; 
+	font-weight:300;
 }
 .portlet.light > .portlet-title > .caption > .caption-subject {
-	text-transform:uppercase;
+	color:$navy; 
+	font-weight:600;
+}
+.portlet.light > .portlet-title > .caption > .caption-helper {
+	color:$grey-shuttle;
 }
 
 // portlet help text
@@ -372,7 +432,7 @@ h3.help-text i { margin-bottom:0.66em; }
 
 // this is a special class that allow half-width content in big empty portlets
 @media (min-width:$screen-md) { 
-	.im-half-width {
+	.width-half {
 		width:50%;
 		margin:0 auto;
 	}
@@ -559,168 +619,16 @@ a .social-post-image {
 	border:1px solid #fff;
 }
 
-/* =Table Overrides
----------------------------------------------------- */
-table {
-	color:$grey;
-}
-td { 
-	text-align:left;
-	background-color:transparent;
-}
-/* table thead { 
-	color:$grey; 
-}
-table thead tr th,
-.table > thead > tr > th, 
-.table > tbody > tr > th, 
-.table > tfoot > tr > th, 
-.table > thead > tr > td, 
-.table > tbody > tr > td, 
-.table > tfoot > tr > td { 
-	border:none !important;
-}
-table.table-striped > tbody > tr:nth-of-type(odd) {
-	background-color:lighten($grey-steel, 2%);
-}
-.table.table-light > thead > tr > th {
-	color:$grey;	
-}
-.table.table-light > tbody > tr > td { 
-	color:$grey;
-	a {
-		color:$grey;
-		text-decoration:underline;
-		&:hover, &:focus, &:active {
-			color:$blue;
-		}
-		&:visited { 
-			color:lighten($grey, 40%); 
-		}	
-	}
-	
-}
-
-// override .kv-table javascript styles
-.table-responsive { border:none; }
-.floatThead-wrapper > div { z-index:0 !important; }
-// override stacking the TH's on mobile
-@media screen and (max-width:480px){
-	.kv-table-wrap td,
-	.kv-table-wrap th { 
-		display:table-cell;
-		text-align:left;
-		width:auto !important; 
-	}
-} */
-
-/* =Highlighting of Domains ('actor' and 'other')
----------------------------------------------------- */
-// dashboard - digital leaderboard
-/* .table.table-light > tbody > tr {
-	&.actor-domain {
-		border-left:3px solid $blue;
-	}
-	&.actor-domain > td > a {
-		color:darken($blue, 0%);
-	}
-	&.other-domain {
-		border-left:3px solid $gold;
-	}
-	&.other-domain > td > a {
-		color:darken($gold, 10%);
-	}
-} */
-// legend
-.domain-legend {
-	list-style:none;
-	margin:1em 0; 
-	padding:0;
-	width:100%;
-}
-.domain-legend li {
-	width:33.33%;
-}
-.domain-legend li span:first-of-type {
-	display:inline-block;
-	width:10px; 
-	height:10px;
-	border-radius:10px;
-	margin-right:0.5em;
-}
-.actor-domain {
-	.domain-value {
-		background-color:$blue;
-	}	
-}
-.other-domain {
-	.domain-value {
-		background-color:$gold;
-	}	
-}
-
-// market settings - inputs
-/* input.actor-domain {
-	color:darken($blue, 0%);
-	border:1px solid $blue;
-}
-input.other-domain {
-	color:darken($gold, 10%);
-	border:1px solid $gold;
-} */
-
-/* =Pagination
----------------------------------------------------- */
-.pagination {
-	margin-top:15px;
-	> li {
-		> a,
-		> span {
-			color:$blue;
-			background-color:#fff;
-		}
-  }
-  > li > a,
-  > li > span {
-		&:hover,
-		&:focus {
-			z-index: 2;
-			color:#fff;
-			background-color:$blue;
-			border-color:$blue;
-		}
-	}
-	> .active > a,
-	> .active > span {
-		&,
-		&:hover,
-		&:focus {
-			color:#fff;
-			background-color:$blue;
-			border-color:$blue;
-		}
- 	}
-	> .disabled {
-		> span,
-		> span:hover,
-		> span:focus,
-		> a,
-		> a:hover,
-		> a:focus {
-		}
-	}
-}
-
-/* =Manage Margets
+/* =Manage Markets (first market setup page?)
 ---------------------------------------------------- */
 .list-view > div:nth-of-type(2n+3) {
 	clear:left;	
 }
 
-/* =Facebook Social Carousel
+/* =Flickity as a carousel
 ---------------------------------------------------- */
 .flickity-viewport {
-  transition: height 0.2s; // adaptive height animation
+  transition:height 0.2s; // adaptive height animation
 }
 .carousel {
 	display:block;
@@ -840,7 +748,6 @@ input.other-domain {
 		}
 	}
 }
-
 
 /* =Flickity as a slider
 ---------------------------------------------------- */
@@ -962,16 +869,6 @@ input.other-domain {
 	}
 }
 
-/* =Dashboard 1.1
----------------------------------------------------- */
-.im-portlet {
-	border-radius: 5px;
-	overflow: hidden;
-	background-color: #fff;
-	margin-bottom: 20px;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-
 /* =Market Overview
 ---------------------------------------------------- */
 $market-overview-height-sm:250px;
@@ -998,7 +895,11 @@ $market-overview-height-lg:400px;
 	z-index:5;
 }
 .market-overview-pill {
+	color:#fff;
+	background-color:$green;
 	border-radius:$br-sm;
+	font-size:12px;
+	padding:0.25em 0.5em;
 }
 .market-overview-name {
 	position:absolute;
@@ -1035,53 +936,49 @@ $market-overview-height-lg:400px;
 	height:380px;
 }
 
-/* =Leaderboard
+/* =Tables
 ---------------------------------------------------- */
-// override
-.table > thead > tr > td.active, 
-.table > tbody > tr > td.active, 
-.table > tfoot > tr > td.active, 
-.table > thead > tr > th.active, 
-.table > tbody > tr > th.active, 
-.table > tfoot > tr > th.active, 
-.table > thead > tr.active > td, 
-.table > tbody > tr.active > td, 
-.table > tfoot > tr.active > td, 
-.table > thead > tr.active > th, 
-.table > tbody > tr.active > th, 
-.table > tfoot > tr.active > th {
-	background-color:transparent;
+.table-im {
+	width:100%;
 }
-
-.table-leaderboard th,
-.table-leaderboard td {
-	//font-size:12px !important; 
-}
-.table-leaderboard > tbody > tr.drawr > td {
-	padding:0;
-}
-.table-leaderboard > thead > tr > th, 
-.table-leaderboard > tbody > tr > th, 
-.table-leaderboard > tfoot > tr > th, 
-.table-leaderboard > thead > tr > td, 
-.table-leaderboard > tbody > tr > td, 
-.table-leaderboard > tfoot > tr > td {
-	padding:0;
+.table-im > thead > tr > th,
+.table-im > thead > tr > td,
+.table-im > tbody > tr > th,
+.table-im > tbody > tr > td,
+.table-im > tfoot > tr > th,
+.table-im > tfoot > tr > td,
+.table-im > tr > th,
+.table-im > tr > td {
 	border-top:1px solid $grey-steel;
 }
-.table.table-light > tbody > tr > td {
+.table-im tr:last-of-type {
+	border-bottom:1px solid $grey-steel;
+}
+th {
+	color:$navy;
+	font-weight:600;
+}
+tr:hover {
+	background-color:lighten($grey-steel, 4%);
+}
+td { 
+	text-align:left;
+	background-color:transparent;
+}
+td a {
 	color:inherit;
+	text-decoration:underline;
 }
 
-// END override
-
-.table-leaderboard > thead > tr > th,
-.table-leaderboard > tbody > tr > th {
+/* =Leaderboard
+---------------------------------------------------- */
+.table-im > thead > tr > th,
+.table-im > tbody > tr > th {
 	padding:20px 10px;
 	vertical-align:middle;
 }
-.table-leaderboard > thead > tr > td,
-.table-leaderboard > tbody > tr > td {
+.table-im > thead > tr > td,
+.table-im > tbody > tr > td {
 	padding:10px;
 	vertical-align:middle;
 }
@@ -1297,23 +1194,8 @@ $market-overview-height-lg:400px;
 		width:50%;
 		h1, h2, h3 {
 			margin:0;
-			color:inherit;
 		}
 	}
-}
-
-.img-width-full {
-	display:block;
-	width:100%;
-	max-width:100%;
-	margin-bottom:1em;
-}
-
-.fa-bell {
-	color:$gold;
-}
-.fa-fire {
-	color:$red;
 }
 
 /* =Modals

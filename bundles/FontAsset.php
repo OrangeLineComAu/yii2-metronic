@@ -8,12 +8,14 @@ namespace hustshenl\metronic\bundles;
 
 use yii\web\AssetBundle;
 
-class FontAsset extends AssetBundle
-{
-    public $sourcePath = '@hustshenl/metronic/assets';
+class FontAsset extends AssetBundle {
+	
+	public $sourcePath = '@hustshenl/metronic/assets';
+	
+	public $css = [
+		'fonts.googleapis.com/css?family=Raleway:300,400,600,700',
+		//'fonts.googleapis.com/css?family=Open+Sans:300,600,700',
+		'global/plugins/font-awesome/css/font-awesome.min.css',
+	];
 
-    public $css = [
-    	  '///fonts.googleapis.com/css?family=Raleway:400,700',
-          'global/plugins/font-awesome/css/font-awesome.min.css',
-    ];
 }
