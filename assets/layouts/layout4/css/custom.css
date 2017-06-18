@@ -346,10 +346,10 @@ button.btn-tool.dropdown-toggle {
 .mmw-date,
 .mmw-url {
   display: inline-block;
-  font-size: 50%;
+  font-size: 30%;
   color: #acb5c3;
   background-color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.5em;
   border-radius: 4px;
   vertical-align: top; }
 

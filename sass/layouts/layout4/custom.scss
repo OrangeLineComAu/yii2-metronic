@@ -333,13 +333,14 @@ button.btn-tool.dropdown-toggle {
 
 /* =Molecules
 ---------------------------------------------------- */
+// marketMenuWidget
 .mmw-date,
 .mmw-url { 
 	display:inline-block; 
-	font-size:50%;
+	font-size:30%;
 	color:$grey-salsa;
 	background-color:#fff;
-	padding:0.5em 1em;
+	padding:0.25em 0.5em;
 	border-radius:$br-sm;
 	vertical-align:top;
 }
