@@ -24,17 +24,21 @@ body {
 h1,h2,h3,h4,h5,h6 { color:$navy; font-family:'Raleway', sans-serif; }
 h1 { font-size:24px; font-weight:300; margin-top:0.5em; }
 h2 { font-size:20px; font-weight:300; }
-h3 { font-size:18px; font-weight:bold; }
+h3 { font-size:18px; font-weight:300; }
 h4 { font-size:inherit; font-weight:bold; text-transform:uppercase; } 
 h5 { font-size:inherit; font-weight:bold; } 
 
 @media (min-width:$screen-lg-min) {
 	h1 { font-size:40px; }
-	h2 { font-size:30px; }
+	h2 { font-size:32px; }
 	h3 { font-size:24px; }
 	h4 { font-size:20px; }
 	h5 { font-size:18px; } 
 }
+
+// spacing finessing
+// p.lead + p.lead { margin-top:-0.5em; }
+// p.lead + p:not(.lead) { margin-top:-1em; }
 
 @media (max-width:$screen-md-max) {
 	ul,ol,p,
@@ -63,10 +67,6 @@ a:visited {
 .text-positive { color:$green; }
 .text-steady { color:$blue; }
 .text-negative { color:$red; }
-
-// spacing finessing
-p.lead + p.lead { margin-top:-0.5em; }
-p.lead + p:not(.lead) { margin-top:-1em; }
 
 // =clearfix 
 .cf {
@@ -179,77 +179,68 @@ p.lead + p:not(.lead) { margin-top:-1em; }
 /* =Buttons
 ---------------------------------------------------- */
 .btn {
-	border:none;
-	border-radius:$br-lg; 
-}
-.btn.btn-default { 
-	color:darken($grey-steel, 50%); 
-	background-color:darken($grey-steel, 5%); 
-	&:hover, &:focus, &:active { 
-		color:$grey; 
-		background-color:darken($grey-steel, 15%); 
+	color:#fff;
+	border:1px solid transparent;
+	border-radius:25px;
+	overflow:hidden;
+	&:hover, &:focus, &:active {
+		border:1px solid transparent;
 	}
 }
-.btn.btn-primary { 
-	color:#fff; 
-	background-color:$blue; 
+.btn.btn-default {
+	border-color:$blue;
+	color:$blue;
+	background-color:transparent;
+	border:1px solid $blue;
 	&:hover, &:focus, &:active { 
 		color:#fff; 
+		background-color:$blue;
+	}
+}
+.btn.btn-primary {
+	color:#fff;
+	background-color:$blue;
+	&:hover, &:focus, &:active { 
 		background-color:darken($blue, 15%); 
 	}
 }
-.btn.btn-success { 
-	color:#fff; 
-	background-color:$green; 
+.btn.btn-success {
+	color:#fff;
+	background-color:$green;
 	&:hover, &:focus, &:active { 
-		color:#fff; 
 		background-color:darken($green, 15%); 
 	}
 }
-.btn.btn-info { 
-	color:#fff;
+.btn.btn-info {
+	//background-color:$green;
 }
-.btn.btn-warning { 
-	color:#fff; 
-	background-color:$gold; 
+.btn.btn-warning {
+	color:#fff;
+	background-color:$yellow;
 	&:hover, &:focus, &:active { 
-		color:#fff; 
-		background-color:darken($gold, 15%); 
+		background-color:darken($yellow, 15%); 
 	}
 }
-.btn.btn-danger { 
-	color:#fff; 
-	background-color:$red; 
+.btn.btn-danger {
+	color:#fff;
+	background-color:$red;
 	&:hover, &:focus, &:active { 
-		color:#fff; 
 		background-color:darken($red, 15%); 
 	}
 }
-
-.btn.blue { 
-	color:#fff; 
-	background-color:$blue !important; 
-	&:hover, &:focus, &:active { 
-		background-color:darken($blue, 15%) !important; 
-	}
-}
-.btn.blue:not(.btn-outline) {
-	background-color:$blue;
-	border-color:$blue;
-	&:hover {
-		background-color:darken($blue,10%);
-		border-color:darken($blue,10%);
-	}
-}
-.btn.green:not(.btn-outline) {
-	background-color:$green;
+.btn.btn-link {
+	color:$blue;
 }
 
 // manage market widget
 .btn-tool {
+	color:#fff !important;
 	padding-left:1em;
 	padding-right:1em;
-	border-radius:$br-lg; 
+	background-color:$blue;
+	&:hover, &:focus, &:active { 
+		background-color:darken($blue, 15%); 
+	}
 }
 button.btn-tool.dropdown-toggle {
 	padding-left:0.25em !important;
@@ -266,57 +257,6 @@ button.btn-tool.dropdown-toggle {
 		margin-bottom:10px; 
 	}
 }
-
-/*
-.btn-rounded { 
-	padding-left:2em; 
-	padding-right:2em; 
-	border-radius:$br-lg; 
-}
-.btn-update-payment {
-	// override min-height:30px set by stripe on this button
-	span {
-		min-height:0 !important;
-	}
-}
-
-.navbar-nav .btn-nav .username {
-	color:$grey-steel !important;
-	opacity:0.6;
-	margin-top:20px;
-	&:hover, &:focus, &:active, &:active { 
-		background:transparent; 
-		opacity:1; 
-	}
-	i { 
-		margin-left:1em; 
-	}
-}
-*/
-
-/* .btn-header {
-	display:block; 
-	float:right; 
-	vertical-align:top; 
-	margin-top:20px; 
-	margin-right:1em;
-	padding:8px 1em; 
-	border:2px solid $green;
-	border-radius:$br-lg; 
-	color:#fff;
-	text-transform:uppercase; 
-	font-size:80%; 
-	transition:all 0.25s ease-in-out;
-	&:hover, &:active, &:focus { 
-		color:#fff; 
-		text-decoration:none;
-		background-color:$green; 
-	}
-	&:visited {
-		color:#fff; 
-	}
-	@media (min-width:$screen-xs) { padding:8px 2em; }
-} */
 
 /* =Forms
 ---------------------------------------------------- */
@@ -337,7 +277,7 @@ button.btn-tool.dropdown-toggle {
 .mmw-date,
 .mmw-url { 
 	display:inline-block; 
-	font-size:30%;
+	font-size:40%;
 	color:$grey-salsa;
 	background-color:#fff;
 	padding:0.25em 0.5em;
@@ -395,7 +335,7 @@ button.btn-tool.dropdown-toggle {
 }
 
 .fa-bell {
-	color:$gold;
+	color:$yellow;
 }
 .fa-fire {
 	color:$red;
@@ -416,6 +356,7 @@ button.btn-tool.dropdown-toggle {
 		padding:10px 10px 15px !important; 
 	}
 }
+// captions
 .portlet.light > .portlet-title > .caption { 
 	font-weight:300;
 }
@@ -425,6 +366,11 @@ button.btn-tool.dropdown-toggle {
 }
 .portlet.light > .portlet-title > .caption > .caption-helper {
 	color:$grey-shuttle;
+}
+
+// override metronic theme action button colour
+.portlet.light > .portlet-title > .actions .btn-default {
+	color:$blue;
 }
 
 // portlet help text
