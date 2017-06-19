@@ -357,6 +357,7 @@ button.btn-tool.dropdown-toggle {
 
 .portlet.light > .portlet-title > .caption > .caption-subject {
   color: #00103e;
+  font-size: 14px;
   font-weight: 600; }
 
 .portlet.light > .portlet-title > .caption > .caption-helper {
@@ -364,6 +365,8 @@ button.btn-tool.dropdown-toggle {
 
 .portlet.light > .portlet-title > .actions .btn-default {
   color: #1655d6; }
+  .portlet.light > .portlet-title > .actions .btn-default:hover, .portlet.light > .portlet-title > .actions .btn-default:focus, .portlet.light > .portlet-title > .actions .btn-default:active {
+    color: #fff; }
 
 h3.help-text {
   font-weight: normal;
@@ -1018,8 +1021,12 @@ td a {
 .stat-item {
   text-transform: uppercase;
   font-size: 75%;
+  font-weight: bold;
   display: inline-block;
   min-width: 6em; }
+
+.portlet .number h1, .portlet .number h2, .portlet .number h3 {
+  color: #778190; }
 
 .portlet .number,
 .portlet .stats {
@@ -1051,7 +1058,7 @@ td a {
 /* =AmCharts Animations
 ---------------------------------------------------- */
 .amcharts-graph-stroke {
-  stroke-dasharray: 3px 3px;
+  stroke-dasharray: 4px 4px;
   stroke-linejoin: round;
   stroke-linecap: round;
   -webkit-animation: am-moving-dashes 1s linear infinite;

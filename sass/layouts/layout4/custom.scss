@@ -362,7 +362,9 @@ button.btn-tool.dropdown-toggle {
 }
 .portlet.light > .portlet-title > .caption > .caption-subject {
 	color:$navy; 
+	font-size:14px;
 	font-weight:600;
+	//text-transform:uppercase;
 }
 .portlet.light > .portlet-title > .caption > .caption-helper {
 	color:$grey-shuttle;
@@ -371,6 +373,9 @@ button.btn-tool.dropdown-toggle {
 // override metronic theme action button colour
 .portlet.light > .portlet-title > .actions .btn-default {
 	color:$blue;
+	&:hover, &:focus, &:active { 
+		color:#fff;
+	}
 }
 
 // portlet help text
@@ -1127,6 +1132,7 @@ td a {
 .stat-item {
 	text-transform:uppercase;
 	font-size:75%;
+	font-weight:bold;
 	display:inline-block;
 	min-width:6em;
 }
@@ -1134,6 +1140,11 @@ td a {
 }
 
 .portlet {
+	.number {
+		h1,h2,h3, {
+			color:$grey-shuttle;
+		}
+	}
 	.number,
 	.stats {
 		display:block;
@@ -1149,6 +1160,12 @@ td a {
 	.portlet-body {
 		min-height:7em;
 	}
+}
+
+.section-trigger {
+	display:inline-block;
+	transform:rotate(90deg);
+	border:1px solid red;
 }
 
 /* =Modals
@@ -1169,7 +1186,7 @@ td a {
 /* =AmCharts Animations
 ---------------------------------------------------- */
 .amcharts-graph-stroke {
-	stroke-dasharray: 3px 3px;
+	stroke-dasharray: 4px 4px;
 	stroke-linejoin: round;
 	stroke-linecap: round;
 	-webkit-animation: am-moving-dashes 1s linear infinite;
