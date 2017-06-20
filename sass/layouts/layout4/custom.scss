@@ -1162,10 +1162,37 @@ td a {
 	}
 }
 
-.section-trigger {
+// reusable expand/collapse
+.hidden-section {
+	display:none;
+}
+.hidden-section-trigger {
 	display:inline-block;
-	transform:rotate(90deg);
-	border:1px solid red;
+	padding:5px;
+	transition:all 0.2s ease-in-out;
+	opacity:0.5;
+	//cursor:pointer;
+	&:hover { opacity:1; }
+	&.open { transform:rotate(180deg); }
+}
+
+// revenue opportuninity expand/collapse
+.rev-opp-special-trigger {
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:10;
+}
+.hidden-section-trigger.hover { 
+	opacity:1; 
+}
+.hidden-section-trigger.open { 
+	transform:rotate(180deg);
+}
+// tweak .portlet-title border styles when active as a trigger
+.keyword-filter-wrap.portlet.light.bordered > .portlet-title {
+	border-bottom:none;
+	margin-bottom:0;
 }
 
 /* =Modals
