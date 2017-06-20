@@ -1162,37 +1162,43 @@ td a {
 	}
 }
 
-// reusable expand/collapse
-.hidden-section {
-	display:none;
+// portletCollapsable(); extension
+.portlet.bordered.collapsable {
+	.portlet-title {
+		position:relative;
+		border-bottom:none;
+		padding-bottom:0;
+		margin-bottom:0;
+		min-height:auto;
+		.trigger {
+			position:absolute;
+			width:100%;
+			height:100%;
+			z-index:10;
+		}
+		.indicator {
+			opacity:0.5;
+			transition:all 0.3s ease-in-out;
+		}
+	}
+	.portlet-body {
+		display:none;
+	}
 }
-.hidden-section-trigger {
-	display:inline-block;
-	padding:5px;
-	transition:all 0.2s ease-in-out;
-	opacity:0.5;
-	//cursor:pointer;
-	&:hover { opacity:1; }
-	&.open { transform:rotate(180deg); }
+.portlet.bordered.collapsable.hover {
+	.indicator {
+		opacity:1;
+	}
 }
-
-// revenue opportuninity expand/collapse
-.rev-opp-special-trigger {
-	position:absolute;
-	width:100%;
-	height:100%;
-	z-index:10;
-}
-.hidden-section-trigger.hover { 
-	opacity:1; 
-}
-.hidden-section-trigger.open { 
-	transform:rotate(180deg);
-}
-// tweak .portlet-title border styles when active as a trigger
-.keyword-filter-wrap.portlet.light.bordered > .portlet-title {
-	border-bottom:none;
-	margin-bottom:0;
+.portlet.bordered.collapsable.open {
+	.indicator {
+		transform:rotate(180deg);
+	}
+	.portlet-title {
+		min-height:48px;
+		border-bottom:inherit;
+		margin-bottom:10px;
+	}
 }
 
 /* =Modals

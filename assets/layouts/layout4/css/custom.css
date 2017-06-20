@@ -1042,34 +1042,34 @@ td a {
 .oppcalc-step-2 .portlet-body {
   min-height: 7em; }
 
-.hidden-section {
+.portlet.bordered.collapsable .portlet-title {
+  position: relative;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  min-height: auto; }
+  .portlet.bordered.collapsable .portlet-title .trigger {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10; }
+  .portlet.bordered.collapsable .portlet-title .indicator {
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out; }
+
+.portlet.bordered.collapsable .portlet-body {
   display: none; }
 
-.hidden-section-trigger {
-  display: inline-block;
-  padding: 5px;
-  transition: all 0.2s ease-in-out;
-  opacity: 0.5; }
-  .hidden-section-trigger:hover {
-    opacity: 1; }
-  .hidden-section-trigger.open {
-    transform: rotate(180deg); }
-
-.rev-opp-special-trigger {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 10; }
-
-.hidden-section-trigger.hover {
+.portlet.bordered.collapsable.hover .indicator {
   opacity: 1; }
 
-.hidden-section-trigger.open {
+.portlet.bordered.collapsable.open .indicator {
   transform: rotate(180deg); }
 
-.keyword-filter-wrap.portlet.light.bordered > .portlet-title {
-  border-bottom: none;
-  margin-bottom: 0; }
+.portlet.bordered.collapsable.open .portlet-title {
+  min-height: 48px;
+  border-bottom: inherit;
+  margin-bottom: 10px; }
 
 /* =Modals
 ---------------------------------------------------- */
