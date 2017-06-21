@@ -378,10 +378,6 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 
-.portlet.light.darker {
-	background-color:lighten($grey-steel,5%);
-}
-
 // portlet help text
 h3.help-text { font-weight:normal; color:$grey-salsa; }
 h3.help-text i { margin-bottom:0.66em; }
@@ -913,7 +909,6 @@ $market-overview-height-lg:400px;
 th {
 	color:$navy;
 	font-weight:600;
-	background-color:transparent;
 }
 tr:hover {
 	background-color:lighten($grey-steel, 4%);
@@ -1168,7 +1163,7 @@ td a {
 }
 
 // portletCollapsable(); extension
-.portlet.light.collapsable {
+.portlet.bordered.collapsable {
 	.portlet-title {
 		position:relative;
 		border-bottom:none;
@@ -1190,12 +1185,12 @@ td a {
 		display:none;
 	}
 }
-.portlet.light.collapsable.hover {
+.portlet.bordered.collapsable.hover {
 	.indicator {
 		opacity:1;
 	}
 }
-.portlet.light.collapsable.open {
+.portlet.bordered.collapsable.open {
 	.indicator {
 		transform:rotate(180deg);
 	}
