@@ -368,6 +368,9 @@ button.btn-tool.dropdown-toggle {
   .portlet.light > .portlet-title > .actions .btn-default:hover, .portlet.light > .portlet-title > .actions .btn-default:focus, .portlet.light > .portlet-title > .actions .btn-default:active {
     color: #fff; }
 
+.portlet.light.darker {
+  background-color: #fafafc; }
+
 h3.help-text {
   font-weight: normal;
   color: #acb5c3; }
@@ -833,7 +836,8 @@ a .social-post-image {
 
 th {
   color: #00103e;
-  font-weight: 600; }
+  font-weight: 600;
+  background-color: transparent; }
 
 tr:hover {
   background-color: #f6f7fa; }
@@ -1042,31 +1046,31 @@ td a {
 .oppcalc-step-2 .portlet-body {
   min-height: 7em; }
 
-.portlet.bordered.collapsable .portlet-title {
+.portlet.light.collapsable .portlet-title {
   position: relative;
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
   min-height: auto; }
-  .portlet.bordered.collapsable .portlet-title .trigger {
+  .portlet.light.collapsable .portlet-title .trigger {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 10; }
-  .portlet.bordered.collapsable .portlet-title .indicator {
+  .portlet.light.collapsable .portlet-title .indicator {
     opacity: 0.5;
     transition: all 0.3s ease-in-out; }
 
-.portlet.bordered.collapsable .portlet-body {
+.portlet.light.collapsable .portlet-body {
   display: none; }
 
-.portlet.bordered.collapsable.hover .indicator {
+.portlet.light.collapsable.hover .indicator {
   opacity: 1; }
 
-.portlet.bordered.collapsable.open .indicator {
+.portlet.light.collapsable.open .indicator {
   transform: rotate(180deg); }
 
-.portlet.bordered.collapsable.open .portlet-title {
+.portlet.light.collapsable.open .portlet-title {
   min-height: 48px;
   border-bottom: inherit;
   margin-bottom: 10px; }
