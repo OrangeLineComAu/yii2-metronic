@@ -30,7 +30,7 @@ h5 { font-size:inherit; font-weight:bold; }
 
 @media (min-width:$screen-lg-min) {
 	h1 { font-size:40px; }
-	h2 { font-size:32px; }
+	h2 { font-size:30px; }
 	h3 { font-size:24px; }
 	h4 { font-size:20px; }
 	h5 { font-size:18px; } 
@@ -201,6 +201,7 @@ a:visited {
 	color:#fff;
 	background-color:$blue;
 	&:hover, &:focus, &:active { 
+		color:#fff; 
 		background-color:darken($blue, 15%); 
 	}
 }
@@ -208,6 +209,7 @@ a:visited {
 	color:#fff;
 	background-color:$green;
 	&:hover, &:focus, &:active { 
+		color:#fff; 
 		background-color:darken($green, 15%); 
 	}
 }
@@ -218,6 +220,7 @@ a:visited {
 	color:#fff;
 	background-color:$yellow;
 	&:hover, &:focus, &:active { 
+		color:#fff; 
 		background-color:darken($yellow, 15%); 
 	}
 }
@@ -225,6 +228,7 @@ a:visited {
 	color:#fff;
 	background-color:$red;
 	&:hover, &:focus, &:active { 
+		color:#fff;
 		background-color:darken($red, 15%); 
 	}
 }
@@ -285,9 +289,15 @@ button.btn-tool.dropdown-toggle {
 	vertical-align:top;
 }
 
-.input-group-addon-big-label {
-	//text-align:left;
-	//width:100%;
+.input-group-addon {
+	background-color:lighten($grey-steel, 5%);
+}
+.input-group-justify {
+	width:100%;
+}
+.input-group-justify .input-group-addon {
+	text-align:left;
+	width:70%;
 }
 
 .circled {
@@ -356,20 +366,23 @@ button.btn-tool.dropdown-toggle {
 		padding:10px 10px 15px !important; 
 	}
 }
-// captions
+.portlet.light.bordered {
+	//border:1px solid lighten($grey-steel, 1%);
+}
 .portlet.light > .portlet-title > .caption { 
 	font-weight:300;
 }
+.portlet.light > .portlet-title > .caption i {
+	margin-right:0.5em;
+} 
 .portlet.light > .portlet-title > .caption > .caption-subject {
 	color:$navy; 
 	font-size:14px;
 	font-weight:600;
-	//text-transform:uppercase;
 }
 .portlet.light > .portlet-title > .caption > .caption-helper {
 	color:$grey-shuttle;
 }
-
 // override metronic theme action button colour
 .portlet.light > .portlet-title > .actions .btn-default {
 	color:$blue;
@@ -377,12 +390,10 @@ button.btn-tool.dropdown-toggle {
 		color:#fff;
 	}
 }
-
 .portlet.light.darker {
 	background-color:lighten($grey-steel,5%);
 }
-
-// portlet help text
+// override portlet help text
 h3.help-text { font-weight:normal; color:$grey-salsa; }
 h3.help-text i { margin-bottom:0.66em; }
 
@@ -906,6 +917,7 @@ $market-overview-height-lg:400px;
 .table-im > tr > th,
 .table-im > tr > td {
 	border-top:1px solid $grey-steel;
+	font-size:12px;
 }
 .table-im tr:last-of-type {
 	border-bottom:1px solid $grey-steel;
@@ -931,7 +943,7 @@ td a {
 ---------------------------------------------------- */
 .table-im > thead > tr > th,
 .table-im > tbody > tr > th {
-	padding:20px 10px;
+	padding:10px;
 	vertical-align:middle;
 }
 .table-im > thead > tr > td,
@@ -1091,6 +1103,20 @@ td a {
 	background-color:$blue;
 }
 
+/* =Keyword and URL Filter Tables
+---------------------------------------------------- */
+.table-switch {
+	position:relative;
+}
+/* .table-switch .table-im {
+	display:none;
+}
+.table-switch .table-im.active {
+	display:block;
+} */
+
+/* =Social
+---------------------------------------------------- */
 .mini-profile {
 }
 .mini-profile-content {
@@ -1145,19 +1171,28 @@ td a {
 }
 
 .portlet {
-	.number {
-		h1,h2,h3, {
-			color:$grey-shuttle;
-		}
+	.portlet-number {
+		margin:0;
+		color:$grey-shuttle;
 	}
-	.number,
-	.stats {
+	h1.portlet-number {
+		color:$navy;
+	}
+	.number { 
 		display:block;
 		float:left;
-		width:50%;
-		h1, h2, h3 {
+		width:40%; 
+		h1,
+		h2,
+		h3 { 
 			margin:0;
+			color:$grey-shuttle; 
 		}
+	}
+	.stats { 
+		display:block;
+		float:left;
+		width:60%; 
 	}
 }
 
