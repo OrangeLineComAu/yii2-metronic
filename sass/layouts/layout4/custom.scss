@@ -366,9 +366,6 @@ button.btn-tool.dropdown-toggle {
 		padding:10px 10px 15px !important; 
 	}
 }
-.portlet.light.bordered {
-	//border:1px solid lighten($grey-steel, 1%);
-}
 .portlet.light > .portlet-title > .caption { 
 	font-weight:300;
 }
@@ -386,8 +383,9 @@ button.btn-tool.dropdown-toggle {
 // override metronic theme action button colour
 .portlet.light > .portlet-title > .actions .btn-default {
 	color:$blue;
-	&:hover, &:focus, &:active { 
+	&:hover, &:focus, &:active, &.active { 
 		color:#fff;
+		background-color:$blue;
 	}
 }
 .portlet.light.darker {
@@ -906,7 +904,9 @@ $market-overview-height-lg:400px;
 /* =Tables
 ---------------------------------------------------- */
 .table-im {
+	position:relative;
 	width:100%;
+	z-index:1;
 }
 .table-im > thead > tr > th,
 .table-im > thead > tr > td,
@@ -933,6 +933,8 @@ tr:hover {
 td { 
 	text-align:left;
 	background-color:transparent;
+	position:relative;;
+	z-index:1;
 }
 td a {
 	color:inherit;
@@ -1108,12 +1110,27 @@ td a {
 .table-switch {
 	position:relative;
 }
-/* .table-switch .table-im {
-	display:none;
+// control hover to reveal long URLs
+.hover-to-reveal {
+	max-width:0;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	z-index:10;
 }
-.table-switch .table-im.active {
-	display:block;
-} */
+.hover-to-reveal:hover {
+	overflow:visible;
+	text-overflow:none;
+}
+.hover-to-reveal:hover a {
+	background-color:lighten($grey-steel,5%);
+}
+
+// keywords indentation
+.table-im tr.indented.active td {
+	background-color:darken($grey-steel,0.25%);
+}
+
 
 /* =Social
 ---------------------------------------------------- */
@@ -1156,49 +1173,58 @@ td a {
 	margin:0 auto;
 }
 
-.stats {
-	list-style:none;
-	padding-left:0;
-}
-.stat-item {
-	text-transform:uppercase;
-	font-size:75%;
-	font-weight:bold;
-	display:inline-block;
-	min-width:6em;
-}
-.stat-figure {
+.dashboard-stat3 {
+	.number {
+		float:left;
+		width:49%;
+	}
+	.info {
+		float:left;
+		width:49%;
+	}
+	.stats {
+		list-style:none;
+		padding-left:0;
+	}
+	.stat-item {
+		text-transform:uppercase;
+		font-size:75%;
+		font-weight:bold;
+		display:inline-block;
+		min-width:6em;
+	}
 }
 
-.portlet {
-	.portlet-number {
+
+.number {
+	h1,
+	h2,
+	h3 { 
 		margin:0;
-		color:$grey-shuttle;
+		color:$grey-shuttle; 
 	}
-	h1.portlet-number {
-		color:$navy;
-	}
-	.number { 
-		display:block;
-		float:left;
-		width:40%; 
-		h1,
-		h2,
-		h3 { 
-			margin:0;
-			color:$grey-shuttle; 
-		}
-	}
-	.stats { 
-		display:block;
-		float:left;
-		width:60%; 
+}
+.info {
+	margin-top:0.5em;
+}
+
+
+// portlets with left number and right desc
+
+.portlet.right-desc {
+	.number {
 	}
 }
 
 .oppcalc-step-2 {
 	.portlet-body {
 		min-height:7em;
+	}
+}
+
+.col-calculator {
+	.portlet > .portlet-body {
+		padding-top:0 !important;
 	}
 }
 
