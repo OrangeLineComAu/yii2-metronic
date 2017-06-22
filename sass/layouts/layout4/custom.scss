@@ -917,7 +917,7 @@ $market-overview-height-lg:400px;
 .table-im > tr > th,
 .table-im > tr > td {
 	border-top:1px solid $grey-steel;
-	font-size:12px;
+	font-size:12px !important;
 }
 .table-im tr:last-of-type {
 	border-bottom:1px solid $grey-steel;
@@ -1110,6 +1110,7 @@ td a {
 .table-switch {
 	position:relative;
 }
+
 // control hover to reveal long URLs
 .hover-to-reveal {
 	max-width:0;
@@ -1125,12 +1126,23 @@ td a {
 .hover-to-reveal:hover a {
 	background-color:lighten($grey-steel,5%);
 }
-
-// keywords indentation
-.table-im tr.indented.active td {
-	background-color:darken($grey-steel,0.25%);
+.hover-to-reveal a {
+	text-decoration:none;
 }
 
+// accordion
+.table-im .open {
+	background-color:lighten($grey-salsa,20%);
+}
+.table-im .open ~ .child {
+	background-color:lighten($grey-salsa,23%);
+}
+.table-im .open .fa {
+	transform:rotate(180deg);
+}
+.table-im .parent:hover {
+	cursor:pointer;
+}
 
 /* =Social
 ---------------------------------------------------- */
@@ -1195,7 +1207,6 @@ td a {
 	}
 }
 
-
 .number {
 	h1,
 	h2,
@@ -1206,14 +1217,6 @@ td a {
 }
 .info {
 	margin-top:0.5em;
-}
-
-
-// portlets with left number and right desc
-
-.portlet.right-desc {
-	.number {
-	}
 }
 
 .oppcalc-step-2 {

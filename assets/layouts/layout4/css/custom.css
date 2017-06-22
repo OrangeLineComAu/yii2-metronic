@@ -850,7 +850,7 @@ a .social-post-image {
 .table-im > tr > th,
 .table-im > tr > td {
   border-top: 1px solid #e9ecf3;
-  font-size: 12px; }
+  font-size: 12px !important; }
 
 .table-im tr:last-of-type {
   border-bottom: 1px solid #e9ecf3; }
@@ -1028,8 +1028,20 @@ td a {
 .hover-to-reveal:hover a {
   background-color: #fafafc; }
 
-.table-im tr.indented.active td {
-  background-color: #e8ebf3; }
+.hover-to-reveal a {
+  text-decoration: none; }
+
+.table-im .open {
+  background-color: #e7eaee; }
+
+.table-im .open ~ .child {
+  background-color: #f0f2f4; }
+
+.table-im .open .fa {
+  transform: rotate(180deg); }
+
+.table-im .parent:hover {
+  cursor: pointer; }
 
 /* =Social
 ---------------------------------------------------- */
