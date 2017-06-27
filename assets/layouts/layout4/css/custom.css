@@ -62,6 +62,12 @@ h5 {
   h5 {
     font-size: 18px; } }
 
+p.lead + p.lead {
+  margin-top: -0.5em; }
+
+p.lead + p:not(.lead) {
+  margin-top: -1em; }
+
 @media (max-width: 1199px) {
   ul, ol, p,
   table th,
@@ -1011,6 +1017,32 @@ td a {
 
 /* =Keyword and URL Filter Tables
 ---------------------------------------------------- */
+.col-calculator {
+  border: 1px solid red; }
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px; }
+
+@media (min-width: 992px) {
+  .sticky-surpassed {
+    position: absolute;
+    bottom: 0; } }
+
+@media (min-width: 992px) {
+  .stuck {
+    position: fixed;
+    top: 75px;
+    width: 192px; } }
+
+@media (min-width: 1200px) {
+  .stuck {
+    width: 268px; } }
+
+.keyword-filter-table {
+  min-height: 700px; }
+
 .table-switch {
   position: relative; }
 
@@ -1042,6 +1074,49 @@ td a {
 
 .table-im .parent:hover {
   cursor: pointer; }
+
+.dashboard-stat3 .number {
+  float: left;
+  width: 49%; }
+
+.dashboard-stat3 .info {
+  float: left;
+  width: 49%; }
+
+.dashboard-stat3 .stats {
+  list-style: none;
+  padding-left: 0; }
+
+.dashboard-stat3 .stat-item {
+  text-transform: uppercase;
+  font-size: 75%;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 6em; }
+
+.number h1,
+.number h2,
+.number h3,
+.number h4,
+.number h5,
+.number h6 {
+  margin: 0;
+  font-weight: normal; }
+
+.number-primary {
+  margin-top: 10px; }
+
+.oppcalc-step-2 .portlet-body {
+  min-height: 7em; }
+
+.col-calculator {
+  position: relative; }
+  .col-calculator .portlet > .portlet-body {
+    padding-top: 0 !important; }
+  .col-calculator .number {
+    position: relative; }
+  .col-calculator i {
+    color: #d9deea; }
 
 /* =Social
 ---------------------------------------------------- */
@@ -1076,40 +1151,6 @@ td a {
   width: 40px;
   height: 40px;
   margin: 0 auto; }
-
-.dashboard-stat3 .number {
-  float: left;
-  width: 49%; }
-
-.dashboard-stat3 .info {
-  float: left;
-  width: 49%; }
-
-.dashboard-stat3 .stats {
-  list-style: none;
-  padding-left: 0; }
-
-.dashboard-stat3 .stat-item {
-  text-transform: uppercase;
-  font-size: 75%;
-  font-weight: bold;
-  display: inline-block;
-  min-width: 6em; }
-
-.number h1,
-.number h2,
-.number h3 {
-  margin: 0;
-  color: #778190; }
-
-.info {
-  margin-top: 0.5em; }
-
-.oppcalc-step-2 .portlet-body {
-  min-height: 7em; }
-
-.col-calculator .portlet > .portlet-body {
-  padding-top: 0 !important; }
 
 .portlet.light.collapsable .portlet-title {
   position: relative;

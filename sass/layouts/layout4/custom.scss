@@ -37,8 +37,8 @@ h5 { font-size:inherit; font-weight:bold; }
 }
 
 // spacing finessing
-// p.lead + p.lead { margin-top:-0.5em; }
-// p.lead + p:not(.lead) { margin-top:-1em; }
+p.lead + p.lead { margin-top:-0.5em; }
+p.lead + p:not(.lead) { margin-top:-1em; }
 
 @media (max-width:$screen-md-max) {
 	ul,ol,p,
@@ -1107,6 +1107,39 @@ td a {
 
 /* =Keyword and URL Filter Tables
 ---------------------------------------------------- */
+.col-calculator {
+	border:1px solid red;
+}
+
+// sticky class
+.sticky { 
+	//position:relative;
+	position:-webkit-sticky;
+	position:sticky;
+	top:-1px;
+}
+.sticky-surpassed {
+	@media (min-width:$screen-md-min) {
+		position:absolute;
+		bottom:0;
+	}
+}
+.stuck {
+	@media (min-width:$screen-md-min) {
+		position:fixed;
+		top:75px;
+		width:192px;
+	}
+	@media (min-width:$screen-lg-min) {
+		width:268px;
+	}
+}
+
+
+.keyword-filter-table {
+	min-height:700px;
+}
+
 .table-switch {
 	position:relative;
 }
@@ -1142,6 +1175,67 @@ td a {
 }
 .table-im .parent:hover {
 	cursor:pointer;
+}
+
+.dashboard-stat3 {
+	.number {
+		float:left;
+		width:49%;
+	}
+	.info {
+		float:left;
+		width:49%;
+	}
+	.stats {
+		list-style:none;
+		padding-left:0;
+	}
+	.stat-item {
+		text-transform:uppercase;
+		font-size:75%;
+		font-weight:bold;
+		display:inline-block;
+		min-width:6em;
+	}
+}
+
+.number {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 { 
+		margin:0;
+		font-weight:normal;
+		//color:$grey-shuttle; 
+	}
+}
+.info {
+	//margin-top:0.5em;
+}
+.number-primary { 
+	margin-top:10px; 
+}
+
+.oppcalc-step-2 {
+	.portlet-body {
+		min-height:7em;
+	}
+}
+
+.col-calculator {
+	position:relative;
+
+	.portlet > .portlet-body {
+		padding-top:0 !important;
+	}
+	.number {
+		position:relative;
+	}
+	i {
+		color:darken($grey-steel,5%);
+	}
 }
 
 /* =Social
@@ -1183,52 +1277,6 @@ td a {
 	width:40px; 
 	height:40px;
 	margin:0 auto;
-}
-
-.dashboard-stat3 {
-	.number {
-		float:left;
-		width:49%;
-	}
-	.info {
-		float:left;
-		width:49%;
-	}
-	.stats {
-		list-style:none;
-		padding-left:0;
-	}
-	.stat-item {
-		text-transform:uppercase;
-		font-size:75%;
-		font-weight:bold;
-		display:inline-block;
-		min-width:6em;
-	}
-}
-
-.number {
-	h1,
-	h2,
-	h3 { 
-		margin:0;
-		color:$grey-shuttle; 
-	}
-}
-.info {
-	margin-top:0.5em;
-}
-
-.oppcalc-step-2 {
-	.portlet-body {
-		min-height:7em;
-	}
-}
-
-.col-calculator {
-	.portlet > .portlet-body {
-		padding-top:0 !important;
-	}
 }
 
 // portletCollapsable(); extension
