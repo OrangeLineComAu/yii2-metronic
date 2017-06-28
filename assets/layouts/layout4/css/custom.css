@@ -886,6 +886,18 @@ td a {
   padding: 10px;
   vertical-align: middle; }
 
+.table-im > thead > tr > th,
+.table-im > tbody > tr > th {
+  background-color: #fafafc;
+  border-bottom: 1px solid #e9ecf3;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+
+.table-im {
+  border-collapse: separate; }
+
 .table-im > thead > tr > td,
 .table-im > tbody > tr > td {
   padding: 10px;
@@ -1015,36 +1027,28 @@ td a {
   color: #fff;
   background-color: #1655d6; }
 
-/* =Keyword and URL Filter Tables
+/* =Calculator
+   =Keyword and URL Filter Tables
 ---------------------------------------------------- */
-.col-calculator {
-  border: 1px solid red; }
+.oppcalc-step-2 .portlet-body {
+  min-height: 7em; }
 
 .sticky {
   position: -webkit-sticky;
-  position: sticky;
-  top: -1px; }
-
-@media (min-width: 992px) {
-  .sticky-surpassed {
-    position: absolute;
-    bottom: 0; } }
-
-@media (min-width: 992px) {
-  .stuck {
-    position: fixed;
-    top: 75px;
-    width: 192px; } }
-
-@media (min-width: 1200px) {
-  .stuck {
-    width: 268px; } }
-
-.keyword-filter-table {
-  min-height: 700px; }
+  position: sticky; }
 
 .table-switch {
   position: relative; }
+
+.table-wrap {
+  position: relative;
+  height: 350px;
+  overflow: scroll; }
+  @media (min-width: 992px) {
+    .table-wrap {
+      height: auto;
+      min-height: 350px;
+      max-height: 500px; } }
 
 .hover-to-reveal {
   max-width: 0;
@@ -1074,6 +1078,15 @@ td a {
 
 .table-im .parent:hover {
   cursor: pointer; }
+
+.col-calculator {
+  position: relative; }
+  .col-calculator .portlet > .portlet-body {
+    padding-top: 0 !important; }
+  .col-calculator .number {
+    position: relative; }
+  .col-calculator i {
+    color: #d9deea; }
 
 .dashboard-stat3 .number {
   float: left;
@@ -1105,18 +1118,6 @@ td a {
 
 .number-primary {
   margin-top: 10px; }
-
-.oppcalc-step-2 .portlet-body {
-  min-height: 7em; }
-
-.col-calculator {
-  position: relative; }
-  .col-calculator .portlet > .portlet-body {
-    padding-top: 0 !important; }
-  .col-calculator .number {
-    position: relative; }
-  .col-calculator i {
-    color: #d9deea; }
 
 /* =Social
 ---------------------------------------------------- */

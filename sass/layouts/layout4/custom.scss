@@ -948,6 +948,20 @@ td a {
 	padding:10px;
 	vertical-align:middle;
 }
+.table-im > thead > tr > th, 
+.table-im > tbody > tr > th {
+	background-color:lighten($grey-steel,5%);
+	border-bottom:1px solid $grey-steel;
+	position:-webkit-sticky;
+	position:sticky;
+	top:0;
+	z-index:100;
+}
+
+.table-im { 
+	border-collapse:separate;
+}
+
 .table-im > thead > tr > td,
 .table-im > tbody > tr > td {
 	padding:10px;
@@ -1105,43 +1119,33 @@ td a {
 	background-color:$blue;
 }
 
-/* =Keyword and URL Filter Tables
+/* =Calculator
+   =Keyword and URL Filter Tables
 ---------------------------------------------------- */
-.col-calculator {
-	border:1px solid red;
+.oppcalc-step-2 {
+	.portlet-body {
+		min-height:7em;
+	}
 }
-
 // sticky class
 .sticky { 
 	//position:relative;
 	position:-webkit-sticky;
 	position:sticky;
-	top:-1px;
+	//top:75px;
 }
-.sticky-surpassed {
-	@media (min-width:$screen-md-min) {
-		position:absolute;
-		bottom:0;
-	}
-}
-.stuck {
-	@media (min-width:$screen-md-min) {
-		position:fixed;
-		top:75px;
-		width:192px;
-	}
-	@media (min-width:$screen-lg-min) {
-		width:268px;
-	}
-}
-
-
-.keyword-filter-table {
-	min-height:700px;
-}
-
 .table-switch {
 	position:relative;
+}
+.table-wrap {
+	position:relative;
+	height:350px;
+	overflow:scroll;
+	@media (min-width:$screen-md) {
+		height:auto;
+		min-height:350px;
+		max-height:500px;
+	}
 }
 
 // control hover to reveal long URLs
@@ -1175,6 +1179,21 @@ td a {
 }
 .table-im .parent:hover {
 	cursor:pointer;
+}
+
+// calculator column
+.col-calculator {
+	position:relative;
+
+	.portlet > .portlet-body {
+		padding-top:0 !important;
+	}
+	.number {
+		position:relative;
+	}
+	i {
+		color:darken($grey-steel,5%);
+	}
 }
 
 .dashboard-stat3 {
@@ -1216,26 +1235,6 @@ td a {
 }
 .number-primary { 
 	margin-top:10px; 
-}
-
-.oppcalc-step-2 {
-	.portlet-body {
-		min-height:7em;
-	}
-}
-
-.col-calculator {
-	position:relative;
-
-	.portlet > .portlet-body {
-		padding-top:0 !important;
-	}
-	.number {
-		position:relative;
-	}
-	i {
-		color:darken($grey-steel,5%);
-	}
 }
 
 /* =Social
