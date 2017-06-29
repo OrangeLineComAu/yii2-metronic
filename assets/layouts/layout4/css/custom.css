@@ -24,9 +24,13 @@ body {
   -o-font-feature-settings: 'lnum';
   font-feature-settings: 'lnum'; }
 
-h1, h2, h3, h4, h5, h6 {
+.megaheading, h1, h2, h3, h4, h5, h6 {
   color: #00103e;
   font-family: 'Raleway', sans-serif; }
+
+.megaheading {
+  font-size: 28px;
+  font-weight: 300; }
 
 h1 {
   font-size: 24px;
@@ -51,6 +55,8 @@ h5 {
   font-weight: bold; }
 
 @media (min-width: 1200px) {
+  .megaheading {
+    font-size: 60px; }
   h1 {
     font-size: 40px; }
   h2 {
@@ -272,13 +278,13 @@ button.btn-tool.dropdown-toggle {
     margin-bottom: 10px; } }
 
 /* .btn.blue { 
-   color:#fff; 
-   background-color:$blue !important; 
-   border-color:$blue;
-   border:none; 
-   &:hover, &:focus, &:active, &.active { 
-      background-color:darken($blue, 15%) !important;
-   }
+	color:#fff; 
+	background-color:$blue !important; 
+	border-color:$blue;
+	border:none; 
+	&:hover, &:focus, &:active, &.active { 
+	  background-color:darken($blue, 15%) !important;
+	}
 } */
 .btn.btn-outline.blue {
   color: #1655d6 !important;
@@ -313,13 +319,20 @@ button.btn-tool.dropdown-toggle {
 .dropdown-menu > li {
   color: #555; }
 
-.dropdown-menu .mt-radio,
-.dropdown-menu .mt-checkbox,
-.dropdown-menu a.btn.action {
-  margin: 8px 16px; }
-
-.dropdown-menu li:last-child:hover > a {
-  border-radius: 3em; }
+.dropdown-menu {
+  /* & > li:last-child:hover > a {
+		border-radius:none;
+	} */
+  /* li:last-child:hover > a {
+	  border-radius:$br-lg; // override
+	} */ }
+  .dropdown-menu .mt-radio,
+  .dropdown-menu .mt-checkbox,
+  .dropdown-menu a.btn.action {
+    margin: 8px 16px; }
+  .dropdown-menu > li:last-child:hover > a.btn.action {
+    display: inline-block;
+    border-radius: 3em; }
 
 /* =Forms
 ---------------------------------------------------- */
@@ -1081,7 +1094,7 @@ td a {
   background-color: #1655d6; }
 
 /* =Calculator
-   =Keyword and URL Filter Tables
+	=Keyword and URL Filter Tables
 ---------------------------------------------------- */
 .oppcalc-step-2 .portlet-body {
   min-height: 7em; }
