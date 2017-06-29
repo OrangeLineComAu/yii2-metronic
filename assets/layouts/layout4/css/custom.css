@@ -866,7 +866,7 @@ th {
   font-weight: 600;
   background-color: transparent; }
 
-tr:hover {
+tbody tr:hover {
   background-color: #f6f7fa; }
 
 td {
@@ -888,12 +888,15 @@ td a {
 
 .table-im > thead > tr > th,
 .table-im > tbody > tr > th {
-  background-color: #fafafc;
-  border-bottom: 1px solid #e9ecf3;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100; }
+
+.portlet.light.darker .table-im > thead > tr > th,
+.portlet.light.darker .table-im > tbody > tr > th {
+  background-color: #fafafc;
+  border-bottom: 1px solid #e9ecf3; }
 
 .table-im {
   border-collapse: separate; }

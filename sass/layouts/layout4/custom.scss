@@ -927,7 +927,7 @@ th {
 	font-weight:600;
 	background-color:transparent;
 }
-tr:hover {
+tbody tr:hover {
 	background-color:lighten($grey-steel, 4%);
 }
 td { 
@@ -948,14 +948,22 @@ td a {
 	padding:10px;
 	vertical-align:middle;
 }
+
+// sticky th
 .table-im > thead > tr > th, 
 .table-im > tbody > tr > th {
-	background-color:lighten($grey-steel,5%);
-	border-bottom:1px solid $grey-steel;
 	position:-webkit-sticky;
 	position:sticky;
 	top:0;
 	z-index:100;
+}
+// colour for .portlet.light.darker
+.portlet.light.darker {
+	.table-im > thead > tr > th, 
+	.table-im > tbody > tr > th {
+		background-color:lighten($grey-steel,5%);
+		border-bottom:1px solid $grey-steel;
+	}
 }
 
 .table-im { 
