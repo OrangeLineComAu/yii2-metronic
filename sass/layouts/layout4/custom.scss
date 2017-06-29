@@ -262,6 +262,67 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 
+/* .btn.blue { 
+   color:#fff; 
+   background-color:$blue !important; 
+   border-color:$blue;
+   border:none; 
+   &:hover, &:focus, &:active, &.active { 
+      background-color:darken($blue, 15%) !important;
+   }
+} */
+.btn.btn-outline.blue { 
+   color:$blue !important; 
+   border:1px solid $blue !important;
+   background-color:transparent !important;
+   &:hover, &:focus, &:active, &.active { 
+		color:#fff !important; 
+		border-color:$blue !important;
+		background-color:$blue !important; 
+   }
+}
+.open .btn.btn-outline.blue { 
+	color:#fff !important; 
+	border-color:$blue !important;
+	background-color:$blue !important; 
+} 
+
+/* =Manage Market Widget
+---------------------------------------------------- */
+// responsive layout
+.market-menu-markets,
+.market-menu-filter,
+.market-menu-time-travel {
+	@media (max-width:$screen-md) {
+	   clear:both;
+	   margin-bottom:10px; 
+	}
+}
+@media (min-width:$screen-sm) {
+   .market-menu-markets,
+   .market-menu-filter { 
+      display:inline-block;
+   }
+   .market-menu-time-travel {
+      float:right;
+   }
+}
+ 
+.dropdown-menu > li {
+   color:#555; // override
+}
+// padding for non-link items in dropdowns
+.dropdown-menu {
+   .mt-radio, 
+   .mt-checkbox,
+   a.btn.action {
+      margin:8px 16px;
+   }
+   li:last-child:hover > a {
+      border-radius:$br-lg; // override
+   }
+}
+
 /* =Forms
 ---------------------------------------------------- */
 .hint-block { 
