@@ -238,6 +238,11 @@ a:visited {
 	color:$blue;
 }
 
+.btn-sm, .btn-group-sm > .btn {
+	padding:3px 10px;
+}
+
+
 // manage market widget
 .btn-tool {
 	color:#fff !important;
@@ -1004,10 +1009,10 @@ td {
 	position:relative;;
 	z-index:1;
 }
-td a {
+/* td a {
 	color:inherit;
 	text-decoration:underline;
-}
+} */
 
 /* =Leaderboard
 ---------------------------------------------------- */
@@ -1022,7 +1027,7 @@ td a {
 .table-im > tbody > tr > th {
 	position:-webkit-sticky;
 	position:sticky;
-	top:0;
+	top:-1px;
 	z-index:100;
 }
 // colour for .portlet.light.darker
@@ -1035,7 +1040,7 @@ td a {
 }
 
 .table-im { 
-	border-collapse:separate;
+	//border-collapse:separate;
 }
 
 .table-im > thead > tr > td,
@@ -1053,6 +1058,19 @@ td a {
 	}
 }
 
+// position
+.table-leaderboard tr th:nth-of-type(1),
+.table-leaderboard tr td:nth-of-type(1),
+// brand
+.table-leaderboard tr th:nth-of-type(2),
+.table-leaderboard tr td:nth-of-type(2),
+// compare
+.table-leaderboard tr th:nth-of-type(5),
+.table-leaderboard tr td:nth-of-type(5) {
+	width:5%;
+	text-align:center;
+}
+
 // leaderboard legend 
 .leaderboard-legend {
 	text-align:right;
@@ -1066,7 +1084,7 @@ td a {
 	display:inline-block;
 	list-style-type:none;
 	margin:0;
-	padding:0;
+	padding:5px 0 0;
 	font-weight:normal;
 	font-size:90% !important;
 }
@@ -1104,14 +1122,14 @@ td a {
 }
 
 .lb-stats {
-	@media (min-width:$screen-lg-med) {
+	@media (min-width:$screen-md) {
 		width:300px;
 	}
 }
 .lb-movement {
 	display:block;
 	float:left;
-	@media (min-width:$screen-lg-med) {
+	@media (min-width:$screen-md) {
 		width:25px;
 	}
 }
@@ -1119,7 +1137,7 @@ td a {
 	position:relative;
 	display:block;
 	float:left;
-	@media (min-width:$screen-lg-med) {
+	@media (min-width:$screen-md) {
 		width:275px;
 	}
 }
@@ -1205,16 +1223,15 @@ td a {
 }
 // sticky class
 .sticky { 
-	//position:relative;
 	position:-webkit-sticky;
 	position:sticky;
-	//top:75px;
 }
 .table-switch {
 	position:relative;
 }
 .table-wrap {
 	position:relative;
+	border-top:1px solid $grey-steel;
 	height:350px;
 	overflow:scroll;
 	@media (min-width:$screen-md) {
