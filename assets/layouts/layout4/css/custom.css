@@ -810,20 +810,8 @@ a .social-post-image {
           display: none; }
       .login-wrapper .login-widget #a0-lock .a0-panel .a0-success {
         color: #fff; }
-      .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass {
-        border: 1px solid #d9d9d9;
-        padding: 0.25em 1em;
-        color: #333333;
-        font-size: 80%;
-        font-weight: 600;
-        text-transform: uppercase;
-        background-color: #fff;
-        border-color: 1px solid #333333;
-        border-radius: 3em; }
-        .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:hover, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:focus, .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:active {
-          color: #333333;
-          background-color: #d9d9d9;
-          text-decoration: none; }
+      .login-wrapper .login-widget #a0-lock .a0-panel .a0-forgot-pass:hover {
+        text-decoration: underline; }
   .login-wrapper .login-footer {
     margin: 2em auto;
     max-width: 90%;

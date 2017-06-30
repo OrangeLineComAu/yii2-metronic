@@ -866,19 +866,8 @@ a .social-post-image {
 				color:#fff;
 			}
 			.a0-forgot-pass {
-				border:1px solid darken(#fff, 15%);
-				padding:0.25em 1em;
-				color:$grey;
-				font-size:80%;
-				font-weight:600;
-				text-transform:uppercase; 
-				background-color:#fff;
-				border-color:1px solid $grey;
-				border-radius:$br-lg;
-				&:hover, &:focus, &:active {
-					color:$grey;
-					background-color:darken(#fff, 15%);
-					text-decoration:none;
+				&:hover {
+					text-decoration:underline;
 				}
 			}
 		}
