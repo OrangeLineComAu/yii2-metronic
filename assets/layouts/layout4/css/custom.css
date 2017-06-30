@@ -257,6 +257,9 @@ a:visited {
 .btn.btn-link {
   color: #1655d6; }
 
+.btn-sm, .btn-group-sm > .btn {
+  padding: 3px 10px; }
+
 .btn-tool {
   color: #fff !important;
   padding-left: 1em;
@@ -938,10 +941,10 @@ td {
   position: relative;
   z-index: 1; }
 
-td a {
-  color: inherit;
-  text-decoration: underline; }
-
+/* td a {
+	color:inherit;
+	text-decoration:underline;
+} */
 /* =Leaderboard
 ---------------------------------------------------- */
 .table-im > thead > tr > th,
@@ -953,16 +956,13 @@ td a {
 .table-im > tbody > tr > th {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 100; }
 
 .portlet.light.darker .table-im > thead > tr > th,
 .portlet.light.darker .table-im > tbody > tr > th {
   background-color: #fafafc;
   border-bottom: 1px solid #e9ecf3; }
-
-.table-im {
-  border-collapse: separate; }
 
 .table-im > thead > tr > td,
 .table-im > tbody > tr > td {
@@ -976,6 +976,15 @@ td a {
       float: left;
       width: 60%; } }
 
+.table-leaderboard tr th:nth-of-type(1),
+.table-leaderboard tr td:nth-of-type(1),
+.table-leaderboard tr th:nth-of-type(2),
+.table-leaderboard tr td:nth-of-type(2),
+.table-leaderboard tr th:nth-of-type(5),
+.table-leaderboard tr td:nth-of-type(5) {
+  width: 5%;
+  text-align: center; }
+
 .leaderboard-legend {
   text-align: right; }
   @media (min-width: 768px) {
@@ -988,7 +997,7 @@ td a {
   display: inline-block;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0;
   font-weight: normal;
   font-size: 90% !important; }
 
@@ -1016,14 +1025,14 @@ td a {
   .drawr-trigger.active, .drawr-trigger:hover {
     background-color: #f6f7fa; }
 
-@media (min-width: 1260px) {
+@media (min-width: 992px) {
   .lb-stats {
     width: 300px; } }
 
 .lb-movement {
   display: block;
   float: left; }
-  @media (min-width: 1260px) {
+  @media (min-width: 992px) {
     .lb-movement {
       width: 25px; } }
 
@@ -1031,7 +1040,7 @@ td a {
   position: relative;
   display: block;
   float: left; }
-  @media (min-width: 1260px) {
+  @media (min-width: 992px) {
     .lb-percentage-wrap {
       width: 275px; } }
 
@@ -1108,6 +1117,7 @@ td a {
 
 .table-wrap {
   position: relative;
+  border-top: 1px solid #e9ecf3;
   height: 350px;
   overflow: scroll; }
   @media (min-width: 992px) {
