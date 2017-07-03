@@ -280,15 +280,14 @@ button.btn-tool.dropdown-toggle {
   .actions.pull-left {
     margin-bottom: 10px; } }
 
-/* .btn.blue { 
-	color:#fff; 
-	background-color:$blue !important; 
-	border-color:$blue;
-	border:none; 
-	&:hover, &:focus, &:active, &.active { 
-	  background-color:darken($blue, 15%) !important;
-	}
-} */
+.btn.blue {
+  color: #fff;
+  background-color: #1655d6 !important;
+  border-color: #1655d6;
+  border: none; }
+  .btn.blue:hover, .btn.blue:focus, .btn.blue:active, .btn.blue.active {
+    background-color: #0f3991 !important; }
+
 .btn.btn-outline.blue {
   color: #1655d6 !important;
   border: 1px solid #1655d6 !important;
@@ -322,20 +321,14 @@ button.btn-tool.dropdown-toggle {
 .dropdown-menu > li {
   color: #555; }
 
-.dropdown-menu {
-  /* & > li:last-child:hover > a {
-		border-radius:none;
-	} */
-  /* li:last-child:hover > a {
-	  border-radius:$br-lg; // override
-	} */ }
-  .dropdown-menu .mt-radio,
-  .dropdown-menu .mt-checkbox,
-  .dropdown-menu a.btn.action {
-    margin: 8px 16px; }
-  .dropdown-menu > li:last-child:hover > a.btn.action {
-    display: inline-block;
-    border-radius: 3em; }
+.dropdown-menu .mt-radio,
+.dropdown-menu .mt-checkbox,
+.dropdown-menu a.btn.action {
+  margin: 8px 16px;
+  display: inline-block; }
+
+.dropdown-menu > li:last-child:hover > a.action {
+  border-radius: 3em; }
 
 /* =Forms
 ---------------------------------------------------- */

@@ -269,7 +269,7 @@ button.btn-tool.dropdown-toggle {
 	}
 }
 
-/* .btn.blue { 
+.btn.blue { 
 	color:#fff; 
 	background-color:$blue !important; 
 	border-color:$blue;
@@ -277,7 +277,7 @@ button.btn-tool.dropdown-toggle {
 	&:hover, &:focus, &:active, &.active { 
 	  background-color:darken($blue, 15%) !important;
 	}
-} */
+}
 .btn.btn-outline.blue { 
 	color:$blue !important; 
 	border:1px solid $blue !important;
@@ -322,17 +322,12 @@ button.btn-tool.dropdown-toggle {
 	.mt-checkbox,
 	a.btn.action {
 		margin:8px 16px;
+		display:inline-block;
 	}
-	/* & > li:last-child:hover > a {
-		border-radius:none;
-	} */
-	& > li:last-child:hover > a.btn.action {
-		display::inline-block;
-		border-radius:$br-lg;
-	}
-	/* li:last-child:hover > a {
-	  border-radius:$br-lg; // override
-	} */
+}
+// override last child li rounded corners hover
+.dropdown-menu > li:last-child:hover > a.action {
+	border-radius:$br-lg;
 }
 
 /* =Forms
