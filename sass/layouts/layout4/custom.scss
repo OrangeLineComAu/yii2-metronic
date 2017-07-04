@@ -44,6 +44,13 @@ h5 { font-size:inherit; font-weight:bold; }
 .megaheading + p {
 	//margin-top:0;
 }
+.page-heading {
+	@media (min-width:$screen-sm) {
+		display:inline-block; 
+		vertical-align:middle;
+		margin:0 0 0.5em;
+	}
+} 
 
 // spacing finessing
 p.lead + p.lead { margin-top:-0.5em; }
@@ -303,24 +310,28 @@ button.btn-tool.dropdown-toggle {
 
 /* =Manage Market Widget
 ---------------------------------------------------- */
-// responsive layout
+.mmw-tools {
+	margin-bottom:10px;
+	@media (min-width:$screen-sm) {
+		float:right;
+	}
+	@media (min-width:$screen-lg) {
+		margin-top:10px;
+	}
+}
 .market-menu-markets,
 .market-menu-filter,
 .market-menu-time-travel {
+	@media (min-width:$screen-md) {
+		margin-left:1em;
+	}
+}
+.market-menu-time-travel {
 	@media (max-width:$screen-md) {
-		clear:both;
-		margin-bottom:10px; 
+		margin-left:1em;	
 	}
 }
-@media (min-width:$screen-sm) {
-	.market-menu-markets,
-	.market-menu-filter { 
-		display:inline-block;
-	}
-	.market-menu-time-travel {
-		float:right;
-	}
-}
+
 .dropdown-menu > li {
 	color:#555; // override
 }
@@ -335,6 +346,17 @@ button.btn-tool.dropdown-toggle {
 // override last child li rounded corners hover
 .dropdown-menu > li:last-child:hover > a.action {
 	border-radius:$br-lg;
+}
+
+.mmw-date,
+.mmw-url { 
+	display:inline-block; 
+	font-size:40%;
+	color:$grey-salsa;
+	background-color:#fff;
+	padding:0.25em 0.5em;
+	border-radius:$br-sm;
+	vertical-align:middle;
 }
 
 /* =Forms
@@ -352,24 +374,6 @@ button.btn-tool.dropdown-toggle {
 
 /* =Molecules
 ---------------------------------------------------- */
-// marketMenuWidget
-.mmw-date,
-.mmw-url { 
-	display:inline-block; 
-	font-size:40%;
-	color:$grey-salsa;
-	background-color:#fff;
-	padding:0.25em 0.5em;
-	border-radius:$br-sm;
-	vertical-align:middle;
-}
-
-.mmw-datepicker {
-	@media (min-width:$screen-sm) {
-		text-align:right;
-	}
-}
-
 .input-group-addon {
 	background-color:lighten($grey-steel, 5%);
 }
@@ -396,17 +400,22 @@ button.btn-tool.dropdown-toggle {
 		margin-bottom:10px;
 		border:1px solid $grey-salsa;
 		border-radius:100%;
+		transition:all 0.2s ease-in-out;
 		i {
+			transition:all 0.2s ease-in-out;
+			color:$grey-salsa;
 			position:relative;
 			top:45%;
 			transform:translateY(-50%);
 		}
 	}
 	.circled-text {
+		transition:all 0.2s ease-in-out;
 		display:block;
 		color:$grey-salsa;
 	}
 }
+a.circled.active,
 a.circled:hover {
 	.circled-icon {
 		border-color:$blue;
@@ -1454,4 +1463,7 @@ td {
 	100% {
 		stroke-dashoffset: -31px;
 	}
+}
+.amcharts-legend-label {
+	text-decoration:underline;
 }

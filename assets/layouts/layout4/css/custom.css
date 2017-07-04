@@ -72,6 +72,12 @@ h5 {
   top: -1.33em;
   font-size: 33%; }
 
+@media (min-width: 768px) {
+  .page-heading {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0.5em; } }
+
 p.lead + p.lead {
   margin-top: -0.5em; }
 
@@ -308,19 +314,24 @@ button.btn-tool.dropdown-toggle {
 
 /* =Manage Market Widget
 ---------------------------------------------------- */
-@media (max-width: 992px) {
+.mmw-tools {
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    .mmw-tools {
+      float: right; } }
+  @media (min-width: 1200px) {
+    .mmw-tools {
+      margin-top: 10px; } }
+
+@media (min-width: 992px) {
   .market-menu-markets,
   .market-menu-filter,
   .market-menu-time-travel {
-    clear: both;
-    margin-bottom: 10px; } }
+    margin-left: 1em; } }
 
-@media (min-width: 768px) {
-  .market-menu-markets,
-  .market-menu-filter {
-    display: inline-block; }
+@media (max-width: 992px) {
   .market-menu-time-travel {
-    float: right; } }
+    margin-left: 1em; } }
 
 .dropdown-menu > li {
   color: #555; }
@@ -333,6 +344,16 @@ button.btn-tool.dropdown-toggle {
 
 .dropdown-menu > li:last-child:hover > a.action {
   border-radius: 3em; }
+
+.mmw-date,
+.mmw-url {
+  display: inline-block;
+  font-size: 40%;
+  color: #acb5c3;
+  background-color: #fff;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  vertical-align: middle; }
 
 /* =Forms
 ---------------------------------------------------- */
@@ -350,20 +371,6 @@ button.btn-tool.dropdown-toggle {
 
 /* =Molecules
 ---------------------------------------------------- */
-.mmw-date,
-.mmw-url {
-  display: inline-block;
-  font-size: 40%;
-  color: #acb5c3;
-  background-color: #fff;
-  padding: 0.25em 0.5em;
-  border-radius: 4px;
-  vertical-align: middle; }
-
-@media (min-width: 768px) {
-  .mmw-datepicker {
-    text-align: right; } }
-
 .input-group-addon {
   background-color: #fafafc; }
 
@@ -384,20 +391,27 @@ button.btn-tool.dropdown-toggle {
     height: 50px;
     margin-bottom: 10px;
     border: 1px solid #acb5c3;
-    border-radius: 100%; }
+    border-radius: 100%;
+    transition: all 0.2s ease-in-out; }
     .circled .circled-icon i {
+      transition: all 0.2s ease-in-out;
+      color: #acb5c3;
       position: relative;
       top: 45%;
       transform: translateY(-50%); }
   .circled .circled-text {
+    transition: all 0.2s ease-in-out;
     display: block;
     color: #acb5c3; }
 
+a.circled.active .circled-icon,
 a.circled:hover .circled-icon {
   border-color: #1655d6; }
+  a.circled.active .circled-icon i,
   a.circled:hover .circled-icon i {
     color: #1655d6; }
 
+a.circled.active .circled-text,
 a.circled:hover .circled-text {
   color: #1655d6; }
 
@@ -1274,3 +1288,6 @@ td {
 @keyframes am-moving-dashes {
   100% {
     stroke-dashoffset: -31px; } }
+
+.amcharts-legend-label {
+  text-decoration: underline; }
