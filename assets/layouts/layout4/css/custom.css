@@ -358,7 +358,11 @@ button.btn-tool.dropdown-toggle {
   background-color: #fff;
   padding: 0.25em 0.5em;
   border-radius: 4px;
-  vertical-align: top; }
+  vertical-align: middle; }
+
+@media (min-width: 768px) {
+  .mmw-datepicker {
+    text-align: right; } }
 
 .input-group-addon {
   background-color: #fafafc; }
@@ -412,6 +416,9 @@ a.circled:hover .circled-text {
   background: #fff url(/images/bg-hills.jpg) center no-repeat;
   background-size: 100% auto;
   background-position: center bottom; }
+
+[data-toggle="tooltip"] i {
+  color: #b8c1d8; }
 
 /* =Portlet
 ---------------------------------------------------- */
@@ -871,11 +878,22 @@ a .social-post-image {
       height: 400px; } }
 
 .market-overview-graph {
+  position: relative;
   display: block;
   height: 400px; }
 
 .graph-market-overview {
   height: 380px; }
+
+.market-overview-graph-tooltip {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  z-index: 999; }
+  @media (min-width: 768px) {
+    .market-overview-graph-tooltip {
+      bottom: 30px;
+      right: 45px; } }
 
 /* =Tables
 ---------------------------------------------------- */
@@ -1132,8 +1150,6 @@ td {
     padding-top: 0 !important; }
   .col-calculator .number {
     position: relative; }
-  .col-calculator i {
-    color: #d9deea; }
 
 .dashboard-stat3 .number {
   float: left;
