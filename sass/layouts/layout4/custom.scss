@@ -1271,29 +1271,27 @@ td {
 
 // little logos
 [class^="logo-circled"] {
-	border-radius:100px;	
-	padding-left:10px;
-	padding-right:10px;
+	text-align:center;
+	border-radius:100px;
 	background-color:#fff;
 	text-align:center;
-	//border:1px solid $grey-steel;
 }
 [class^="logo-circled"] img {
 	display:block;
-	width:100%;
-	max-width:100%;
+	margin:0 auto;
+	width:16px;
 	position:relative;
-	top:48%;
-	transform:translateY(-48%);
-}
-.logo-circled-md { 
-	width:75px; 
-	height:75px;
+	top:50%;
+	transform:translateY(-50%);
 }
 .logo-circled-sm {
-	width:40px; 
-	height:40px;
+	width:36px;
+	height:36px;
 	margin:0 auto;
+}
+.logo-circled-md { 
+	width:75px;
+	height:75px;
 }
 
 /* =Revenue Opportunitiy 

@@ -1128,28 +1128,27 @@ td {
   background-color: #1655d6; }
 
 [class^="logo-circled"] {
+  text-align: center;
   border-radius: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
   background-color: #fff;
   text-align: center; }
 
 [class^="logo-circled"] img {
   display: block;
-  width: 100%;
-  max-width: 100%;
+  margin: 0 auto;
+  width: 16px;
   position: relative;
-  top: 48%;
-  transform: translateY(-48%); }
+  top: 50%;
+  transform: translateY(-50%); }
+
+.logo-circled-sm {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto; }
 
 .logo-circled-md {
   width: 75px;
   height: 75px; }
-
-.logo-circled-sm {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto; }
 
 /* =Revenue Opportunitiy 
    =Calculator 
