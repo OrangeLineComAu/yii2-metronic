@@ -8,7 +8,7 @@
 .font-green {
   colour: #01bc7d; }
 
-/* Typography
+/* Base
 ---------------------------------------------------- */
 html, body {
   min-height: 100%; }
@@ -24,6 +24,15 @@ body {
   -o-font-feature-settings: 'lnum';
   font-feature-settings: 'lnum'; }
 
+@media (max-width: 1199px) {
+  ul, ol, p,
+  table th,
+  table td,
+  .btn {
+    font-size: 100% !important; } }
+
+/* Typography
+---------------------------------------------------- */
 .megaheading, h1, h2, h3, h4, h5, h6 {
   color: #00103e; }
 
@@ -84,13 +93,6 @@ p.lead + p.lead {
 p.lead + p:not(.lead) {
   margin-top: -1em; }
 
-@media (max-width: 1199px) {
-  ul, ol, p,
-  table th,
-  table td,
-  .btn {
-    font-size: 100% !important; } }
-
 .semibold {
   font-weight: 600; }
 
@@ -131,6 +133,11 @@ a:visited {
 
 /* =Layout
 ---------------------------------------------------- */
+@media (min-width: 992px) {
+  .width-half {
+    width: 50%;
+    margin: 0 auto; } }
+
 .page-content-wrapper .page-content {
   margin-left: 0;
   padding-left: 0; }
@@ -217,7 +224,7 @@ a:visited {
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
   padding: 25px 10px; }
 
-/* =Buttons
+/* =Buttons overrides
 ---------------------------------------------------- */
 .btn {
   color: #fff;
@@ -424,17 +431,16 @@ a.circled:hover .circled-text {
 .icon-lg {
   font-size: 200%; }
 
-/* =Modules
----------------------------------------------------- */
-.mntns-bg {
-  background: #fff url(/images/bg-hills.jpg) center no-repeat;
-  background-size: 100% auto;
-  background-position: center bottom; }
-
+/* .mntns-bg {
+	background:#fff url(/images/bg-hills.jpg) center no-repeat;
+	background-size:100% auto;
+	background-position:center bottom; 
+} */
 [data-toggle="tooltip"] i {
   color: #b8c1d8; }
 
-/* =Portlet
+/* =Portlet 
+   customisations and overrides
 ---------------------------------------------------- */
 @media (max-width: 480px) {
   .portlet {
@@ -470,77 +476,92 @@ h3.help-text {
 h3.help-text i {
   margin-bottom: 0.66em; }
 
-@media (min-width: 992px) {
-  .width-half {
-    width: 50%;
-    margin: 0 auto; } }
-
-/* =Dashboard
+/* =portletCollapsable(); extension
 ---------------------------------------------------- */
-.dashboard-hero {
-  padding: 20px;
-  margin-bottom: 20px; }
-  .dashboard-hero h2 {
-    font-weight: bold;
-    margin-top: 0; }
-  .dashboard-hero h3 {
-    text-transform: uppercase;
-    margin-top: 0.25em; }
+.portlet.light.collapsable .portlet-title {
+  position: relative;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  min-height: auto; }
+  .portlet.light.collapsable .portlet-title .trigger {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10; }
+  .portlet.light.collapsable .portlet-title .indicator {
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out; }
 
-.dashboard-hero-logo {
-  display: block;
-  float: right;
-  max-height: 50px;
-  margin: 0 0 1em 1em; }
-  @media (min-width: 768px) {
-    .dashboard-hero-logo {
-      max-height: 80px; } }
+.portlet.light.collapsable .portlet-body {
+  display: none; }
 
-/* =Stat Boxes
+.portlet.light.collapsable.hover .indicator {
+  opacity: 1; }
+
+.portlet.light.collapsable.open .indicator {
+  transform: rotate(180deg); }
+
+.portlet.light.collapsable.open .portlet-title {
+  min-height: 48px;
+  border-bottom: inherit;
+  margin-bottom: 10px; }
+
+/* =DELETE? =Dashboard
 ---------------------------------------------------- */
-@media (min-width: 1200px) {
-  .dashboard-stat2 .display {
-    min-height: 5.5em; } }
+/* .dashboard-hero { 
+	padding:20px;
+	margin-bottom:20px;
 
-.dashboard-stat2 .node-value {
-  color: #092c7b;
-  letter-spacing: -1px;
-  font-size: 200% !important; }
-
-.dashboard-stat2 small i {
-  font-size: 75% !important; }
+	h2 { font-weight:bold; margin-top:0; }	
+	h3 { text-transform:uppercase; margin-top:0.25em; }
+}
+.dashboard-hero-logo { 
+	display:block; 
+	float:right; 
+	max-height:50px; 
+	margin:0 0 1em 1em; 
+	@media (min-width:$screen-sm) { max-height:80px; }
+} */
+/* =DELETE? =Stat Boxes
+---------------------------------------------------- */
+/* .dashboard-stat2 {
+	@media (min-width:$screen-lg) { 
+		.display {
+			min-height:5.5em;
+		}
+	}	
+	.node-value { 
+		color:$blue-darkest; 
+		letter-spacing:-1px;
+		font-size:200% !important; 
+	}
+	small i { font-size:75% !important; }
+}
 
 .glyphicon-chevron-up,
-.glyphicon-chevron-up + span {
-  color: #01bc7d !important; }
-
+.glyphicon-chevron-up + span { color:$green !important; }
 .glyphicon-chevron-down,
-.glyphicon-chevron-down + span {
-  color: #c9302c !important; }
-
-/* =Chart.js
+.glyphicon-chevron-down + span { color:$red !important; } */
+/* =DELETE? =Chart.js
 ---------------------------------------------------- */
-.chart-legend {
-  margin: 2em 1em; }
-  @media (min-width: 768px) {
-    .chart-legend {
-      columns: 2; } }
-  @media (min-width: 1200px) {
-    .chart-legend {
-      columns: 3; } }
-
-.chart-legend ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.chart-legend ul li span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 0.66em;
-  border-radius: 12px; }
-
+/* .chart-legend {
+	margin:2em 1em;
+	@media (min-width:$screen-sm) { columns:2; }
+	@media (min-width:$screen-lg) { columns:3; }
+}
+.chart-legend ul { 
+	list-style:none; 
+	margin:0; 
+	padding:0; 
+}
+.chart-legend ul li span { 
+	display:inline-block; 
+	width:12px; 
+	height:12px; 
+	margin-right:0.66em;
+	border-radius:12px;
+} */
 /* =Graphs
 ---------------------------------------------------- */
 @media (max-width: 480px) {
@@ -764,7 +785,8 @@ a .social-post-image {
   .slider .flickity-prev-next-button {
     display: none; }
 
-/* =Add-on design for login
+/* =Add-on design for login page
+	Now with auth0 overrides!
 ---------------------------------------------------- */
 .login-wrapper {
   background: #01264a url(/images/login-bg.jpg?v3) center no-repeat;
@@ -1105,15 +1127,36 @@ td {
   color: #fff;
   background-color: #1655d6; }
 
-/* =Calculator
-	=Keyword and URL Filter Tables
+[class^="logo-circled"] {
+  border-radius: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #fff;
+  text-align: center; }
+
+[class^="logo-circled"] img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  top: 48%;
+  transform: translateY(-48%); }
+
+.logo-circled-md {
+  width: 75px;
+  height: 75px; }
+
+.logo-circled-sm {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto; }
+
+/* =Revenue Opportunitiy 
+   =Calculator 
+   =Keyword and URL Filter Tables
 ---------------------------------------------------- */
 .oppcalc-step-2 .portlet-body {
   min-height: 7em; }
-
-.sticky {
-  position: -webkit-sticky;
-  position: sticky; }
 
 .table-switch {
   position: relative; }
@@ -1184,80 +1227,12 @@ td {
   display: inline-block;
   min-width: 6em; }
 
-.number h1,
-.number h2,
-.number h3,
-.number h4,
-.number h5,
-.number h6 {
+.number h1, .number h2, .number h3, .number h4, .number h5, .number h6 {
   margin: 0;
   font-weight: normal; }
 
 .number-primary {
   margin-top: 10px; }
-
-/* =Social
----------------------------------------------------- */
-.mini-profile-content {
-  padding-left: 1em; }
-
-.mini-profile-url {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.66em; }
-
-[class^="logo-circled"] {
-  border-radius: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #fff;
-  text-align: center; }
-
-[class^="logo-circled"] img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  top: 48%;
-  transform: translateY(-48%); }
-
-.logo-circled-md {
-  width: 75px;
-  height: 75px; }
-
-.logo-circled-sm {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto; }
-
-.portlet.light.collapsable .portlet-title {
-  position: relative;
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  min-height: auto; }
-  .portlet.light.collapsable .portlet-title .trigger {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10; }
-  .portlet.light.collapsable .portlet-title .indicator {
-    opacity: 0.5;
-    transition: all 0.3s ease-in-out; }
-
-.portlet.light.collapsable .portlet-body {
-  display: none; }
-
-.portlet.light.collapsable.hover .indicator {
-  opacity: 1; }
-
-.portlet.light.collapsable.open .indicator {
-  transform: rotate(180deg); }
-
-.portlet.light.collapsable.open .portlet-title {
-  min-height: 48px;
-  border-bottom: inherit;
-  margin-bottom: 10px; }
 
 /* =Modals
 ---------------------------------------------------- */
@@ -1291,3 +1266,6 @@ td {
 
 .amcharts-legend-label {
   text-decoration: underline; }
+
+.blockMsg {
+  border-radius: 4px !important; }
