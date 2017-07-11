@@ -309,6 +309,12 @@ button.btn-tool.dropdown-toggle {
 	background-color:$blue !important; 
 } 
 
+// prevent .input-group-btn from collapsing on mobile
+.input-group-btn {
+    font-size:inherit !important;
+    white-space:normal !important;
+}
+
 /* =Manage Market Widget
 ---------------------------------------------------- */
 .mmw-tools {
