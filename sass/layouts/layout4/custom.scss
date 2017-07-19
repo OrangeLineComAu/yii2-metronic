@@ -73,6 +73,8 @@ a:visited {
 	color:inherit;
 }
 
+.overflow-hidden { overflow:hidden; }
+
 .align-center { text-align:center; }
 .text-muted { color:$grey-salsa; }
 .text-info { color:$blue; }
@@ -392,7 +394,7 @@ button.btn-tool.dropdown-toggle {
 	width:70%;
 }
 
-// circled icons (used in social widget)
+// circled icons, used in social widget
 .circled {
 	display:block;
 
@@ -445,12 +447,12 @@ a.circled:hover {
 	font-size:200%;
 }
 
-// =DELETE? pop some mountains in the bg
-/* .mntns-bg {
+// pop some mountains in the bg
+.mntns-bg {
 	background:#fff url(/images/bg-hills.jpg) center no-repeat;
 	background-size:100% auto;
 	background-position:center bottom; 
-} */
+}
 
 // colour the question mark tooltip icon
 [data-toggle="tooltip"] i {
@@ -560,64 +562,6 @@ h3.help-text i { margin-bottom:0.66em; }
 		margin-bottom:10px;
 	}
 }
-
-/* =DELETE? =Dashboard
----------------------------------------------------- */
-/* .dashboard-hero { 
-	padding:20px;
-	margin-bottom:20px;
-
-	h2 { font-weight:bold; margin-top:0; }	
-	h3 { text-transform:uppercase; margin-top:0.25em; }
-}
-.dashboard-hero-logo { 
-	display:block; 
-	float:right; 
-	max-height:50px; 
-	margin:0 0 1em 1em; 
-	@media (min-width:$screen-sm) { max-height:80px; }
-} */
-
-/* =DELETE? =Stat Boxes
----------------------------------------------------- */
-/* .dashboard-stat2 {
-	@media (min-width:$screen-lg) { 
-		.display {
-			min-height:5.5em;
-		}
-	}	
-	.node-value { 
-		color:$blue-darkest; 
-		letter-spacing:-1px;
-		font-size:200% !important; 
-	}
-	small i { font-size:75% !important; }
-}
-
-.glyphicon-chevron-up,
-.glyphicon-chevron-up + span { color:$green !important; }
-.glyphicon-chevron-down,
-.glyphicon-chevron-down + span { color:$red !important; } */
-
-/* =DELETE? =Chart.js
----------------------------------------------------- */
-/* .chart-legend {
-	margin:2em 1em;
-	@media (min-width:$screen-sm) { columns:2; }
-	@media (min-width:$screen-lg) { columns:3; }
-}
-.chart-legend ul { 
-	list-style:none; 
-	margin:0; 
-	padding:0; 
-}
-.chart-legend ul li span { 
-	display:inline-block; 
-	width:12px; 
-	height:12px; 
-	margin-right:0.66em;
-	border-radius:12px;
-} */
 
 /* =Graphs
 ---------------------------------------------------- */
@@ -1097,10 +1041,6 @@ td {
 	position:relative;;
 	z-index:1;
 }
-/* td a {
-	color:inherit;
-	text-decoration:underline;
-} */
 
 /* =Leaderboard
 ---------------------------------------------------- */
@@ -1448,7 +1388,44 @@ td {
 .amcharts-legend-label {
 	text-decoration:underline;
 }
-
 .blockMsg {
 	border-radius:$br-sm !important;
+}
+
+/* =Loading Wrapper
+---------------------------------------------------- */
+.loading-wrapper {
+	display:none;
+	position:fixed;
+	overflow:hidden;
+	text-align:center;
+	background-color:$blue-sky;
+	background-color:rgba(229,246,255,0.95);
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:9999;
+	text-transform:uppercase;
+	font-size:90%;
+	letter-spacing:2px;
+	color:$navy;
+}
+.loading-img {
+	position:relative;
+	display:block;
+	margin:25% auto 0;
+	width:40px;
+	height:40px;
+	background:transparent url(/images/loading-eagle.png) top center no-repeat;	
+	background-size:40px 40px;
+	z-index:10000;
+}
+@keyframes animateEagle {
+	0%   { transform:translateY(0); }
+	50% { transform:translateY(-10px); }
+	100% { transform:translateY(0); }
+}
+.loading-anim {
+	animation:animateEagle 2.5s ease-in-out infinite;
 }

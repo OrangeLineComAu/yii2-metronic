@@ -105,6 +105,9 @@ a {
 a:visited {
   color: inherit; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 .align-center {
   text-align: center; }
 
@@ -435,11 +438,11 @@ a.circled:hover .circled-text {
 .icon-lg {
   font-size: 200%; }
 
-/* .mntns-bg {
-	background:#fff url(/images/bg-hills.jpg) center no-repeat;
-	background-size:100% auto;
-	background-position:center bottom; 
-} */
+.mntns-bg {
+  background: #fff url(/images/bg-hills.jpg) center no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom; }
+
 [data-toggle="tooltip"] i {
   color: #b8c1d8; }
 
@@ -534,61 +537,6 @@ h3.help-text i {
   border-bottom: inherit;
   margin-bottom: 10px; }
 
-/* =DELETE? =Dashboard
----------------------------------------------------- */
-/* .dashboard-hero { 
-	padding:20px;
-	margin-bottom:20px;
-
-	h2 { font-weight:bold; margin-top:0; }	
-	h3 { text-transform:uppercase; margin-top:0.25em; }
-}
-.dashboard-hero-logo { 
-	display:block; 
-	float:right; 
-	max-height:50px; 
-	margin:0 0 1em 1em; 
-	@media (min-width:$screen-sm) { max-height:80px; }
-} */
-/* =DELETE? =Stat Boxes
----------------------------------------------------- */
-/* .dashboard-stat2 {
-	@media (min-width:$screen-lg) { 
-		.display {
-			min-height:5.5em;
-		}
-	}	
-	.node-value { 
-		color:$blue-darkest; 
-		letter-spacing:-1px;
-		font-size:200% !important; 
-	}
-	small i { font-size:75% !important; }
-}
-
-.glyphicon-chevron-up,
-.glyphicon-chevron-up + span { color:$green !important; }
-.glyphicon-chevron-down,
-.glyphicon-chevron-down + span { color:$red !important; } */
-/* =DELETE? =Chart.js
----------------------------------------------------- */
-/* .chart-legend {
-	margin:2em 1em;
-	@media (min-width:$screen-sm) { columns:2; }
-	@media (min-width:$screen-lg) { columns:3; }
-}
-.chart-legend ul { 
-	list-style:none; 
-	margin:0; 
-	padding:0; 
-}
-.chart-legend ul li span { 
-	display:inline-block; 
-	width:12px; 
-	height:12px; 
-	margin-right:0.66em;
-	border-radius:12px;
-} */
 /* =Graphs
 ---------------------------------------------------- */
 @media (max-width: 480px) {
@@ -993,10 +941,6 @@ td {
   position: relative;
   z-index: 1; }
 
-/* td a {
-	color:inherit;
-	text-decoration:underline;
-} */
 /* =Leaderboard
 ---------------------------------------------------- */
 .table-im > thead > tr > th,
@@ -1280,3 +1224,43 @@ td {
 
 .blockMsg {
   border-radius: 4px !important; }
+
+/* =Loading Wrapper
+---------------------------------------------------- */
+.loading-wrapper {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  text-align: center;
+  background-color: #e5f6ff;
+  background-color: rgba(229, 246, 255, 0.95);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  text-transform: uppercase;
+  font-size: 90%;
+  letter-spacing: 2px;
+  color: #00103e; }
+
+.loading-img {
+  position: relative;
+  display: block;
+  margin: 25% auto 0;
+  width: 40px;
+  height: 40px;
+  background: transparent url(/images/loading-eagle.png) top center no-repeat;
+  background-size: 40px 40px;
+  z-index: 10000; }
+
+@keyframes animateEagle {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
+
+.loading-anim {
+  animation: animateEagle 2.5s ease-in-out infinite; }
